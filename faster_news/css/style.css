@@ -52,3 +52,31 @@ nav > a{
     text-decoration: none;
     color: white;
 }
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor1);
+    font-size: 1.2em;
+}
+
+section.info {
+    width: 80vw;
+    padding: 20px;
+    margin-left: auto;
+    text-align: justify;
+    border: 2px solid black;
+}
+
+div.img {
+    background-color: brown;
+    width: 600px;
+    height: 350px;
+    margin: auto;
+}
+
+section#ad {
+    width: 16.5vw;
+    height: 100vh;
+    background-color: black;
+}
