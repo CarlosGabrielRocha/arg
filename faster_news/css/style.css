@@ -25,6 +25,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #292A2D;
+    color: white;
 }
 
 header {
@@ -53,16 +54,20 @@ nav {
     background-color: var(--cor3);
 }
 
+a {
+    text-decoration: none;
+}
+
 nav > a{
     padding: 25px;
     font-size: 1.6em;
-    text-decoration: none;
     color: white;
 }
 
 main {
-    width: 60vw;
+    width: 59vw;
     height: 110vh;
+    position: relative;
 
     margin-top: 100px;
     margin-left: 580px;
@@ -80,16 +85,14 @@ main {
     padding: 25px;
 }
 
-section.info {
-    padding: 20px;
-    margin-left: auto;
-    text-align: justify;
-    width: 350px;
-    background-color: #28546c60;
+hr {
+    width: 1020px;
+    margin: auto;
+    border-color: rgba(255, 255, 255, 0.281);
 }
 
 #urgente {
-    width: 600px;
+    width: 550px;
 
     font-size: 3em;
     font-family: 'Cormorant Garamond', serif;
@@ -105,26 +108,68 @@ section.info {
    
 }
 
-div.logo {
-    height: 300px;
-    width: 600px;
-   
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+section.logo {
+    height: 350px;
+    width: 550px;
+    margin: 30px 0px 30px 25px;
+
+    border-radius: 25px;
 
 
     background-image: linear-gradient(to bottom, var(--cor2), var(--cor3)); 
     color: white;
 }
 
-div.logo > h1 {
-    padding: 60px 0px 0px 40px;
-    font-size: 2.1em;
+h1.descricao{
+    padding: 50px;
+    font-size: 1.7em;
+    color: white;
 }
 
-div.logo > h1:hover {
+h1.descricao:hover {
     text-decoration: underline;
     text-decoration-color: white;
+}
+
+h1.descricao:active {
+    color: yellow;
+}
+
+section.info {
+    width: 420px;
+
+    position: absolute;
+    right: 0;
+    top: 230px;
+    left: 595px;
+
+    padding: 20px;
+    text-align: justify;
+}
+
+section.info p {
+    padding-top: 10px;
+    color: rgba(255, 255, 255, 0.63);
+}
+
+section.info p:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.63);
+}
+
+section.info p:active {
+    color: yellow;
+}
+
+.smalltitle {
+    color: #76ACF8;
+    padding: 25px;
+    font-size: 1.2em;
+}
+
+h2 {
+    font-size: 1em;
+    padding: 10px;
 }
 
 aside {
@@ -139,10 +184,6 @@ aside {
   
     background-color: #1F1F1F;
     color: white;
-}
-
-article a {
-    text-decoration: none;
 }
 
 footer {
