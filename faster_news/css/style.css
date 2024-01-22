@@ -66,8 +66,7 @@ nav > a{
 
 main {
     width: 59vw;
-    height: 110vh;
-    position: relative;
+    height: 165vh;
 
     margin-top: 100px;
     margin-left: 580px;
@@ -80,9 +79,10 @@ main {
 }
 
 .title {
+    padding: 25px;  
+    font-size: 1.4em;
+    font-weight: normal;
     color: #76ACF8;
-    font-size: 1.5em;
-    padding: 25px;
 }
 
 hr {
@@ -111,6 +111,7 @@ hr {
 section.logo {
     height: 350px;
     width: 550px;
+    position: relative;
     margin: 30px 0px 30px 25px;
 
     border-radius: 25px;
@@ -135,36 +136,54 @@ h1.descricao:active {
     color: yellow;
 }
 
-section.info {
+div.info {
     width: 420px;
 
     position: absolute;
     right: 0;
-    top: 230px;
-    left: 595px;
+    top: 100px;
+    left: 575px;
 
     padding: 20px;
     text-align: justify;
 }
 
-section.info p {
+div.info p {
     padding-top: 10px;
     color: rgba(255, 255, 255, 0.63);
 }
 
-section.info p:hover {
+div.info p:hover {
     text-decoration: underline;
     color: rgba(255, 255, 255, 0.63);
 }
 
-section.info p:active {
+div.info p:active {
     color: yellow;
 }
 
-.smalltitle {
-    color: #76ACF8;
+.smalltitle { 
     padding: 25px;
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #76ACF8;
+}
+
+.subtitle {
+    padding: 10px 0px 10px 26px;
+    font-weight: normal;
     font-size: 1.2em;
+}
+
+section.conteudo p {
+    padding: 0px 0px 15px 25px;
+    font-size: 1.3em;
+    color: rgba(255, 255, 255, 0.945);
+}
+
+section.conteudo a:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
 }
 
 h2 {
