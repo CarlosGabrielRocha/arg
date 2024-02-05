@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
-* {
-    margin: 0px;
-    padding: 0px;
-}
 
+@font-face {
+    font-family: 'fantasia';
+    src: url('../fonteacorde.ttf') format('TrueType');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -13,6 +15,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
 /* font-family: 'Cormorant Garamond', serif; */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
 
 :root {
     --cor0: #9792E3;
@@ -38,6 +45,7 @@ header h1 {
     text-align: center;
     font-size: 5em;
     font-variant: small-caps;
+    text-shadow: 5px 1px 3px rgba(0, 0, 0, 0.24);
     color: white;
 }
 
@@ -52,6 +60,7 @@ nav {
     height: 50px;
     text-align: center;
     background-color: var(--cor3);
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.363);
 }
 
 a {
@@ -193,33 +202,71 @@ h2 {
 
 aside {
     width: 23vw;
-    height: 110vh;
+    height: 165vh;
     margin: 100px 0px 0px 80px;
 
-    border-radius: 25px;
 
     position: absolute;
     top: 210px;
   
-    background-color: #1F1F1F;
     color: white;
 }
 
+aside div {
+    height: 500px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+
+    background-color: #1F1F1F;
+}
+
+aside img {
+    width: 400px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+aside p {
+    padding: 30px;
+    font-size: 1.6em;
+    text-align: justify;
+    color: #76ACF8;    
+}
+
 footer {
-    height: 300px;
+    height: 250px;
     margin-top: 50px;
 
     position: relative;
 
+    
     font-size: 1.3em;
     text-align: center;
 
     color: white;
-    background-color: #1F1F1F;
+    background-color: #051120;
+}
+
+footer > div#cor {
+    width: 100%;
+    height: 5px;
+    background-color: #123961;
+}
+
+
+footer p#acorde {
+    padding-top: 20px;
+
+    font-family: 'fantasia';
+    font-size: 3em;
+    letter-spacing: 5px;
+
 }
 
 footer p {
-    font-size: 1.5em;
+    font-family: 'fantasy';
+    font-size: 2em;
+    text-shadow: 6px 1px 3px rgba(0, 0, 0, 0.322);
 }
 
 div#rodapé {
