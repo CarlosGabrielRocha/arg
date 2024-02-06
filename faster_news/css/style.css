@@ -24,8 +24,8 @@
 :root {
     --cor0: #9792E3;
     --cor1: #BACABF;
-    --cor2: #28546C;
-    --cor3: #032436;
+    --cor2: #123961;
+    --cor3: #051120;
     --cor4: #A01821;
 }
 
@@ -36,28 +36,28 @@ body {
 }
 
 header {
-    height: 150px;
+    height: 100px;
     background-color: var(--cor2);
     font-family: 'Playfair Display', serif;
 }
 
 header h1 {
     text-align: center;
-    font-size: 5em;
+    font-size: 3.5em;
     font-variant: small-caps;
     text-shadow: 5px 1px 3px rgba(0, 0, 0, 0.24);
     color: white;
 }
 
 header p {
-    font-size: 2.5em;
+    font-size: 1.5em;
     text-align: center;
     color: var(--cor1);
 }
 
 nav {
-    padding-top: 10px;
-    height: 50px;
+    padding-top: 5px;
+    height: 25px;
     text-align: center;
     background-color: var(--cor3);
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.363);
@@ -68,13 +68,19 @@ a {
 }
 
 nav > a{
-    padding: 25px;
-    font-size: 1.6em;
+    padding: 20px;
+    font-size: 1.2em;
     color: white;
 }
 
+nav > a:hover{
+    cursor: pointer;
+    color: var(--cor4);
+    transition-duration: 1s;
+}
+
 main {
-    width: 59vw;
+    max-width: 850px;
     height: 165vh;
 
     margin-top: 100px;
@@ -87,9 +93,9 @@ main {
     background-color: #1F1F1F;
 }
 
-.title {
+h1.title {
     padding: 25px;  
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: normal;
     color: #76ACF8;
 }
@@ -100,26 +106,9 @@ hr {
     border-color: rgba(255, 255, 255, 0.281);
 }
 
-#urgente {
-    width: 550px;
-
-    font-size: 3em;
-    font-family: 'Cormorant Garamond', serif;
-    text-align: center;
-    letter-spacing: 5px;
-    font-variant: small-caps;
-
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    
-    background-color: #0f0f0f;
-    color: white;
-   
-}
-
 section.logo {
     height: 350px;
-    width: 550px;
+    width: 450px;
     position: relative;
     margin: 30px 0px 30px 25px;
 
@@ -130,9 +119,24 @@ section.logo {
     color: white;
 }
 
+h1#urgente {
+    font-size: 3em;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    letter-spacing: 5px;
+    font-variant: small-caps;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    background-color: #0f0f0f;
+    color: white;
+}
+
 h1.descricao{
     padding: 50px;
-    font-size: 1.7em;
+    font-size: 1.5em;
+    text-align: justify;
     color: white;
 }
 
@@ -201,7 +205,7 @@ h2 {
 }
 
 aside {
-    width: 23vw;
+    max-width: 350px;
     height: 165vh;
     margin: 100px 0px 0px 80px;
 
@@ -271,7 +275,7 @@ footer p {
 
 div#rodapé {
     width: 100%;
-    height: 40px;
+    height: 30px;
     position: absolute;
     bottom: 0;
     padding-top: 20px;
