@@ -80,7 +80,17 @@ nav > a:hover{
 }
 
 h1#suasnoticias {
+    position: relative;
     margin-left: 200px;
+}
+
+div#data {
+
+    position: absolute;
+    top: 200px;
+    margin-left: 230px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.63);
 }
 
 main {
