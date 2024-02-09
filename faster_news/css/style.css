@@ -56,8 +56,9 @@ header p {
 }
 
 nav {
+    position: relative;
     padding-top: 5px;
-    height: 25px;
+    height: 35px;
     text-align: center;
     background-color: var(--cor3);
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.363);
@@ -75,8 +76,8 @@ nav > a{
 
 nav > a:hover{
     cursor: pointer;
-    color: var(--cor4);
-    transition-duration: 1s;
+    color: rgba(255, 255, 255, 0.281);
+    transition-duration: 0.3s;
 }
 
 h1#suasnoticias {
@@ -119,7 +120,7 @@ span.material-symbols-outlined {
 }
 
 hr {
-    width: 850px;
+    width: 835px;
     margin: auto;
     border-color: rgba(255, 255, 255, 0.281);
 }
@@ -139,6 +140,10 @@ section.logo {
     color: white;
 }
 
+div.caixa {
+    width: 350px;
+}
+
 h1#urgente {
     font-size: 3em;
     font-family: 'Cormorant Garamond', serif;
@@ -153,19 +158,19 @@ h1#urgente {
     color: white;
 }
 
-h1.descricao{
+p.descricao{
     padding: 25px;
     font-size: 1.5em;
-    text-align: justify;
+    text-align: center;
     color: white;
 }
 
-h1.descricao:hover {
+p.descricao:hover {
     text-decoration: underline;
     text-decoration-color: white;
 }
 
-h1.descricao:active {
+p.descricao:active {
     color: yellow;
 }
 
@@ -231,6 +236,10 @@ section.outros p:hover {
     color: white;
     text-decoration: underline;
     text-decoration-color: white;
+}
+
+section.outros p:active {
+    color: yellow;
 }
 
 h2 {
