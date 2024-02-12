@@ -8,17 +8,26 @@ header h1 {
     font-size: 3em;
 }
 
+h1.title {
+    margin: 20px 0px 40px 0px;
+    margin-left: 0px;
+    font-size: 1.8em;
+}
+
 h1#suasnoticias {
-    margin-left: 20px;
+    margin: 35px 0px 0px 0px;
+    margin-left: 0px;
 }
 
 div#data {
-    margin-left: 55px;
-    top: 170px;
+    position: static;
+    margin: 0px 0px 50px 35px;
+    
 }
 
 main {
     width: 90vw;
+    height: 1050px;
 }
 
 hr {
@@ -26,12 +35,45 @@ hr {
 }
 
 section.logo {
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;  
+    height: 450px;
+    margin: auto;
+    margin-top: 20px;
+     
 }
 
-div.info {
+section.logo > div.info {
+    width: 340px;
     position: static;
-    display: block;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0px;
+}
+
+section.logo > div.info p {
+    font-size: 1em;
+}
+
+section.outros {
+    width: 90vw;
+}
+
+section.outros > a > p {
+    font-size: 1em;
+}
+
+footer {
+    height: 25vh;
+}
+
+footer > p#acorde {
+    padding-top: 15px;
+    font-size: 1.8em;
+}
+
+footer p {
+    font-size: 1.3em;
+}
+
+footer > div#rodapé {
+    font-size: 0.8em;
 }
