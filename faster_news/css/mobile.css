@@ -9,19 +9,17 @@ header h1 {
 }
 
 h1.title {
-    margin: 20px 0px 40px 0px;
-    margin-left: 0px;
     font-size: 1.8em;
+    margin-left: 20px;
 }
 
 h1#suasnoticias {
-    margin: 35px 0px 0px 0px;
-    margin-left: 0px;
+    margin-left: 20px;
 }
 
 div#data {
     position: static;
-    margin: 0px 0px 50px 35px;
+    margin: 0px 0px 50px 22px;
     
 }
 
@@ -30,18 +28,30 @@ main {
     height: 1050px;
 }
 
+h1.smalltitle {
+    font-size: 1.2em;
+    padding: 35px;
+}
+
 hr {
     width: 79vw;
 }
 
 section.logo {
     height: 450px;
-    width: calc(95vw - 35px);
+    width: 320px;
     margin: auto;
     margin-top: 20px;
-    
-     
 }
+
+section.logo > div.caixa {
+    width: 320px;
+}
+
+div.caixa > a > p.descricao {
+    font-size: 1.4em;  
+}
+
 
 section.logo > div.info {
     width: 340px;
@@ -64,7 +74,7 @@ section.outros > a > p {
 }
 
 footer {
-    height: 25vh;
+    height: 20vh;
 }
 
 footer > p#acorde {
