@@ -1,2 +1,37 @@
 @charset "UTF-8";
 
+header {
+    height: 65px;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+h1#suasnoticias {
+    margin-left: 20px;
+}
+
+div#data {
+    margin-left: 55px;
+    top: 170px;
+}
+
+main {
+    width: 90vw;
+}
+
+hr {
+    width: 79vw;
+}
+
+section.logo {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;  
+}
+
+div.info {
+    position: static;
+    display: block;
+}
