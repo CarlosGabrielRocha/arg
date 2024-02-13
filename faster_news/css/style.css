@@ -87,7 +87,7 @@ h1#suasnoticias {
 }
 
 div#data {
-    margin: 0px 0px 25px 205px;
+    margin: 8px 0px 25px 205px;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.63);
 }
@@ -109,7 +109,7 @@ h1.smalltitle {
     position: relative;
     padding: 25px;  
     font-size: 1.4em;
-    font-weight: normal;
+    font-weight: bold;
     color: #76ACF8;
 }
 
