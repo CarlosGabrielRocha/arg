@@ -24,7 +24,7 @@
 }
 
 :root {
-    --cor0: #9792E3;
+    --cor0: #1F1F1F;
     --cor1: #BACABF;
     --cor2: #123961;
     --cor3: #051120;
@@ -38,27 +38,50 @@ body {
 }
 
 header {
-    height: 75px;
-    background-color: var(--cor2);
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #123961;
+
+    background-color: var(--cor3);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-variant: small-caps;
 }
 
 header h1 {
-    font-size: 3.5em;
-    text-align: center;
+    font-size: 3em;
     text-shadow: 5px 1px 3px rgba(0, 0, 0, 0.24);
     color: white;
-    background-color: var(--cor2);
+    background-color: var(--cor3);
+}
+
+header #menumobile {
+    display: none;
+}
+
+menu#opcoes {
+    display: none;
 }
 
 nav {
+    box-sizing: border-box;
     position: relative;
-    height: 35px;
-    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 524px;
+    margin: auto;
+
     font-family: 'navegar';
     text-align: center;
-    background-color: var(--cor3);
+    border-radius: 8px;
+    background-color: #1F1F1F;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.363);
 }
 
@@ -66,11 +89,53 @@ a {
     text-decoration: none;
 }
 
+a:active {
+   color: yellow;
+}
+
 nav > a{
-    padding: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 0 27px;
     font-size: 1.2em;
     color: white;
+    z-index: 1;
 }
+
+nav > span.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95px;
+    height: 100%;
+    background: linear-gradient(45deg, #051120, #123961);
+    border-radius: 8px;
+    transition: .3s;
+}
+
+nav a:nth-child(1):hover~span.menu {
+    left: 0;
+}
+
+nav a:nth-child(2):hover~span.menu {
+    left: 123px;
+}
+
+nav a:nth-child(3):hover~span.menu {
+    left: 244px;
+    width: 80px;
+}
+
+nav a:nth-child(4):hover~span.menu {
+    left: 349px;
+    width: 80px;
+}
+
+nav a:nth-child(5):hover~span.menu {
+    left: 456px;
+    width: 68px;
+}
+
 
 h1.title { 
     margin: 25px 0px 20px 30px;
@@ -244,17 +309,11 @@ footer {
     
     font-size: 1.3em;
     text-align: center;
+    border-top: 4px solid #123961;
 
     color: white;
     background-color: #051120;
 }
-
-footer > div#cor {
-    width: 100%;
-    height: 5px;
-    background-color: #123961;
-}
-
 
 footer p#acorde {
     padding-top: 20px;

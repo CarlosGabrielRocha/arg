@@ -1,11 +1,60 @@
 @charset "UTF-8";
 
 header {
-    height: 65px;
+    height: 100px;
 }
 
 header h1 {
     font-size: 3em;
+}
+
+header > span#menumobile {
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+header > span#menumobile:hover {
+    color: rgba(255, 255, 255, 0.829);
+}
+
+menu#opcoes {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 220px;
+    margin-top: 333px;
+
+    font-variant: normal;
+    font-size: 1.1em;
+    font-family: 'navegar';
+    text-align: center;
+    z-index: 1;
+    background-color: #0f0f0f;   
+}
+
+menu#opcoes ul {
+    width: 200px;
+    height: 180px;
+    list-style-type: none;
+}
+
+menu#opcoes > ul > li:hover {
+    background-color: #1f1f1f81;
+}
+
+menu#opcoes a {
+    display: block;
+    width: 200px;
+    padding: 8px 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.473);
+    color: white;
+}
+
+nav {
+    display: none;
 }
 
 h1.title {
