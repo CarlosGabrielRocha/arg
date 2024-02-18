@@ -13,11 +13,6 @@
     src: url('../fontes/TitilliumWeb-Light.ttf') format('TrueType')
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
-
-/* font-family: 'Cormorant Garamond', serif; */
-
-
 * {
     margin: 0px;
     padding: 0px;

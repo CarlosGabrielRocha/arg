@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 header {
     height: 100px;
 }
@@ -21,7 +22,7 @@ header > span#menumobile:hover {
 }
 
 menu#opcoes {
-    display: none;
+    display: block;
     position: absolute;
     width: 200px;
     height: 220px;

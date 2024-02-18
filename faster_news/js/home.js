@@ -70,8 +70,3 @@ sistema.innerHTML = `${diasem}, ${dia} de ${mes}.`
 
 //menu
 
-function ClicarMenu() {
-    if (opcoes.style.display == 'none') {
-        opcoes.style.display = 'block'
-    }
-}
