@@ -22,7 +22,7 @@ header > span#menumobile:hover {
 }
 
 menu#opcoes {
-    display: block;
+    display: none;
     position: absolute;
     width: 200px;
     height: 220px;
@@ -124,11 +124,10 @@ section.outros > a > p {
 }
 
 footer {
-    height: 20vh;
+    height: 165px;
 }
 
 footer > p#acorde {
-    padding-top: 15px;
     font-size: 1.8em;
 }
 
