@@ -5,10 +5,6 @@ header {
     height: 100px;
 }
 
-header h1 {
-    font-size: 3em;
-}
-
 header > span#menumobile {
     display: block;
     position: absolute;
@@ -65,8 +61,9 @@ h1.title {
 
 
 main {
-    width: 95vw;
-    height: 1200px;
+    width: 90vw;
+    max-width: 500px;
+    height: 1100px;
 }
 
 h1#suasnoticias {
@@ -84,22 +81,27 @@ div#data {
 
 h1.smalltitle {
     font-size: 1.2em;
-    margin-left: 36px;
+    margin-left: 23px;
+
 }
 
 hr {
-    width: 79vw;
+    width: 80vw;
+    max-width: 450px;
 }
 
 section.logo {
-    height: 450px;
+    height: 350px;
     width: 320px;
     margin: auto;
-    
+    margin-top: 30px;
+    margin-bottom: 100px;
+     
 }
 
 section.logo > div.caixa {
     width: 320px;
+    height: 180px;
 }
 
 div.caixa > a > p.descricao {
@@ -110,6 +112,7 @@ div.caixa > a > p.descricao {
 section.logo > div.info {
     width: 320px;
     position: static;
+    display: block;
     margin: auto;
     margin-top: 20px;
     padding: 0px;
@@ -120,7 +123,12 @@ section.logo > div.info p {
 }
 
 section.outros {
-    width: 90vw;
+    width: 95vw;
+    max-width: 600px;
+}
+
+section.outros > hr {
+    width: 350px;
 }
 
 section.outros > a > p {

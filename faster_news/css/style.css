@@ -264,6 +264,7 @@ div.info p:active {
 h1#vejatambem {
     position: absolute;
     top: -70px;
+    margin-left: 10px;
 }
 
 .subtitle {
