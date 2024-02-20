@@ -5,6 +5,10 @@ header {
     height: 100px;
 }
 
+header > h1 {
+    font-size: 3em;
+}
+
 header > span#menumobile {
     display: block;
     position: absolute;
@@ -149,4 +153,24 @@ footer p {
 
 footer > div#rodapé {
     font-size: 0.8em;
+}
+
+@media screen and (max-width: 370px) {
+    
+    section.logo {
+        width: 260px;
+    }
+    
+    section.logo > div.caixa {
+        width: 260px;
+        height: 160px;
+    }
+
+    section.logo > div.info {
+        width: 260px;
+    }
+
+    section.outros > hr {
+        width: 250px;
+    }
 }
