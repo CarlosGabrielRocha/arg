@@ -84,3 +84,10 @@ function Tamanho() {
         opcoes.style.display = 'none'
     }
 }
+
+//audio
+
+function ExecAudio() {
+    var play = window.document.getElementById('playaudio')
+    playaudio.play()
+}

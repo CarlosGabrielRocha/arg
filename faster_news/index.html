@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 769px) and (max-width: 992px)">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body onresize="Tamanho()">
+<body onresize="Tamanho()" onmouseover="ExecAudio()" >
     
     <header>
         <h1>faster news</h1>
@@ -108,7 +108,7 @@
                 <p>Convidada especial Ana Casteli ensina a fritar frango na água. "Depois que aprendi a fazer desse jeito, nunca mais fritei no óleo."</p>
             </a>
         </section>
-        <audio autoplay="autoplay" src="Art Of Silence.mp3" type="audio/mpeg"></audio>
+        <audio src="Art Of Silence.mp3" type="audio/mpeg" id="playaudio" loop></audio>
     <footer>
         <p id="acorde">Acorde</p>
         <p>A.R.G</p>
