@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faster Piadas</title>
+    <link rel="stylesheet" href="../css/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="../css/tablet.css" media="screen and (min-width: 769px) and (max-width: 992px)">
+    <link rel="stylesheet" href="../css/style.css" media="all">
+    <link rel="stylesheet" href="piadas.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <body onresize="Tamanho()" onmouseover="ExecAudio()" >
+        <header>
+            <h1>faster <span id="piadas">piadas</span></h1>
+            <span class="material-symbols-outlined" id="menumobile" onclick="ClickMenu()">menu</span>
+            <menu id="opcoes">
+               <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="../index.html">Recentes</a></li>
+                <li><a href="#">Culinária</a></li>
+                <li><a href="#">Piadas</a></li>
+                <li><a href="#">2024</a></li>
+               </ul>
+            </menu>
+        </header>
+        <nav>
+            <a href="../index.html">Recentes</a>
+            <a href="#">Culinária</a>
+            <a href="#">Home</a>
+            <a href="#">Piadas</a>
+            <a href="#">2024</a>
+            <span class="menu"></span>
+        </nav>
+        <main>
+            <h1 class="title" id="suasnoticias">Suas piadas</h1>
+            <div id="data"></div>
+            <h1 class="smalltitle">Melhores piadas<span class="material-symbols-outlined">arrow_forward_ios</span>
+            </h1>
+            <hr>
+
+            <section class="vid">
+                <h1>Lembra desse vídeo?</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/msSc7Mv0QHY?si=lYDLsUgeYtJcVD30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>Esse vídeo fez bastante sucesso entre os amantes de cacarejo em meados de 2014.</p>
+            </section>
+
+            <hr>
+
+            <section class="conto">
+                <h1>Conto de galinha</h1>
+                <p>Uma galinha diz para a outra: <br> - Ontem à noite estive com febre! <br> Pergunta a outra: - Como é que sabes? <br> Responde a primeira: <br> - Pus um ovo cozido...</p>
+                <p>Quando uma galinha diz miau? <input type="button" value="Resposta"></p>
+                Quando ele está aprendendo uma nova língua.
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QoeNeJz9LXE?si=lJkdCmM_8y3bmAxN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+            <section>
+                <p>O que as galinhas fazem para rir? <input type="button" value="Resposta"></p>
+                Elas contam piadas sobre pessoas
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/L8XbI9aJOXk?si=4KHGb3zuCHo1aktW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                <p>Ei, acho que já vi isso em algum lugar..</p>
+            </section>
+
+        </main>
+        
+        <footer>
+            <p id="acorde">Acorde</p>
+            <p>A.R.G</p>
+            <div id="rodapé">&copy; Todos os direitos reservados a Carlos Gabriel</div>
+        </footer>
+    <script src="../js/home.js"></script>
+</body>
+</html>

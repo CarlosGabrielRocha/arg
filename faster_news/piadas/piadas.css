@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'piada';
+    src: url('../fontes/fasterpiadas-Regular.ttf');
+}
+
+
+header h1 {
+    margin-left: 20px;
+    font-size: 3.5em;
+    color: rgb(255, 255, 255);
+}
+
+header > h1 > span#piadas {
+    font-family: 'piada';
+    font-size: 1.1em;
+    letter-spacing: 5px;
+}
+
+main {
+    height: 1900px;
+    background-color: #1f1f1f;
+}
+
+main p {
+    padding: 10px;
+}
+
+main > section {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+section.vid {
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+section.vid > h1 {
+   margin-bottom: 30px;
+   font-size: 2em;
+}
+
+section.vid > p {
+    margin-top: 20px;
+}
+
+section.conto {
+
+}
+
+
+
+
+
+

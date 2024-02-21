@@ -52,7 +52,6 @@ header h1 {
     font-size: 3.5em;
     text-shadow: 5px 1px 3px rgba(0, 0, 0, 0.24);
     color: white;
-    background-color: var(--cor3);
 }
 
 header #menumobile {
@@ -112,7 +111,7 @@ nav a:nth-child(1):hover~span.menu {
     left: 0;
 }
 
-nav a:nth-child(2):active~span.menu {
+nav a:nth-child(2):hover~span.menu {
     left: 123px;
 }
 
