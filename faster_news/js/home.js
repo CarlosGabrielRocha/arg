@@ -87,9 +87,8 @@ function Tamanho() {
 
 //audio
 
-/*
+
 function ExecAudio() {
     var play = window.document.getElementById('playaudio')
     playaudio.play()
 }
-*/
