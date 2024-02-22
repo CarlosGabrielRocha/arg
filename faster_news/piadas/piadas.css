@@ -19,7 +19,7 @@ header > h1 > span#piadas {
 }
 
 main {
-    height: 1900px;
+    height: auto;    
     background-color: #1f1f1f;
 }
 
@@ -45,6 +45,7 @@ section > iframe {
 main p {
     padding: 5px;
     margin-left: 20px;
+    text-align: justify;
 }
 
 section.vid {
@@ -55,15 +56,36 @@ section h1 {
    font-size: 2em;
 }
 
+section.conto {
+    align-items: center;
+}
+
+section.conto p {
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.384);
+
+}
 
 section.conto h1 {
-    align-self: center;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color:  white
 }
 
 section.principal {
     align-items: center;
     font-size: 1.3em;
 }
+
+section.principal > div {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+section.principal > iframe {
+    display: none;
+}
+
 
 
 
