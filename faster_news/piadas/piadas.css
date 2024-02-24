@@ -5,17 +5,17 @@
     src: url('../fontes/Cakecafe.ttf');
 }
 
-header h1 {
-    margin-left: 20px;
+header > h1 {
     font-family: 'piada';
-    font-size: 3em;
+    font-size: 2.6em;
     letter-spacing: 1px;
-    text-shadow: 5px 3px black;
+    text-shadow: 5px 1px 4px black;
     color: rgb(255, 255, 255);
 }
 
 main {
-    height: auto;    
+    height: auto; 
+    margin-top: 100px;   
     background-color: #1f1f1f;
 }
 
@@ -45,8 +45,7 @@ main p {
 
 
 section h1 {
-   font-size: 2em;
-   text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.322)
+   font-size: 2.2em;
 }
 
 section.conto > .box {
@@ -62,7 +61,7 @@ section.conto > .box {
 }
 
 section.conto h1 {
-    font-size: 1.8em;
+    font-size: 2.2em;
     margin-bottom: 20px;
     color:  white
 }
@@ -89,7 +88,7 @@ section.principal > div {
 }
 
 section.principal > div:hover {
-    font-size: .9em;
+    color: yellow;
 }
 
 section.principal > iframe {
@@ -115,7 +114,7 @@ section.principal > iframe {
     }
 
     header h1 {
-        font-size: 2.5em;
+        font-size: 2.3em;
     }
 
     nav {
@@ -123,12 +122,12 @@ section.principal > iframe {
     }
 
     main {
-        width: 90vw;
+        width: 95vw;
         max-width: 500px;
     }
 
     section h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
     section.vid > p {
@@ -142,13 +141,33 @@ section.principal > iframe {
     }
     
     iframe {
-        width: 80vw;
+        width: 85vw;
         max-width: 450px;
         height: 230px;
     }
 
+    section.conto h1 {
+        font-size: 1.6em;
+    }
+
     section.principal {
         font-size: 1.1em;
+    }
+
+    footer {
+        height: 165px;
+    }
+    
+    footer > p#acorde {
+        font-size: 1.8em;
+    }
+    
+    footer p {
+        font-size: 1.3em;
+    }
+    
+    footer > div#rodapé {
+        font-size: 0.8em;
     }
 }
 
