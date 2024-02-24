@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+body {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+header {
+    background-color: #F7F7F7;
+    border-bottom: 1px solid black;
+}
+
+header > h1 {
+    color: rgba(0, 0, 0, 0.877);
+    text-shadow: none;
+    
+}
+
+h1#escolha {
+    transform: translate(45px, 100px);
+}
+
+main {
+    flex-direction: row;
+    
+    width: 1300px;
+    height: 600px;
+    padding: 0px;
+    margin-top: 100px;
+  
+    border-radius: 0px;
+    box-shadow: none;
+
+    background-color: white;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+#carbonara, #torta, #frango {
+    max-width: 400px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+main div.imagem {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 400px;
+}
+
+main > div.imagem > p {
+    font-size: 1.5em;
+    text-align: justify;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+.curtir {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px 0px 0px;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.432);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.671);
+    z-index: 1;
+}
+
+.curtir > span {
+   transform: scale(.9);
+}
+
+.curtir:hover{
+    cursor: pointer;
+    background-color: rgba(240, 54, 54, 0.692);
+    transform: scale(1.1);
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    
+    
+}
+
+footer {
+    border-top: 2px solid black;
+    background-color: #F7F7F7;
+    color: black;
+}
+
+footer p#acorde {
+    font-weight: bold;
+    text-shadow: none;
+}
+
+footer p {
+    font-family: bolder;
+    text-shadow: none;
+}
+
+div#rodapé {
+    color: white;
+}
+
+
