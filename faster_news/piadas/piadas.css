@@ -2,20 +2,16 @@
 
 @font-face {
     font-family: 'piada';
-    src: url('../fontes/fasterpiadas-Regular.ttf');
+    src: url('../fontes/Cakecafe.ttf');
 }
-
 
 header h1 {
     margin-left: 20px;
-    font-size: 3.5em;
-    color: rgb(255, 255, 255);
-}
-
-header > h1 > span#piadas {
     font-family: 'piada';
-    font-size: 1.1em;
-    letter-spacing: 5px;
+    font-size: 3em;
+    letter-spacing: 1px;
+    text-shadow: 5px 3px black;
+    color: rgb(255, 255, 255);
 }
 
 main {
@@ -26,49 +22,48 @@ main {
 main > section {
     box-sizing: border-box;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
-    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-
-section {
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
+    
 section > iframe {
-    align-self: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    align-self: center;
+    border: 5px solid rgba(0, 0, 0, 0.479);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.322);
 }
 
 main p {
     padding: 5px;
-    margin-left: 20px;
     text-align: justify;
 }
 
-section.vid {
-    align-items: center;
-}
 
 section h1 {
    font-size: 2em;
+   text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.322)
 }
 
-section.conto {
-    align-items: center;
-}
-
-section.conto p {
+section.conto > .box {
     width: 250px;
-    background-color: rgba(0, 0, 0, 0.384);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.151);
+    
+}
 
+.box p {
+    padding: 10px;
 }
 
 section.conto h1 {
     font-size: 1.8em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color:  white
 }
 
@@ -77,13 +72,95 @@ section.principal {
     font-size: 1.3em;
 }
 
+section.principal p {
+    margin-bottom: 10px;
+}
+
 section.principal > div {
+    box-sizing: border-box;
+    padding: 5px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.473);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.151);
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+}
+
+section.principal > div:hover {
+    font-size: .9em;
 }
 
 section.principal > iframe {
     display: none;
+}
+
+@media screen and (max-width: 370px) {
+    
+    section h1 {
+        font-size: 1.5em;
+    }
+
+    iframe {
+        height: 100px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    header {
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav {
+        display: none;
+    }
+
+    main {
+        width: 90vw;
+        max-width: 500px;
+    }
+
+    section h1 {
+        font-size: 1.8em;
+    }
+
+    section.vid > p {
+        width: 80vw;
+        max-width: 450px;
+    }
+
+    hr {
+        width: 80vw;
+        max-width: 450px;
+    }
+    
+    iframe {
+        width: 80vw;
+        max-width: 450px;
+        height: 230px;
+    }
+
+    section.principal {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    main {
+        width: 700px;
+        height: auto;
+    }
+    
+    hr {
+        width: 655px;
+    }
 }
 
 
