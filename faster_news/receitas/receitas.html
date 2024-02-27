@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="receitas.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body onresize="Tamanho()" onmouseover="ExecAudio()" >
+<body onresize="Tamanho()" >
     <header>
         <h1>faster receitas</h1>
         <span class="material-symbols-outlined" id="menumobile" onclick="ClickMenu()">menu</span>
@@ -34,20 +34,20 @@
     </nav>
     <h1 id="escolha">Faça a sua escolha!</h1>
     <main>
-        <div class="imagem">
+        <div class="imagem" onclick="escolheu()">
             <div class="curtir"><span class="material-symbols-outlined">favorite</span></div>
             <img src="../imagens/macarrao.jpg" alt="macarrao" id="carbonara">
-            <p>O melhor carbonara que você vai comer na vida</p>
+                <p>O melhor carbonara que você vai comer na vida</p>
         </div>
-        <div class="imagem">
+        <div class="imagem"  onclick="escolheu()">
             <div class="curtir"><span class="material-symbols-outlined">favorite</span></div>
             <img src="../imagens/torta.jpg" alt="torta" id="torta">
-            <p>Como preparar uma deleciosa Torta de limão</p>
+                <p>Como preparar uma deleciosa Torta de limão</p>
         </div>
-        <div class="imagem">
+        <div class="imagem"  onclick="escolheu()">
             <div class="curtir"><span class="material-symbols-outlined">favorite</span></div>
             <img src="../imagens/frango.jpg" alt="frango frito" id="frango">
-            <p>Ana casteli ensina a frita frango na água.</p>
+                <p>Ana casteli ensina a frita frango na água.</p>
         </div>
     </main>
 
@@ -56,6 +56,6 @@
         <p>A.R.G</p>
         <div id="rodapé">&copy; Todos os direitos reservados a Carlos Gabriel</div>
     </footer>
-    
+    <script src="../js/receitas.js"></script>
 </body>
 </html>
