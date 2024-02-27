@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025</title>
+    <title>2024</title>
+    <link rel="stylesheet" href="../css/tablet.css" media="screen and (min-width: 769px) and (max-width: 992px)">
+    <link rel="stylesheet" href="../css/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="../css/style.css" media="all">
+    <link rel="stylesheet" href="2024.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    
+    <body onresize="Tamanho()">
+        <header>
+            <h1>faster year</h1>
+            <span class="material-symbols-outlined" id="menumobile" onclick="ClickMenu()">menu</span>
+            <menu id="opcoes">
+               <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="../index.html">Recentes</a></li>
+                <li><a href="../receitas/receitas.html">Culinária</a></li>
+                <li><a href="../piadas/piadas.html">Piadas</a></li>
+                <li><a href="2024.html">2024</a></li>
+               </ul>
+            </menu>
+        </header>
+        <nav>
+            <a href="index.html">Recentes</a>
+            <a href="receitas/receitas.html">Culinária</a>
+            <a href="#">Home</a>
+            <a href="piadas/piadas.html">Piadas</a>
+            <a href="#">2024</a>
+            <span class="menu"></span>
+        </nav>
+
+        <main>
+            <section id="contagem">
+                <div id="dias">
+
+                </div>
+
+                <div id="horas">
+
+                </div>
+
+                <div id="minutos">
+
+                </div>
+
+                <div id="segundos">
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p id="acorde">Acorde</p>
+            <p>A.R.G</p>
+            <div id="rodapé">&copy; Todos os direitos reservados a Carlos Gabriel</div>
+        </footer>
+        
+        <script src="../js/home.js"></script>
 </body>
 </html>
