@@ -17,11 +17,21 @@ header > h1 {
 }
 
 h1#escolha {
-    transform: translate(45px, 100px);
-    width: 500px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border-color: rgba(0, 0, 0, 0.473);
+}
+
+div.inicio {
+    position: absolute;
+    top: -50px;
+    margin-left: 20px;
 }
 
 main {
+    position: relative;
     flex-direction: row;
     
     width: 1300px;
@@ -106,6 +116,45 @@ footer p {
 
 div#rodapé {
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+
+    div.inicio {
+        position: static;
+        margin: auto;
+    }
+
+    hr {
+        width: 300px;
+    }
+
+    main {
+        flex-direction: column;
+
+        width: 95vw;
+        height: auto;
+        
+        margin: 50px auto;
+    }
+
+    main div.imagem {
+        width: 300px;
+        margin-top: 50px;
+    }
+
+    main > div.imagem > p {
+        font-size: 1.2em;
+        width: 300px;
+    }
+
+    #carbonara, #torta, #frango {
+        max-width: 300px;
+        max-height: 400px;
+        width: auto;
+        height: auto;
+        border-radius: 5px;
+    }
 }
 
 
