@@ -12,7 +12,7 @@ header {
 
 header > h1 {
     color: rgba(0, 0, 0, 0.877);
-    text-shadow: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.253);
     
 }
 
@@ -21,7 +21,7 @@ h1#escolha {
 }
 
 hr {
-    width: 350px;
+    width: 300px;
     border-color: rgba(0, 0, 0, 0.473);
 }
 
@@ -107,13 +107,12 @@ footer {
 }
 
 footer p#acorde {
-    font-weight: bold;
-    text-shadow: none;
+    
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.253);
 }
 
 footer p {
-    font-family: bolder;
-    text-shadow: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.253);
 }
 
 div#rodapé {
@@ -135,24 +134,35 @@ div#rodapé {
         flex-direction: column;
         width: 95vw;
         height: auto;
-        margin: 150px auto;
+        margin: 100px auto;
     }
 
     main div.imagem {
         margin-top: 70px;
     }
+
 }
 
 
 @media screen and (max-width: 768px) {
 
+    header h1 {
+        font-size: 2.5em;
+    }
+
     div.inicio {
+        width: 300px;
+        font-size: .9em;
         position: static;
         margin: auto;
     }
 
+    div.inicio h1 {
+        padding: 10px;
+    }
+
     hr {
-        width: 298px;
+        width: 300px;
     }
 
     main {
@@ -177,6 +187,22 @@ div#rodapé {
     #carbonara, #torta, #frango {
         max-width: 300px;
         max-height: 400px;
+    }
+
+    footer {
+        height: 165px;
+    }
+    
+    footer > p#acorde {
+        font-size: 1.8em;
+    }
+    
+    footer p {
+        font-size: 1.3em;
+    }
+    
+    footer > div#rodapé {
+        font-size: 0.8em;
     }
 }
 
