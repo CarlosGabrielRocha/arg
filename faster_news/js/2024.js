@@ -1,7 +1,7 @@
-const p_dias = document.getElementById("dias")
-const p_horas = document.getElementById("horas")
-const p_min = document.getElementById("minutos")
-const p_seg = document.getElementById("segundos")
+const p_dias = document.getElementById("p_dias")
+const p_horas = document.getElementById("p_horas")
+const p_min = document.getElementById("p_min")
+const p_seg = document.getElementById("p_seg")
 
 const anoNovo = '1 jan 2025'
 

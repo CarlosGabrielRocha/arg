@@ -9,6 +9,19 @@
 
 /* font-family: "Open Sans", sans-serif; */
 
+body {
+    background-color: black;
+}
+
+header {
+    background-color: #1F1F1F;
+    border-bottom: 4px solid white;
+}
+
+nav > span.menu {
+    background: rgba(255, 255, 255, 0.349)
+}
+
 main {
     box-sizing: border-box;
     justify-content: center;
@@ -17,8 +30,9 @@ main {
     height: 600px;
     margin-top: 50px;
     border-radius: 0px;
-    background-color: black;
     font-family: "Open Sans", sans-serif;
+    background-color: black;
+    color: orange;
 }
 
 
@@ -27,6 +41,7 @@ main h1 {
     position: absolute;
     top: 250px;
     font-size: 3.5em;
+    font-weight: lighter;
 }
 
 main > p {
@@ -38,30 +53,44 @@ main > p {
 section#contagem {
     display: flex;
     flex-direction: row;
-    width: 1300px;
+    width: 1000px;
     height: 200px;
 
     border-radius: 30px;
     background-color: #1f1f1f56;
 }
 
-div {
-    width: 300px;
-    height: 300px;
+section > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 200px;
     text-align: center; 
 }
 
-#dias, #horas, #minutos {
+#dias, #horas, #minutos, #segundos {
     border-right: 2px solid black;
     font-family: 'relogio';
+    font-size: 4em;
 }
 
 #segundos {
-    font-family: 'relogio';
+    border: none;
 }
 
 #dias {
-    width: 400px;
     font-family: 'relogio';
+}
+
+
+div > span {
+    font-size: .5em;
+    font-family: "Open Sans", sans-serif;
+}
+
+footer {
+    background-color: #1F1F1F;
+    border-top: 4px solid white;
 }
 
