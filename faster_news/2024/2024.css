@@ -14,8 +14,12 @@ body {
 }
 
 header {
-    background-color: #1F1F1F;
-    border-bottom: 4px solid white;
+    background-color: black;
+    border-bottom: 2px solid white;
+}
+
+header h1 {
+    color: rgb(236, 184, 87);
 }
 
 nav > span.menu {
@@ -32,10 +36,8 @@ main {
     border-radius: 0px;
     font-family: "Open Sans", sans-serif;
     background-color: black;
-    color: orange;
+    
 }
-
-
 
 main h1 {
     position: absolute;
@@ -61,18 +63,16 @@ section#contagem {
 }
 
 section > div {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 250px;
     height: 200px;
-    text-align: center; 
-}
-
-#dias, #horas, #minutos, #segundos {
-    border-right: 2px solid black;
     font-family: 'relogio';
     font-size: 4em;
+    text-align: center; 
+    border-right: 2px solid black;
 }
 
 #segundos {
@@ -85,12 +85,93 @@ section > div {
 
 
 div > span {
-    font-size: .5em;
+    font-size: .3em;
     font-family: "Open Sans", sans-serif;
 }
 
 footer {
-    background-color: #1F1F1F;
-    border-top: 4px solid white;
+    background-color: black;
+    color: rgb(236, 184, 87);
+    border-top: 2px solid white;
 }
 
+footer > #rodapé {
+    background-color: #1f1f1f56;
+}
+
+@media screen and (max-width: 768px) {
+    
+    
+
+    header > h1 {
+        font-size: 2.8em;
+    }
+
+    nav {
+        display: none;
+    }
+    
+    main {
+        width: 95vw;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    main h1 {
+        position: static;
+        font-size: 3em;
+        margin-bottom: 50px;
+    }
+
+    main p {
+        font-size: 2em;
+    }
+
+    section#contagem {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        height: 600px;
+    }
+
+    section div {
+        display: block;
+        padding: 25px;
+        width: 60vw;
+        height: 150px;
+        font-family: 'relogio';
+        font-size: 1.8em;
+        border-bottom: 2px solid black;
+        border-right: none;
+    }
+    
+    #segundos {
+        border: none;
+    }
+    
+    #dias {
+        font-family: 'relogio';
+    }
+
+    div > span {
+        font-size: .6em;
+    }
+
+    footer {
+        height: 165px;
+    }
+
+    footer > p#acorde {
+        font-size: 1.8em;
+    }
+    
+    footer p {
+        font-size: 1.3em;
+    }
+    
+    footer > div#rodapé {
+        font-size: 0.8em;
+    }
+    
+}
