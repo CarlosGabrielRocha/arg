@@ -99,6 +99,12 @@ footer > #rodapé {
     background-color: #1f1f1f56;
 }
 
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    section#contagem {
+        width: 750px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     
     
@@ -132,6 +138,7 @@ footer > #rodapé {
         justify-content: center;
         align-items: center;
         width: 70vw;
+        max-width: 430px;
         height: 600px;
     }
 
@@ -139,6 +146,7 @@ footer > #rodapé {
         display: block;
         padding: 25px;
         width: 60vw;
+        max-width: 370px;
         height: 150px;
         font-family: 'relogio';
         font-size: 1.5em;
