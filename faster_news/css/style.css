@@ -169,6 +169,26 @@ main {
     background-color: #1F1F1F;
 }
 
+iframe {
+    display: none;
+    position: absolute;
+    width: 874px;
+    height: 750px;
+    transform: scale(100%);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+#exit {
+    display: none;
+    position: sticky;
+    max-width: max-content;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    background-color: black;
+    z-index: 1;
+}
+
 h1.smalltitle {
     position: relative;
     margin: 0px 0px 0px 20px;

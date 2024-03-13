@@ -84,3 +84,14 @@ function Tamanho() {
         opcoes.style.display = 'none'
     }
 }
+
+// iframe
+
+var n1 = document.getElementById('n1')
+
+function noticia1() {
+    if(n1.style.display == 'none' ) {
+        n1.style.display = 'block'
+    }    
+}
+
