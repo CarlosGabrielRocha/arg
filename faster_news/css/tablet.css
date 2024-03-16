@@ -4,11 +4,9 @@ header h1 {
     font-size: 3em;
 }
 
-
-
 main {
     width: 700px;
-    height: 800px;
+    height: 750px;
 }
 
 hr {
@@ -31,6 +29,33 @@ section.logo > div.info {
     left: 320px;
     padding-top: 0px;
     font-size: .9em;
+}
+
+section.news {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 700px;
+    height: 750px;
+
+    text-align: justify;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.774);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+section.news h1 {
+    margin: 20px;
+    color: white;
+}
+
+section.news p {
+    padding: 10px;
+    margin: 5px;
+    color: rgba(255, 255, 255, 0.801);
 }
 
 section.outros {

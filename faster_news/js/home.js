@@ -1,8 +1,8 @@
 
-var data = new Date()
-var diasem = data.getDay()
-var dia = data.getDate()
-var mes = data.getMonth()
+var data = new Date();
+var diasem = data.getDay();
+var dia = data.getDate();
+var mes = data.getMonth();
 switch(diasem) {
     case 0:
         diasem = 'Domingo'
@@ -65,38 +65,48 @@ switch(mes) {
         mes = 'Dezembro'
         break
 }
-var sistema = window.document.querySelector('div#data')
-sistema.innerHTML = `${diasem}, ${dia} de ${mes}.`
+var sistema = window.document.querySelector('div#data');
+sistema.innerHTML = `${diasem}, ${dia} de ${mes}.`;
 
 //menu
 
 function ClickMenu(){
 
     if (opcoes.style.display == 'block'){
-        opcoes.style.display = 'none'
+        opcoes.style.display = 'none';
     } else {
-        opcoes.style.display = 'block'
+        opcoes.style.display = 'block';
     }
 }
 
 function Tamanho() {
     if (window.innerWidth > 768) {
-        opcoes.style.display = 'none'
+        opcoes.style.display = 'none';
     }
 }
 
 //audio
 
 function ExecAudio() {
-var play = document.getElementById('playaudio')
-playaudio.play()
+var play = document.getElementById('playaudio');
+playaudio.play();
 }
 
 // news
 
-function noti() {
-    let new1 = document.getElementById('new1')
-    if(new1.style.display == "none") {
-        new1.style.display = "block"
-    }
+function noticiaOne() {
+    new1.style.display = "flex";
+    exit.style.display = "block";
+}
+
+function noticiaTwo() {
+    new2.style.display = "flex";
+    exit.style.display = "block";
+}
+
+function sair() {
+    new1.style.display = "none";
+    new2.style.display = "none";
+    exit.style.display = "none";
+
 }

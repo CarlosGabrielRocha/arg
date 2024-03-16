@@ -126,6 +126,38 @@ section.logo > div.info p {
     font-size: 1em;
 }
 
+section.news {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 90vw;
+    max-width: 500px;
+    height: 1100px;
+
+    text-align: justify;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.774);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+section.news h1 {
+    margin: 10px;
+    color: white;
+}
+
+section.news p {
+    padding: 8px;
+    color: rgba(255, 255, 255, 0.801);
+}
+
+section.news img {
+    width: 350px;
+    transform: scale(0.9);
+}
+
 section.outros {
     width: 95vw;
     max-width: 600px;
@@ -172,5 +204,16 @@ footer > div#rodapé {
 
     section.outros > hr {
         width: 250px;
+    }
+
+    section.news p {
+        font-size: .9em;
+        padding: 20px;
+        color: rgba(255, 255, 255, 0.801);
+    }
+
+    section.news img {
+        width: 300px;
+        transform: scale(0.9);
     }
 }

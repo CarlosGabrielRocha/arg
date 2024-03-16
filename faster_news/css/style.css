@@ -268,7 +268,7 @@ section.news {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
     width: 874px;
     height: 750px;
 
@@ -295,6 +295,7 @@ section.news img {
 }
 
 #exit {
+    display: none;
     position: sticky;
     max-width: max-content;
     cursor: pointer;
@@ -316,7 +317,7 @@ section.news::-webkit-scrollbar-thumb {
     border: 0.5px solid black;
 }
 
-section#new1 {
+section#new1, section#new2 {
     display: none;
 }
 
