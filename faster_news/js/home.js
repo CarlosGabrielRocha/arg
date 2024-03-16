@@ -92,11 +92,11 @@ var play = document.getElementById('playaudio')
 playaudio.play()
 }
 
-// iframe
+// news
 
-function noticia1() {
-    if (n1.style.display == 'none' ) {
-        n1.style.display = 'block'
-    } 
+function noti() {
+    let new1 = document.getElementById('new1')
+    if(new1.style.display == "none") {
+        new1.style.display = "block"
+    }
 }
-

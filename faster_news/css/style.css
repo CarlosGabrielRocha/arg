@@ -169,28 +169,6 @@ main {
     background-color: #1F1F1F;
 }
 
-div#n1 {
-    display: none;
-}
-
-iframe.news {
-    position: absolute;
-    width: 874px;
-    height: 750px;
-    border-radius: 5px;
-    z-index: 1;
-}
-
-#exit {
-    display: none;
-    position: sticky;
-    max-width: max-content;
-    cursor: pointer;
-    border-top-left-radius: 5px;
-    background-color: black;
-    z-index: 1;
-}
-
 h1.smalltitle {
     position: relative;
     margin: 0px 0px 0px 20px;
@@ -285,6 +263,66 @@ div.info p:active {
     color: yellow;
 }
 
+section.news {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 874px;
+    height: 750px;
+
+    text-align: justify;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.774);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+section.news h1 {
+    margin: 20px;
+    color: white;
+}
+
+section.news p {
+    padding: 10px;
+    margin: 5px;
+    color: rgba(255, 255, 255, 0.801);
+}
+
+section.news img {
+    transform: scale(0.9);
+}
+
+#exit {
+    position: sticky;
+    max-width: max-content;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    background-color: black;
+    z-index: 2;
+}
+
+section.news::-webkit-scrollbar {
+    width: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.74);
+}
+
+section.news::-webkit-scrollbar-thumb {
+    background-color: rgb(53, 53, 53);
+    border-radius: 5px;
+    border: 0.5px solid black;
+}
+
+section#new1 {
+    display: none;
+}
+
+/* conteudo após o main */
+
+
 h1#vejatambem {
     position: absolute;
     top: -70px;
@@ -331,6 +369,7 @@ h2 {
     font-size: 1em;
     padding: 10px;
 }
+
 
 footer {
     display: flex;

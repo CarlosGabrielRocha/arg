@@ -33,17 +33,21 @@
     </nav>
     
     <main>
-        <div id="n1"><iframe src="noticia1.html" frameborder="0" class="news"></iframe>
-        </div>
-        <span class="material-symbols-outlined" id="exit" onclick="Exit()">
+
+        <span class="material-symbols-outlined" id="exit" onclick="noti()">
             close
-        </span>
-       
+            </span>
+
+        <!-- exit -->
+            
         <h1 class="title" id="suasnoticias">Suas notícias</h1>
         <div id="data"></div>
+
         <h1 class="smalltitle">Principais Notícias<span class="material-symbols-outlined">arrow_forward_ios</span>
         </h1>
+
         <hr>
+
         <section class="logo">
                     <h1 id="urgente">Urgente</h1>
                     <div class="caixa">
@@ -65,6 +69,7 @@
         </section>
 
         <hr>
+        
         <section class="logo">
                 <h1  id="urgente">Urgente</h1>
                 <div class="caixa">
@@ -88,7 +93,22 @@
             </a>
         </div>
     </section>
+
+    <!-- Esse contéudo só irá aparecer quando o usuário clicar na respectiva noticia. -->
+
+    <section class="news" id="new1">
+
+        <h1>Título</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae officia repudiandae suscipit neque voluptatem quae repellendus ipsum consequatur maiores mollitia, officiis nobis praesentium magni ullam quasi ex quia placeat? Earum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit delectus, sit numquam dolore natus dolorem laborum error sapiente assumenda, incidunt minima. Repellendus eum ad iure eveniet consequuntur totam. Laudantium, numquam.</p>
+        <img src="imagens/teste.png" alt="teste">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint tempora quas quam repellat unde ea? Dolorem commodi sequi praesentium, explicabo eligendi est, blanditiis repudiandae tenetur odio reprehenderit dignissimos dolorum cumque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, consequuntur. Consectetur eum laboriosam rerum itaque eos eaque iste quisquam cupiditate, magnam ipsam, laudantium ipsum voluptates ea inventore doloribus minima accusamus!</p>
+        <img src="imagens/teste.png" alt="teste">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt animi laudantium eos, explicabo vitae quis optio ab aut qui nesciunt nulla nostrum aperiam laboriosam quasi nemo. Nihil fuga optio sapiente. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, ab soluta voluptate reprehenderit est vel facilis. Autem omnis porro molestias suscipit, deleniti dolore necessitatibus, nobis cumque dolores quaerat saepe doloremque!</p>
+    </section>
+
     </main>
+
         <section class="outros">
             <h1 class="title" id="vejatambem">Veja também</h1>
 
@@ -113,13 +133,17 @@
                 <p>Convidada especial Ana Casteli ensina a fritar frango na água. "Depois que aprendi a fazer desse jeito, nunca mais fritei no óleo."</p>
             </a>
         </section>
-        <audio src="Art Of Silence.mp3" type="audio/mpeg" id="playaudio" loop></audio>
+
+       
+
     <footer>
         <p id="acorde">Acorde</p>
         <p>A.R.G</p>
         <div id="rodapé">&copy; Todos os direitos reservados a Carlos Gabriel</div>
     </footer>
-    
+
+    <audio src="Art Of Silence.mp3" type="audio/mpeg" id="playaudio" loop></audio>
+
     <script src="js/home.js"></script>
 </body>
 </html>
