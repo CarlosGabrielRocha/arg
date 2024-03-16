@@ -304,12 +304,12 @@ section.news img {
 .exit {
     display: none;
     position: sticky;
+    top: 0;
     align-self: flex-start;
     max-width: max-content;
     cursor: pointer;
     border-top-left-radius: 5px;
     background-color: black;
-    z-index: 2;
 }
 
 section.news::-webkit-scrollbar {
