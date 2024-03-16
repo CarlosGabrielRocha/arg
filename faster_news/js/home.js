@@ -85,13 +85,18 @@ function Tamanho() {
     }
 }
 
+//audio
+
+function ExecAudio() {
+var play = document.getElementById('playaudio')
+playaudio.play()
+}
+
 // iframe
 
-var n1 = document.getElementById('n1')
-
 function noticia1() {
-    if(n1.style.display == 'none' ) {
+    if (n1.style.display == 'none' ) {
         n1.style.display = 'block'
-    }    
+    } 
 }
 

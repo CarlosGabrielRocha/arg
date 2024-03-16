@@ -169,12 +169,14 @@ main {
     background-color: #1F1F1F;
 }
 
-iframe {
+div#n1 {
     display: none;
+}
+
+iframe.news {
     position: absolute;
     width: 874px;
     height: 750px;
-    transform: scale(100%);
     border-radius: 5px;
     z-index: 1;
 }
