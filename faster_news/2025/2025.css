@@ -19,7 +19,7 @@ header {
 }
 
 header h1 {
-    color: rgb(236, 184, 87);
+    color: orangered;
 }
 
 nav > span.menu {
@@ -91,7 +91,7 @@ div > span {
 
 footer {
     background-color: black;
-    color: rgb(236, 184, 87);
+    color: orangered;
     border-top: 2px solid white;
 }
 
@@ -110,7 +110,11 @@ footer > #rodapé {
     
 
     header > h1 {
-        font-size: 2.8em;
+        font-size: 3em;
+    }
+
+    header > span#menumobile:hover {
+        color: orangered;
     }
 
     nav {

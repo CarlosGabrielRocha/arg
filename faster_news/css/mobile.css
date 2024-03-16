@@ -18,7 +18,7 @@ header > span#menumobile {
 }
 
 header > span#menumobile:hover {
-    color: rgba(255, 255, 255, 0.829);
+    color: rgba(255, 255, 255, 0.527);
 }
 
 menu#opcoes {
@@ -133,7 +133,7 @@ section.news {
     align-items: center;
     align-self: center;
     
-    width: 95vw;
+    width: 96vw;
     max-width: 650px;
     height: 1100px;
 

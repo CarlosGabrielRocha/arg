@@ -79,7 +79,7 @@ nav {
     text-align: center;
     border-radius: 8px;
     background-color: #1F1F1F;
-    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.363);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.363);
 }
 
 a {
@@ -285,7 +285,9 @@ section.news {
 }
 
 section.news h1 {
-    margin: 20px;
+    padding: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.623);
+    border-right: 1px solid rgba(255, 255, 255, 0.623);
     color: white;
 }
 
@@ -299,9 +301,10 @@ section.news img {
     transform: scale(0.9);
 }
 
-#exit {
+.exit {
     display: none;
     position: sticky;
+    align-self: flex-start;
     max-width: max-content;
     cursor: pointer;
     border-top-left-radius: 5px;

@@ -16,6 +16,10 @@ header > h1 {
     
 }
 
+nav > span.menu {
+    background: rgba(255, 255, 255, 0.349)
+}
+
 h1#escolha {
     margin-bottom: 10px;
 }
@@ -145,6 +149,10 @@ div#rodapé {
 
 
 @media screen and (max-width: 768px) {
+
+    header > span#menumobile:hover {
+        color: rgba(0, 0, 0, 0.459);
+    }
 
     div.inicio {
         width: 300px;
