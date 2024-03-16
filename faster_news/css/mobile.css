@@ -32,7 +32,7 @@ menu#opcoes {
     font-size: 1.1em;
     font-family: 'navegar';
     text-align: center;
-    z-index: 1;
+    z-index: 2;
     background-color: #0f0f0f;   
 }
 
@@ -131,9 +131,10 @@ section.news {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
     
-    width: 90vw;
-    max-width: 500px;
+    width: 95vw;
+    max-width: 650px;
     height: 1100px;
 
     text-align: justify;
