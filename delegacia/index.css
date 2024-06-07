@@ -1,1 +1,22 @@
 @charset "UTF-8";
+
+:root {
+--backColor: #01010D;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--backColor);
+    color: white;
+}
+
+main {
+    width: 900px;
+    height: 833px;
+    background-image: url(imagens/phone_main.png);
+    background-repeat: no-repeat;
+}
