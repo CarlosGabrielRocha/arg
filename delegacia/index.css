@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'teste';
+    src: url('fontes/Pixeled.ttf') format('TrueType');
+}
+
 :root {
 --backColor: #01010D;
 }
@@ -9,14 +14,46 @@
     padding: 0px;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.555);
+}
+
+header h1 {
+    color: white;
+    font-family: 'teste';
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+header a  {
+    align-self: flex-end;
+}
+
 body {
-    background-color: var(--backColor);
+    background-color: black;
     color: white;
 }
 
 main {
-    width: 900px;
-    height: 833px;
-    background-image: url(imagens/phone_main.png);
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 560px;
+    margin: auto;
+    margin-top: 60px;
+
+}
+
+div#phone {
+    position: relative;
+}
+
+div#icones {
+    position: absolute;
+    display: grid;
 }
