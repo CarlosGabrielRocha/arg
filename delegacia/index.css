@@ -61,22 +61,9 @@ main {
     margin-top: 60px;
 }
 
-div#phone {
+div#phone img {
     position: relative;
 }
-
-div#wallpaper {
-    width: 220px;
-    height: 450px;
-    position: absolute;
-}
-
-div#wallpaper img {
-    width: 220px;
-    height: 450px;
-    object-fit: cover;
-}
-
 
 div#icones {
     position: absolute;
