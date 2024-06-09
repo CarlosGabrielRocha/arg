@@ -5,6 +5,8 @@
     src: url('fontes/Breakthecode-rXp8.ttf') format('TrueType');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+
 :root {
 --backColor: #01010D;
 }
@@ -14,8 +16,14 @@
     padding: 0px;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 150px;
@@ -26,8 +34,7 @@ header h1 {
     color: white;
     font-family: 'teste';
     text-transform: uppercase;
-    font-size: 2em;
-    
+    font-size: 3.5em;
 }
 
 header a  {
@@ -36,19 +43,12 @@ header a  {
 
 body {
     background-color: black;
+    background-image: url('imagens/ceu.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     color: white;
-}
-
-div#fundo {
-    position: absolute;
-    background-image: url(imagens/code.gif);
-    background-size: cover;
-    width: 96vw;
-    height: 110vh;
-    opacity: 0.09;
-    z-index: -1;
+    font-family: "Quicksand", sans-serif;
 }
 
 main {
@@ -59,12 +59,24 @@ main {
     height: 560px;
     margin: auto;
     margin-top: 60px;
-
 }
 
 div#phone {
     position: relative;
 }
+
+div#wallpaper {
+    width: 220px;
+    height: 450px;
+    position: absolute;
+}
+
+div#wallpaper img {
+    width: 220px;
+    height: 450px;
+    object-fit: cover;
+}
+
 
 div#icones {
     position: absolute;
