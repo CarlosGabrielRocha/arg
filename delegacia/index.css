@@ -36,7 +36,19 @@ header a  {
 
 body {
     background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
+}
+
+div#fundo {
+    position: absolute;
+    background-image: url(imagens/code.gif);
+    background-size: cover;
+    width: 96vw;
+    height: 110vh;
+    opacity: 0.09;
+    z-index: -1;
 }
 
 main {
