@@ -52,20 +52,31 @@ body {
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 270px;
     height: 560px;
     margin: auto;
     margin-top: 60px;
 }
 
-div#phone img {
+div#phone {
     position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+div#hora {
+    position: absolute;
+    width: 242px;
+    height: 85px;
+    margin-top: 61px;
+    background-color: rgba(255, 0, 0, 0.473);
 }
 
 div#icones {
-    position: absolute;
+   position: absolute;
     display: grid;
+    width: 242px;
+    height: 340px;
+    margin-top: 145px;
+    background-color: rgba(0, 255, 255, 0.466);
 }
