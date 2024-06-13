@@ -43,7 +43,7 @@ header a  {
 
 body {
     background-color: black;
-    background-image: url('imagens/ceu.jpg');
+    background-image: url('imagens/ceu.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -75,6 +75,8 @@ div#hora {
 div#icones {
    position: absolute;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 80px 80px 80px;
     width: 242px;
     height: 340px;
     margin-top: 145px;
