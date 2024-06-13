@@ -64,21 +64,55 @@ div#phone {
     justify-content: center;
 }
 
-div#hora {
+div#topo {
     position: absolute;
     width: 242px;
     height: 85px;
     margin-top: 61px;
-    background-color: rgba(255, 0, 0, 0.473);
+}
+
+div#topo > p#hora {
+    font-size: 2em;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+div#topo > p#data {
+    font-size: 0.7em;
+    margin-left: 10px;
 }
 
 div#icones {
    position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 80px 80px 80px;
+    grid-template-rows: 70px 70px 70px 70px;
+    gap: 10px 20px;
     width: 242px;
     height: 340px;
     margin-top: 145px;
-    background-color: rgba(0, 255, 255, 0.466);
+}
+
+div.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+div.icone p {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 5px;
+}
+
+div.imagemIcone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.548);
 }
