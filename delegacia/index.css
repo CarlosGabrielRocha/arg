@@ -5,15 +5,19 @@
     src: url('fontes/Breakthecode-rXp8.ttf') format('TrueType');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+
+
+/* Configurações globais */
 
 :root {
---backColor: #01010D;
+--transparent: rgba(255, 255, 255, 0.055);
+--fontTransparent: rgba(255, 255, 255, 0.836);
 }
 
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 a {
@@ -21,34 +25,35 @@ a {
     color: white;
 }
 
+/* Topo da página */
+
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 150px;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.555);
+    color: var(--fontTransparent);
+    background-color: var(--transparent);
 }
 
 header h1 {
-    color: white;
+    margin: 10px;
     font-family: 'teste';
-    text-transform: uppercase;
-    font-size: 3.5em;
+    font-size: 2.5em;
+    letter-spacing: 3px;
 }
 
-header a  {
-    align-self: flex-end;
-}
+/* Corpo da página e contéudo principal */
 
 body {
     background-color: black;
     background-image: url('imagens/ceu.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: right bottom;
+    background-attachment: fixed;
     color: white;
-    font-family: "Quicksand", sans-serif;
+    font-family: 'quicksand';
 }
 
 main {
@@ -58,16 +63,20 @@ main {
     margin-top: 60px;
 }
 
+/* Telefone */
+
 div#phone {
     position: relative;
     display: flex;
     justify-content: center;
 }
 
+/* Topo do telefone */
+
 div#topo {
     position: absolute;
     width: 242px;
-    height: 85px;
+    height: 105px;
     margin-top: 61px;
 }
 
@@ -82,15 +91,17 @@ div#topo > p#data {
     margin-left: 10px;
 }
 
+ /* Configurações gerais dos icônes do telefone */
+
 div#icones {
    position: absolute;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 70px 70px 70px 70px;
     gap: 10px 20px;
     width: 242px;
-    height: 340px;
-    margin-top: 145px;
+    height: 320px;
+    margin-top: 165px;
 }
 
 div.icone {
@@ -115,4 +126,48 @@ div.imagemIcone {
     margin: auto;
     border-radius: 10px;
     background-color: rgba(128, 128, 128, 0.548);
+}
+
+/* Configurações pontuais dos icônes do telefone */
+
+#cameras {
+    grid-row: 4;
+    grid-column: 1;
+}
+
+#jornal {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+#caution {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+#mapa {
+    grid-row: 4;
+    grid-column: 3;
+}
+
+#lista {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+/* Rodapé */
+
+footer {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 1.2em;
+    text-align: center;
+    height: 83px;
+    color: var(--fontTransparent);
+}
+
+footer p {
+    background-color: var(--transparent);
+    width: 100%;
 }
