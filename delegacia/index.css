@@ -5,6 +5,17 @@
     src: url('fontes/Breakthecode-rXp8.ttf') format('TrueType');
 }
 
+@keyframes flutuar {
+    to {
+        transform: translateY(5%);
+    }
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
 /* Configurações globais */
 
 :root {
@@ -69,15 +80,17 @@ main {
 /* Telefone */
 
 div#phone {
+    filter: brightness(110%);
     position: relative;
     display: flex;
     justify-content: center;
-    pointer-events: none;
 }
+
 
 /* Topo do telefone */
 
 div#topo {
+    filter: sepia(100%);
     position: absolute;
     width: 242px;
     height: 105px;
@@ -99,7 +112,8 @@ div#topo > p#data {
  /* Configurações gerais dos icônes do telefone */
 
 div#icones {
-   position: absolute;
+    filter: sepia(100%);
+    position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 70px 70px 70px 70px;
@@ -108,6 +122,7 @@ div#icones {
     height: 320px;
     margin-top: 165px;
 }
+
 
 div.icone {
     display: flex;
@@ -130,7 +145,21 @@ div.imagemIcone {
     height: 45px;
     margin: auto;
     border-radius: 10px;
-    background-color: rgba(128, 128, 128, 0.253);
+    background-color: rgba(201, 201, 201, 0.459);
+}
+
+div.imagemIcone:hover {
+    animation: flutuar 1s ease-in-out infinite alternate;
+    background-color: white;
+}
+
+div.imagemIcone:active {
+    animation: girar 1s ease-in-out alternate;
+}
+
+div.imagemIcone img {
+    width: 36px;
+    height: 36px;
 }
 
 /* Configurações pontuais dos icônes do telefone */
@@ -145,11 +174,7 @@ div.imagemIcone {
     grid-column: 2;
 }
 
-#imagemDelegacia > img {
-    scale: 0.4;
-}
-
-#caution {
+#vulture {
     grid-row: 2;
     grid-column: 3;
 }
@@ -167,7 +192,7 @@ div.imagemIcone {
 /* Senha para os arquivos */
 
 section#campoSenha {
-    visibility: hidden;
+    
     display: flex;
     align-items: center; 
     flex-direction: column;
