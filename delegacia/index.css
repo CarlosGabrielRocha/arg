@@ -11,11 +11,6 @@
     }
 }
 
-@keyframes girar {
-    to {
-        transform: rotate(360deg);
-    }
-}
 /* Configurações globais */
 
 :root {
@@ -112,7 +107,6 @@ div#topo > p#data {
  /* Configurações gerais dos icônes do telefone */
 
 div#icones {
-    filter: sepia(100%);
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -144,17 +138,25 @@ div.imagemIcone {
     width: 45px;
     height: 45px;
     margin: auto;
-    border-radius: 10px;
-    background-color: rgba(201, 201, 201, 0.459);
+    border-radius: 15px;
 }
 
-div.imagemIcone:hover {
+div.inativo {
+    background-color: rgba(0, 0, 0, 0.466);
+    
+}
+
+div.inativo img {
+    opacity: 0.5;
+}
+
+div.ativo {
     animation: flutuar 1s ease-in-out infinite alternate;
     background-color: white;
 }
 
-div.imagemIcone:active {
-    animation: girar 1s ease-in-out alternate;
+div.ativo:hover {
+    background-color: #03d3b7;
 }
 
 div.imagemIcone img {
@@ -189,11 +191,12 @@ div.imagemIcone img {
     grid-column: 1;
 }
 
+
+
 /* Senha para os arquivos */
 
 section#campoSenha {
-    
-    display: flex;
+    display: none;
     align-items: center; 
     flex-direction: column;
     position: absolute;
