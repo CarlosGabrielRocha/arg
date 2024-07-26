@@ -1,76 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delegacia Catuama</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <div class="meteoro"></div>
-    <header>
-        <h1>Investigation</h1>
-    </header>
+
     <main>
         <div id="phone">
-            <img src="imagens/phone.svg" alt="phone">
+            <img src="midia/phone.svg" alt="phone">
 
             <div id="topo">
-                <p id="hora">12:32</p><p id="data">Domingo, 08 Novembro 2024</p>
+                <p id="hora">12:32</p>
+                <p id="data">Domingo, 08 Novembro 2024</p>
             </div>
 
             <div id="icones">
                 <div class="icone" id="notas">
                     <a href="#">
-                        <div class="imagemIcone ativo" id="imagemNotas"><img src="imagens/notas.svg" alt="notas"></div>
+                        <div class="imagemIcone ativo" id="imagemNotas"><img src="midia/notas.svg" alt="notas"></div>
                     </a>
                 </div>
                 <div class="icone" id="mapa">
                     <a href="#">
-                        <div class="imagemIcone inativo"><img src="imagens/mapa.svg" alt="mapa"></div>
+                        <div class="imagemIcone inativo"><img src="midia/mapa.svg" alt="mapa"></div>
                     </a>
                 </div>
                 <div class="icone" id="lista">
                     <a href="#">
-                        <div class="imagemIcone inativo"><img src="imagens/lista.svg" alt="lista"></div>
+                        <div class="imagemIcone inativo"><img src="midia/lista.svg" alt="lista"></div>
                     </a>
                 </div>
                 <div class="icone" id="missoes">
                     <a href="#">
-                        <div class="imagemIcone ativo"><img src="imagens/missoes.svg" alt="missoes"></div>
+                        <div class="imagemIcone ativo"><img src="midia/missoes.svg" alt="missoes"></div>
                     </a>
                 </div>
                 <div class="icone" id="delegacia">
                     <a href="#">
-                        <div class="imagemIcone ativo"><img src="imagens/delegacia.svg" alt="delegacia"></div>
+                        <div class="imagemIcone ativo"><img src="midia/delegacia.svg" alt="delegacia"></div>
                     </a>
                 </div>
                 <div class="icone" id="vulture">
                     <a href="#">
-                        <div class="imagemIcone inativo"><img src="imagens/vulture.svg" alt="vulture"></div>
+                        <div class="imagemIcone inativo"><img src="midia/vulture.svg" alt="vulture"></div>
                     </a>
                 </div>
                 <div class="icone" id="cameras">
                     <a href="#">
-                        <div class="imagemIcone ativo"><img src="imagens/cameras.svg" alt="camera"></div>
+                        <div class="imagemIcone ativo"><img src="midia/cameras.svg" alt="camera"></div>
                     </a>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- Telas  -->
+
     <section id="campoSenha">
-        
-            <p>Arquivo Protegido</p>
-                <div class="inputBox"> 
-                    <input type="password" name="senha" id="idSenha" required="required">
-                    <label for="idSenha">Senha</label>
-                </div>
-                <input type="button" value="Enviar" class="button">  
+
+        <p>Arquivo Protegido</p>
+        <div class="inputBox">
+            <input type="password" name="senha" id="idSenha" required="required">
+            <label for="idSenha">Senha</label>
+        </div>
+        <input type="button" value="Enviar" class="button">
+
+    </section>
+
+    <section id="telaCameras">
+
+        <div id="telaCamerasTopo">
+            <img src="midia/seta-direita.svg" alt="seta-direita" id="proximo" class="botao">
+            <img src="midia/seta-esquerda.svg" alt="seta-esquerda" id="voltar" class="botao">
+            <img src="midia/fechar.svg" alt="sair" id="sair" class="botao">
+        </div>
+        <p>Câmera 1</p>
+        <div id="area-camera">
+            <video src="midia/camera3.mp4" loop></video>
+        </div>
         
     </section>
+
+    <!-- Rodapé -->
+
     <footer>
-        <p>&copy; Desenvolvido por Carlos Gabriel</p>
+        <p>Desenvolvido por Carlos Gabriel</p>
     </footer>
     <script src="index.js"></script>
 </body>
+
 </html>

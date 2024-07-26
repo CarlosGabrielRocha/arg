@@ -5,6 +5,11 @@
     src: url('fontes/Breakthecode-rXp8.ttf') format('TrueType');
 }
 
+@font-face {
+    font-family: 'cameras';
+    src: url('fontes/RobotoMono.ttf') format('TrueType');
+}
+
 @keyframes flutuar {
     to {
         transform: translateY(5%);
@@ -15,6 +20,7 @@
 
 :root {
 --transparent: rgba(255, 255, 255, 0.055);
+--greyTransparent: rgba(0, 0, 0, 0.603);
 --fontTransparent: rgba(255, 255, 255, 0.836);
 }
 
@@ -29,48 +35,37 @@ a {
     color: white;
 }
 
-p, h1 {
+p {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.514);
-}
-
-/* Topo da página */
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--fontTransparent);
-    background-color: var(--transparent);
-}
-
-header h1 {
-    margin: 10px;
-    font-family: 'teste';
-    font-size: 2.5em;
-    letter-spacing: 3px;
 }
 
 /* Corpo da página e contéudo principal */
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
     background-color: black;
-    background-image: url('imagens/ceu.webp');
+    background-image: url('midia/ceu.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right bottom;
     background-attachment: fixed;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    overflow: hidden;
     user-select: none;
 }
 
 main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     width: 270px;
     height: 560px;
-    margin: auto;
-    margin-top: 60px;
 }
 
 /* Telefone */
@@ -80,6 +75,8 @@ div#phone {
     position: relative;
     display: flex;
     justify-content: center;
+    width: 270px;
+    height: 560px;
 }
 
 
@@ -192,8 +189,6 @@ div.imagemIcone img {
     grid-column: 1;
 }
 
-
-
 /* Senha para os arquivos */
 
 section#campoSenha {
@@ -228,7 +223,7 @@ section#campoSenha > p {
     border: 1px solid rgba(255, 255, 255, 0.25);
     outline: none;
     color: white;
-    background-color: rgba(0, 0, 0, 0.603);
+    background-color: var(--greyTransparent);
     transition: 0.5s;
 }
 
@@ -261,7 +256,7 @@ section#campoSenha > p {
     outline: none;
     border: 1px solid white;
     color: white;
-    background-color: rgba(0, 0, 0, 0.603);
+    background-color: var(--greyTransparent);
 }
 
 .button:active {
@@ -273,19 +268,71 @@ section#campoSenha > p {
     border: none;
 }
 
+/* Tela das câmeras */
+
+section#telaCameras {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 370px;
+    width: 430px;
+    font-family: 'cameras';
+    background-color: var(--transparent);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+section#telaCameras > div#telaCamerasTopo {
+    display: flex;
+    column-gap: 10px;
+    position: absolute;
+    top: 0;
+    align-self: flex-start;
+    width: 100%;
+    background-color: var(--greyTransparent);
+    border-radius: 10px 0px 0px 10px;
+}
+
+div#telaCamerasTopo > img {
+    background-color: grey;
+    width: 22px;
+}
+
+div#telaCamerasTopo > img:hover {
+    background-color: black;
+}
+
+div#telaCamerasTopo > img:active {
+    background-color: #00dfc4;
+}
+
+div#telaCamerasTopo > img#proximo {
+    border-top-left-radius: 10px;
+}
+
+div#telaCamerasTopo > img#sair {
+    margin-left: auto;
+    border-top-right-radius: 10px;
+}
+
+section#telaCameras > #area-camera {
+    margin-top: 10px;
+}
+
+section#telaCameras > #area-camera > video {
+    width: 400px;
+    border: 1px solid var(--greyTransparent);
+}
+ 
 /* Rodapé */
 
 footer {
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    font-size: 1.2em;
-    text-align: center;
-    height: 83px;
-    color: var(--fontTransparent);
-}
-
-footer p {
-    background-color: var(--transparent);
     width: 100%;
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+    color: var(--fontTransparent);
+    background-color: var(--transparent);
 }
