@@ -271,8 +271,8 @@ section#campoSenha > p {
 /* Tela das câmeras */
 
 section#telaCameras {
+    display: none;
     position: absolute;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
