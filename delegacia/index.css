@@ -330,7 +330,7 @@ section#telaCameras > #area-camera > video {
 
 footer {
     width: 100%;
-    padding: 5px;
+    
     font-size: 1em;
     text-align: center;
     color: var(--fontTransparent);
