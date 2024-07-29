@@ -39,10 +39,6 @@ p {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.514);
 }
 
-body, html {
-    overflow-y: hidden;
-}
-
 /* Corpo da página e contéudo principal */
 
 body {
