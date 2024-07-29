@@ -276,12 +276,13 @@ section#telaCameras {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 370px;
-    width: 430px;
+    height: 400px;
+    min-width: 320px;
+    max-width: 414px;
     font-family: 'cameras';
     background-color: var(--transparent);
     border-radius: 20px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 }
 
 section#telaCameras > div#telaCamerasTopo {
@@ -322,7 +323,8 @@ section#telaCameras > #area-camera {
 }
 
 section#telaCameras > #area-camera > video {
-    width: 400px;
+    min-width: 320px;
+    max-width: 414px;
     border: 1px solid var(--greyTransparent);
 }
  
