@@ -16,6 +16,12 @@
     }
 }
 
+@keyframes crescer {
+    to {
+        transform: scale(1.1);
+    }
+}
+
 /* Configurações globais */
 
 :root {
@@ -268,23 +274,18 @@ section#campoSenha > p {
     border: none;
 }
 
-/* Tela das câmeras */
+/* Configurações gerais das Telas */
 
-section#telaCameras {
-    display: none;
-    position: absolute;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+section.tela {
     height: 400px;
     width: 370px;
-    font-family: 'cameras';
+    position: absolute;
     background-color: var(--transparent);
     border-radius: 20px;
     backdrop-filter: blur(10px);
 }
 
-section#telaCameras > div#telaCamerasTopo {
+div.telaTopo {
     display: flex;
     column-gap: 10px;
     position: absolute;
@@ -295,26 +296,36 @@ section#telaCameras > div#telaCamerasTopo {
     border-radius: 10px 0px 0px 10px;
 }
 
-div#telaCamerasTopo > img {
+div.telaTopo > img {
     background-color: grey;
     width: 22px;
 }
 
-div#telaCamerasTopo > img:hover {
+div.telaTopo > img:hover {
     background-color: black;
 }
 
-div#telaCamerasTopo > img:active {
+div.telaTopo > img:active {
     background-color: #00dfc4;
 }
 
-div#telaCamerasTopo > img#proximo {
+div.telaTopo > img#proximo {
     border-top-left-radius: 10px;
 }
 
-div#telaCamerasTopo > img#sair {
+div.telaTopo > img#sair {
     margin-left: auto;
     border-top-right-radius: 10px;
+}
+
+/* Tela das câmeras */
+
+section#telaCameras {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-family: 'cameras';
 }
 
 section#telaCameras > #area-camera {
@@ -325,7 +336,40 @@ section#telaCameras > #area-camera > video {
     width: 350px;
     border: 1px solid var(--greyTransparent);
 }
- 
+
+/* Tela das notas */
+
+section#telaNotas {
+    display: none; /*flex*/
+    align-items: center;
+    justify-content: center;
+}
+
+section#telaNotas > div#area-notas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    font-size: .8em;
+    background-color: rgba(0, 0, 0, 0.445);
+    border-radius: 10px;
+}
+
+div#area-notas > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+div#area-notas > div > img:hover {
+    animation: crescer .2s ease-in-out forwards;
+}
+
 /* Rodapé */
 
 footer {
