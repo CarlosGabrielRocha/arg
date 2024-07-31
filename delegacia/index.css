@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+:root {
+    --white: white;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('midia/fundo.webp');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+
+main {
+    width: 280px;
+    height: 350px;
+    background-image: url('midia/fundo_claro.webp');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    opacity: 0.8;
+    border-radius: 15px;
+}
+
