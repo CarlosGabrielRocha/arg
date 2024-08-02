@@ -8,7 +8,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
@@ -19,6 +19,7 @@ body {
     height: 100vh;
     background-image: url('midia/fundo.webp');
     background-color: black;
+    color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -26,15 +27,57 @@ body {
 }
 
 main {
-    width: 280px;
-    height: 350px;
-    background-image: url('midia/fundo_claro.webp');
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    background-image: url('midia/fundo_login.webp');
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
     background-attachment: fixed;
-    opacity: 0.8;
     border-radius: 15px;
+}
+
+h1 {
+    letter-spacing: 5px;
+}
+
+section#login-centro {
+    margin-top: 20px;
+    margin: auto;
+}
+
+section#login-centro > input {
+    display: block;
+    padding: 4px;
+    margin: 10px;
+    width: 200px;
+    height: 35px;
+    background-color: #4e626667;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    
+}
+
+section#login-centro > input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.616);
+}
+
+section#login-centro > button {
+    width: 60px;
+    height: 30px;
+    background-color: rgb(22, 22, 22);
+    color: rgba(255, 255, 255, 0.616);
+    border: none;
+    border-radius: 5px;
+}
+
+section#login-centro > button:hover {
+    border: 1px solid rgba(255, 255, 255, 0.692);
 }
 
