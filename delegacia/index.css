@@ -33,7 +33,6 @@ main {
     width: 300px;
     height: 400px;
     text-align: center;
-    
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('midia/fundo_login.webp');
     background-color: black;
     background-repeat: no-repeat;
@@ -43,14 +42,19 @@ main {
     border-radius: 15px;
 }
 
-h1 {
-    padding: 20px;
+main h1 {
+    padding: 10px;
     letter-spacing: 5px;
+}
+
+main img {
+    width: 80px;
+    margin: auto;
 }
 
 section#login {
     margin: auto;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 section#login > input {
@@ -68,12 +72,13 @@ section#login > input {
 }
 
 section#login > input:focus {
-    border: 1px solid rgba(255, 255, 255, 0.616);
+    border: 1px solid white;
 }
 
 section#login > button {
     width: 60px;
     height: 30px;
+    margin: 5px;
     background-color: rgb(22, 22, 22);
     color: rgba(255, 255, 255, 0.616);
     border: none;
@@ -81,6 +86,6 @@ section#login > button {
 }
 
 section#login > button:hover {
-    border: 1px solid rgba(255, 255, 255, 0.692);
+    border: 1px solid white;
 }
 
