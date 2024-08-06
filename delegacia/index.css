@@ -18,7 +18,7 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-image: url('midia/fundo.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('midia/fundo.webp');
     background-color: black;
     color: white;
     background-repeat: no-repeat;
@@ -33,11 +33,12 @@ main {
     width: 300px;
     height: 400px;
     text-align: center;
-    background-image: url('midia/fundo_login.webp');
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('midia/fundo_login.webp');
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center bottom;
+    background-position: left bottom;
     background-attachment: fixed;
     border-radius: 15px;
 }
