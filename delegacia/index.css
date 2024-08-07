@@ -43,6 +43,7 @@ main {
 }
 
 main h1 {
+    text-shadow: 1px 1px 8px black;
     padding: 10px;
     letter-spacing: 5px;
 }
@@ -54,7 +55,7 @@ main img {
 
 section#login {
     margin: auto;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 section#login > input {

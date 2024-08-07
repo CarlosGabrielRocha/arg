@@ -1,7 +1,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg fill="#ffffff" height="72px" width="72px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" stroke="#ffffff">
+<svg fill="#ffffff" width="80px" height="80px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <path d="M23,13.2V8.9C23,5.1,19.9,2,16,2S9,5.1,9,8.9v4.3c-1.2,0.4-2,1.5-2,2.8v5c0,5,4,9,9,9s9-4,9-9v-5C25,14.7,24.2,13.6,23,13.2 z M17,22.8V25c0,0.6-0.4,1-1,1s-1-0.4-1-1v-2.2c-1.2-0.4-2-1.5-2-2.8c0-1.7,1.3-3,3-3s3,1.3,3,3C19,21.3,18.2,22.4,17,22.8z M21,13 H11V8.9C11,6.2,13.2,4,16,4s5,2.2,5,4.9V13z"/> </g>
+<g id="SVGRepo_iconCarrier"> <title>locked</title> <path d="M4 31v-16h3v-5c0-4.418 3.581-8 8-8h1c4.418 0 8 3.582 8 8v5h3v16h-23zM14.744 22.787l-0.744 5.213h3l-0.745-5.213c0.729-0.298 1.245-1.013 1.245-1.85 0-1.104-0.896-2-2-2-1.105 0-2 0.896-2 2 0 0.837 0.515 1.552 1.244 1.85zM21 10.5c0-3.038-2.463-5.5-5.5-5.5-3.038 0-5.5 2.462-5.5 5.5v4.5h11v-4.5z"/> </g>
 </svg>
