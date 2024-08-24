@@ -55,7 +55,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: black;
-    background-image: url('midia/ceu.webp');
+    background-image: url('../midia/ceu.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right bottom;
@@ -65,52 +65,53 @@ body {
     user-select: none;
 }
 
+/* Telefone */
+
 main {
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
     margin: auto;
     width: 270px;
     height: 560px;
-}
-
-/* Telefone */
-
-div#phone {
     filter: brightness(110%);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 270px;
-    height: 560px;
 }
-
 
 /* Topo do telefone */
 
-div#topo {
-    filter: sepia(100%);
+section#topo {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 242px;
     height: 105px;
     margin-top: 61px;
     font-family: system-ui;
+    filter: sepia(100%);
 }
 
-div#topo > p#hora {
+section#topo > p#hora {
     font-size: 2.5em;
     margin-left: 5px;
     margin-top: 5px;
 }
 
-div#topo > p#data {
+section#topo > p#data {
     font-size: 0.8em;
     margin-left: 10px;
 }
 
+section#topo > img {
+    position: absolute;
+    align-self: flex-end;
+    width: 25px;
+    padding: 3px;
+    margin: 5px;
+}
+
  /* Configurações gerais dos icônes do telefone */
 
-div#icones {
+section#icones {
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -164,8 +165,7 @@ div.ativo:hover {
 }
 
 div.imagemIcone img {
-    width: 36px;
-    height: 36px;
+    width: 33px;
 }
 
 /* Configurações pontuais dos icônes do telefone */
@@ -281,7 +281,7 @@ section.tela {
     width: 370px;
     position: absolute;
     background-color: var(--transparent);
-    border-radius: 20px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
 }
 
@@ -293,7 +293,7 @@ div.telaTopo {
     align-self: flex-start;
     width: 100%;
     background-color: var(--greyTransparent);
-    border-radius: 10px 0px 0px 10px;
+    border-top-left-radius: 10px;
 }
 
 div.telaTopo > img {
@@ -353,7 +353,6 @@ section#telaNotas > div#area-notas {
     justify-content: center;
     width: 300px;
     height: 200px;
-    font-size: .8em;
     background-color: rgba(0, 0, 0, 0.445);
     border-radius: 10px;
 }
@@ -363,11 +362,60 @@ div#area-notas > div {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+}
+
+div#area-notas > div > img {
+    width: 30px;
 }
 
 div#area-notas > div > img:hover {
     animation: crescer .2s ease-in-out forwards;
+}
+
+div#area-notas > div > p {
+    font-size: .8em;
+    color: rgba(255, 255, 255, 0.733);
+}
+
+/* Tela Puzzles */
+
+section#telaMiniGames {
+    display: none; /*flex*/
+    align-items: center;
+    justify-content: center;
+}
+
+section#telaMiniGames > div#area-puzzle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    font-size: .8em;
+    background-color: rgba(0, 0, 0, 0.445);
+    border-radius: 10px;
+}
+
+div#area-puzzle > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div#area-puzzle > div > img {
+    width: 35px;
+}
+
+div#area-puzzle > div > img:hover {
+    animation: crescer .2s ease-in-out forwards;
+}
+
+div#area-puzzle > div > p {
+    font-size: .9em;
+    color: rgba(255, 255, 255, 0.521);
 }
 
 /* Rodapé */

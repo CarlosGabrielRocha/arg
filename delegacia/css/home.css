@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'robotoslab';
+    src: url(../fonts/roboto_slab.ttf);
+}
+
+@font-face {
+    font-family: 'exo2';
+    src: url(../fonts/exo2.ttf);
+    font-weight: 200;
+}
+
+
+main {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 120px);
+}
+
+#header-main {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+#header-main img {
+    width: 20px;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto 0px;
+}
+
+div.ativo img {
+    animation: flutuar 0.7s ease-in-out infinite alternate;
+}
+
+main p {
+    font-size: .7em;
+    padding: 5px;
+}
+

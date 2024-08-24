@@ -1,0 +1,40 @@
+/* Configurações gerais das Telas */
+
+section.tela {
+    height: 500px;
+    width: 570px;
+}
+
+/* Tela das câmeras */
+
+section#telaCameras > #area-camera > video {
+    width: 490px;
+}
+
+section#telaCameras > p{
+    font-size: 1.2em;
+}
+
+/* Tela das notas */
+
+section#telaNotas > div#area-notas {
+    width: 450px;
+    height: 300px;
+    font-size: 1.1em;
+}
+
+div#area-notas > div > img {
+    width: 40px;
+}
+
+/* Tela Puzzles */
+
+section#telaMiniGames > div#area-puzzle {
+    width: 450px;
+    height: 300px;
+    font-size: 1.1em;
+}
+
+div#area-puzzle > div > img {
+    width: 40px;
+}
