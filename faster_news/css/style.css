@@ -221,12 +221,17 @@ div.caixa {
     background-size: cover;
 }
 
-p.descricao{
-    padding: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    font-size: 1.5em;
+div.caixa a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p.descricao{  
+    width: 90%;
+    font-size: 1.4em;
     font-weight: bold;
+    text-align: center;
     color: white;
 }
 
@@ -299,14 +304,17 @@ section.news img {
     transform: scale(0.9);
 }
 
-.exit {
-    display: none;
+section.news > span {
     position: sticky;
     top: 0;
     align-self: flex-start;
     max-width: max-content;
     cursor: pointer;
     border-top-left-radius: 5px;
+    background-color: #051120;
+}
+
+section.news > span:hover {
     background-color: black;
 }
 

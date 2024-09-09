@@ -1,0 +1,46 @@
+@media screen and (min-width: 576px) {
+
+    /* Configurações gerais das Telas */
+
+    section.tela {
+        height: 26rem;
+        width: 31.5rem;
+    }
+
+    /* Tela das câmeras */
+
+    section#telaCameras > #area-camera > video {
+        width: 440px;
+    }
+
+    section#telaCameras > p{
+        font-size: 1.2em;
+    }
+
+    /* Tela das notas */
+
+    section#telaNotas > div#area-notas {
+        width: 400px;
+        height: 280px;
+        font-size: 1.1em;
+    }
+
+    div#area-notas > div > img {
+        width: 37px;
+    }
+
+    /* Tela Puzzles */
+
+    section#telaMiniGames > div#area-puzzle {
+        width: 400px;
+        height: 280px;
+        font-size: 1.1em;
+    }
+
+    div#area-puzzle > div > img {
+        width: 37px;
+    }
+
+}
+
+

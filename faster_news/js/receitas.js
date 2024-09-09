@@ -1,8 +1,4 @@
 
-function escolheu() {
-    alert('[CONTÉUDO INDISPONÍVEL] NO MOMENTO! ');
-}
-
 //menu
 
 function ClickMenu(){

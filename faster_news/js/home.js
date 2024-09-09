@@ -65,7 +65,7 @@ switch(mes) {
         mes = 'Dezembro'
         break
 }
-var sistema = window.document.querySelector('div#data');
+var sistema = document.querySelector('div#data');
 sistema.innerHTML = `${diasem}, ${dia} de ${mes}.`;
 
 //menu
@@ -96,17 +96,13 @@ playaudio.play();
 
 function noticiaOne() {
     new1.style.display = "flex";
-    exit.style.display = "block";
 }
 
 function noticiaTwo() {
     new2.style.display = "flex";
-    exit.style.display = "block";
 }
 
 function sair() {
     new1.style.display = "none";
     new2.style.display = "none";
-    exit.style.display = "none";
-
 }

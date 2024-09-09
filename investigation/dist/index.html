@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation 2025</title>
+    <script src="bundle.min.js" defer></script>
+</head>
+
+<body>
+
+    <main>
+        <img src="../midia/phone.svg" alt="phone">
+
+        <section id="topo">
+            <img src="../midia/bateria.svg" alt="bateria">
+            <p id="hora">12:32</p>
+            <p id="data">Domingo, 08 Novembro 2024</p>
+        </section>
+
+        <section id="icones">
+            <div class="icone" id="notas" data-screen="notas">
+
+                <div class="imagemIcone ativo" id="imagemNotas"><img src="../midia/notas.svg" alt="notas"></div>
+
+            </div>
+            <div class="icone" id="mapa">
+
+                <div class="imagemIcone inativo"><img src="../midia/mapa.svg" alt="mapa"></div>
+
+            </div>
+            <div class="icone" id="lista">
+
+                <div class="imagemIcone inativo"><img src="../midia/lista.svg" alt="lista"></div>
+
+            </div>
+            <div class="icone" id="missoes" data-screen="missoes">
+
+                <div class="imagemIcone ativo"><img src="../midia/missoes.svg" alt="missoes"></div>
+
+            </div>
+            <div class="icone" id="delegacia">
+                <a href="https://carlosgabrielrocha.github.io/arg/delegacia/index.html#" target="_blank">
+                    <div class="imagemIcone ativo"><img src="../midia/delegacia.svg" alt="delegacia"></div>
+                </a>
+            </div>
+            <div class="icone" id="vulture">
+                <a href="#">
+                    <div class="imagemIcone inativo"><img src="../midia/vulture.svg" alt="vulture"></div>
+                </a>
+            </div>
+            <div class="icone" id="cameras" data-screen="cameras">
+
+                <div class="imagemIcone ativo"><img src="../midia/cameras.svg" alt="camera"></div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Telas  -->
+
+    <section id="campoSenha">
+
+        <p>Arquivo Protegido</p>
+        <div class="inputBox">
+            <input type="password" name="senha" id="idSenha" required="required">
+            <label for="idSenha">Senha</label>
+        </div>
+        <input type="button" value="Enviar" class="button">
+
+    </section>
+
+    <section id="telaCameras" class="tela" data-screen="cameras">
+
+        <div class="telaTopo">
+            <img src="../midia/seta-direita.svg" alt="seta-direita" id="proximo" class="botao">
+            <img src="../midia/seta-esquerda.svg" alt="seta-esquerda" id="voltar" class="botao">
+            <img src="../midia/fechar.svg" alt="sair" id="sair" class="botao" data-screen="cameras">
+        </div>
+        <p>Câmera 1</p>
+        <div id="area-camera">
+            <video src="../midia/camera3.mp4" loop></video>
+        </div>
+
+    </section>
+
+    <section id="telaNotas" class="tela" data-screen="notas">
+
+        <div class="telaTopo">
+            <img src="../midia/fechar.svg" alt="sair" id="sair" class="botao" data-screen="notas">
+        </div>
+
+        <div id="area-notas">
+            <div class="nota">
+                <img src="../midia/pasta_notas.svg" alt="notas">
+                <p>Note 1</p>
+            </div>
+            <div class="nota">
+                <img src="../midia/pasta_notas.svg" alt="notas">
+                <p>Note 2</p>
+            </div>
+            <div class="nota">
+                <img src="../midia/pasta_notas.svg" alt="notas">
+                <p>Note 3</p>
+            </div>
+            <div class="nota">
+                <img src="../midia/pasta_notas.svg" alt="notas">
+                <p>Note 4</p>
+            </div>
+            <div class="nota">
+                <img src="../midia/pasta_notas.svg" alt="notas">
+                <p>Note 5</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="telaMiniGames" class="tela" data-screen="missoes">
+
+        <div class="telaTopo">
+            <img src="../midia/fechar.svg" alt="sair" id="sair" class="botao" data-screen="missoes">
+        </div>
+        
+        <div id="area-puzzle">
+            <div>
+                <img src="../midia/labirinto.svg" alt="Labirinto1">
+                <p>Puzzle 1</p>
+            </div>
+            <div>
+                <img src="../midia/labirinto.svg" alt="Labirinto2">
+                <p>Puzzle 2</p>
+            </div>
+            <div>
+                <img src="../midia/labirinto.svg" alt="Labirinto3">
+                <p>Puzzle 3</p>
+            </div>
+            <div>
+                <img src="../midia/labirinto.svg" alt="Labirinto4">
+                <p>Puzzle 4</p>
+            </div>
+            <div>
+                <img src="../midia/labirinto.svg" alt="Labirinto5">
+                <p>Puzzle 5</p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Rodapé -->
+
+    <footer>
+        <p>Desenvolvido por Carlos Gabriel</p>
+    </footer>
+
+</body>
+
+</html>
