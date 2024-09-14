@@ -1,4 +1,4 @@
-import { cameraNumber } from "./cameras.actions.js"
+import { cameraEvents, cameraNumber } from "./cameras.actions.js"
 import { openIcon, exitIcon } from "./icons.actions.js"
 import { handleNotesClick } from "./notes.actions.js"
 import { changePhoneDate } from "./phone.date.js"
@@ -13,7 +13,7 @@ setInterval(changePhoneDate, 1000)
 openIcon()
 exitIcon()
 handleNotesClick()
-cameraNumber()
+cameraEvents()
 
 
 

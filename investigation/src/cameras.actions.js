@@ -9,6 +9,8 @@ const cameraDiv = document.querySelector('#area-camera')
 
 const cameraVideo = document.getElementById('camera')
 
+const exit = document.querySelector('#telaCamera #sair')
+
 const spanDate = document.createElement('span')
 spanDate.classList.add('camerasText')
 spanDate.style.top = '2px'
@@ -31,7 +33,7 @@ const camerasSrc = [
 
 let number = 0
 
-function cameraNumber() {
+function cameraEvents() {
     
     rightArrow.addEventListener('click', () => {
         number++
@@ -52,7 +54,10 @@ function cameraNumber() {
     cameraIcon.addEventListener('click', () => {
         startVideo()
         setInterval(() => cameraDate(spanDate), 1000)
+        displayBlock()
     })
+
+    exit.addEventListener('click', () => displayNone())
 }
 
 function handleNumber() {
@@ -74,5 +79,12 @@ function startVideo() {
     cameraVideo.play()
 }
 
+function displayBlock() {
+    cameraVideo.style.display = 'block'
+}
 
-export { cameraNumber }
+function displayNone() {
+    cameraVideo.style.display = 'none'
+}
+
+export { cameraEvents }

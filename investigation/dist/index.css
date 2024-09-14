@@ -496,6 +496,11 @@ footer {
     position: absolute;
     font-size: 0.8em;
 }
+
+.videoOn {
+    display: block;
+}
+
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/small.tablets.css ***!
   \********************************************************************************/
