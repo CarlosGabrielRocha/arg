@@ -12,4 +12,8 @@ function changePhoneDate() {
     pDate.innerText = `${dayjs().format('dddd')}, ${dayjs().format('DD')} ${dayjs().format('MMMM')}, ${dayjs().format('YYYY')}`
 }
 
-export default changePhoneDate
+function cameraDate(element) {
+    element.innerText = `${dayjs().format('DD/MM/YYYY')} ${dayjs().format('HH')}-${dayjs().format('mm')}-${dayjs().format('ss')}`
+}
+
+export { changePhoneDate, cameraDate }

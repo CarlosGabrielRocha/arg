@@ -1,0 +1,588 @@
+/*!************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/index.css ***!
+  \************************************************************************/
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'teste';
+    src: url(8f2592c32244454f73f5.ttf) format('TrueType');
+}
+
+@font-face {
+    font-family: 'cameras';
+    src: url(e14e25b7c497634efdfe.ttf) format('TrueType');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@keyframes flutuar {
+    to {
+        transform: translateY(5%);
+    }
+}
+
+@keyframes crescer {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes abrir {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scaleY(0.2);
+        opacity: 70;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 100;
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }    
+}
+
+/* Configurações globais */
+
+:root {
+--transparent: #ffffff0e;
+--greyTransparent: #0000009a;
+--darkerTransparent: #000000ea;
+--highLight: #03d3b7;
+--fontTransparent: rgba(255, 255, 255, 0.836);
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.514);
+}
+
+/* Corpo da página e contéudo principal */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url(0ce61672e752e8fcda6e.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    background-attachment: fixed;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Telefone */
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 270px;
+    height: 560px;
+    filter: brightness(110%);
+}
+
+main img {
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Topo do telefone */
+
+section#topo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 242px;
+    height: 105px;
+    margin-top: 61px;
+    font-family: system-ui;
+    filter: sepia(100%);
+}
+
+section#topo > p#hora {
+    font-size: 2.5em;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+section#topo > p#data {
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+section#topo > img {
+    position: absolute;
+    align-self: flex-end;
+    width: 25px;
+    padding: 3px;
+    margin: 5px;
+}
+
+ /* Configurações gerais dos icônes do telefone */
+
+section#icones {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70px 70px 70px 70px;
+    gap: 10px 20px;
+    width: 242px;
+    height: 320px;
+    margin-top: 165px;
+}
+
+
+div.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+div.icone p {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 5px;
+}
+
+div.imagemIcone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+div.inativo {
+    background-color: rgba(0, 0, 0, 0.466);
+    
+}
+
+div.inativo img {
+    opacity: 0.5;
+}
+
+div.ativo {
+    animation: flutuar 1s ease-in-out infinite alternate;
+    background-color: white;
+}
+
+div.ativo:hover {
+    background-color: #03d3b7;
+}
+
+div.imagemIcone img {
+    width: 33px;
+}
+
+/* Configurações pontuais dos icônes do telefone */
+
+#cameras {
+    grid-row: 4;
+    grid-column: 1;
+}
+
+#delegacia {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+#vulture {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+#mapa {
+    grid-row: 4;
+    grid-column: 3;
+}
+
+#lista {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+/* Senha para os arquivos */
+
+section#campoSenha {
+    display: none;
+    align-items: center; 
+    flex-direction: column;
+    position: absolute;
+    top: 400px;
+    height: 200px;
+    border: 2px solid white;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    background-color: var(--transparent);
+}
+
+section#campoSenha > p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.inputBox {
+    position: relative;
+    width: 250px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    outline: none;
+    color: white;
+    background-color: var(--greyTransparent);
+    transition: 0.5s;
+}
+
+.inputBox label {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.inputBox > input:valid ~ label, .inputBox > input:focus ~ label {
+    color: #00dfc4;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 8px 10px;
+    letter-spacing: 2px;
+}
+
+.inputBox > input:valid, .inputBox > input:focus {
+    border: 1px solid var(--transparent);
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background-color: var(--greyTransparent);
+}
+
+.button:active {
+    border: none;
+    background-color: #00dfc4;
+}
+
+.button:hover {
+    border: none;
+}
+
+/* Configurações gerais das Telas */
+
+section.tela {
+    width: 22rem;
+    height: 25rem;
+    position: absolute;
+    background-color: var(--transparent);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    animation: abrir 1s ease-in-out forwards;
+}
+
+div.telaTopo {
+    display: flex;
+    column-gap: 10px;
+    position: absolute;
+    top: 0;
+    align-self: flex-start;
+    width: 100%;
+    background-color: var(--greyTransparent);
+    border-top-left-radius: 10px;
+}
+
+div.telaTopo > img {
+    background-color: grey;
+    width: 22px;
+}
+
+div.telaTopo > img:hover {
+    background-color: black;
+}
+
+div.telaTopo > img:active {
+    background-color: #00dfc4;
+}
+
+div.telaTopo > img#proximo {
+    border-top-left-radius: 10px;
+}
+
+div.telaTopo > img#sair {
+    margin-left: auto;
+    border-top-right-radius: 10px;
+}
+
+div.telaCentro {
+    width: 300px;
+    height: 200px;
+}
+
+
+/* Tela das câmeras */
+
+section#telaCameras {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-family: 'cameras';
+}
+
+section#telaCameras > #area-camera {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+}
+
+section#telaCameras > #area-camera > video {
+    width: 340px;
+    border: 1px solid var(--greyTransparent);
+}
+
+/* Tela das notas */
+
+section#telaNotas {
+    display: none; /*flex*/
+    align-items: center;
+    justify-content: center;
+}
+
+section#telaNotas > div#area-notas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.445);
+    border-radius: 10px;
+}
+
+div#area-notas > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div#area-notas > div > img {
+    width: 30px;
+}
+
+div#area-notas > div > img:hover {
+    animation: crescer .2s ease-in-out forwards;
+}
+
+div#area-notas > div > p {
+    font-size: .8em;
+    color: rgba(255, 255, 255, 0.733);
+}
+
+/* Tela Puzzles */
+
+section#telaMiniGames {
+    display: none; /*flex*/
+    align-items: center;
+    justify-content: center;
+}
+
+section#telaMiniGames > div#area-puzzle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    font-size: .8em;
+    background-color: rgba(0, 0, 0, 0.445);
+    border-radius: 10px;
+}
+
+div#area-puzzle > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div#area-puzzle > div > img {
+    width: 35px;
+}
+
+div#area-puzzle > div > img:hover {
+    animation: crescer .2s ease-in-out forwards;
+}
+
+div#area-puzzle > div > p {
+    font-size: .9em;
+    color: rgba(255, 255, 255, 0.521);
+}
+
+/* Rodapé */
+
+footer {
+    width: 100%;
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+    color: var(--fontTransparent);
+    background-color: var(--transparent);
+}
+
+/* Outros */
+
+.overlayScreen {
+    animation: aparecer 0.5s ease-in-out forwards;
+}
+
+.blurElement::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.726);
+}
+
+.camerasText {
+    position: absolute;
+    font-size: 0.8em;
+}
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/small.tablets.css ***!
+  \********************************************************************************/
+@media screen and (min-width: 576px) {
+
+    /* Configurações gerais das Telas */
+
+    section.tela {
+        height: 26rem;
+        width: 31.5rem;
+    }
+
+    div.telaCentro {
+        width: 400px;
+        height: 280px;
+        font-size: 1.1em;
+    }
+
+    /* Tela das câmeras */
+
+    section#telaCameras > #area-camera > video {
+        width: 440px;
+    }
+
+    section#telaCameras > p{
+        font-size: 1.2em;
+    }
+
+    /* Tela das notas */
+
+    div#area-notas > div > img {
+        width: 37px;
+    }
+
+    /* Tela Puzzles */
+
+    div#area-puzzle > div > img {
+        width: 37px;
+    }
+
+}
+
+
+
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/others.css ***!
+  \*************************************************************************/
+@media screen and (min-width: 769px) {
+
+    /* Configurações gerais das Telas */
+
+    section.tela {
+        height: 30rem;
+        width: 35.5rem;
+    }
+
+    div.telaCentro {
+        width: 450px;
+        height: 300px;
+        font-size: 1.1em; 
+    }
+
+    /* Tela das câmeras */
+
+    section#telaCameras > #area-camera > video {
+        width: 490px;
+    }
+
+    section#telaCameras > p{
+        font-size: 1.2em;
+    }
+
+    /* Tela das notas */
+
+
+
+    div#area-notas > div > img {
+        width: 40px;
+    }
+
+    /* Tela Puzzles */
+
+
+
+    div#area-puzzle > div > img {
+        width: 40px;
+    }
+
+}
+

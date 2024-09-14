@@ -7,6 +7,12 @@
         width: 31.5rem;
     }
 
+    div.telaCentro {
+        width: 400px;
+        height: 280px;
+        font-size: 1.1em;
+    }
+
     /* Tela das câmeras */
 
     section#telaCameras > #area-camera > video {
@@ -19,23 +25,11 @@
 
     /* Tela das notas */
 
-    section#telaNotas > div#area-notas {
-        width: 400px;
-        height: 280px;
-        font-size: 1.1em;
-    }
-
     div#area-notas > div > img {
         width: 37px;
     }
 
     /* Tela Puzzles */
-
-    section#telaMiniGames > div#area-puzzle {
-        width: 400px;
-        height: 280px;
-        font-size: 1.1em;
-    }
 
     div#area-puzzle > div > img {
         width: 37px;
