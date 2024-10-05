@@ -1,0 +1,40 @@
+@keyframes cair {
+    0% {
+        transform: translate(0vw, 0vh) rotate(25deg);
+    }
+
+/*     30% {
+        transform: translate(21vw, 30vh) rotate(40deg);
+    }
+
+    50% {
+        transform: translate(35vw, 50vh) rotate(40deg);
+        opacity: 0.5;
+    }
+
+    70% {
+        transform: translate(49vw, 70vh) rotate(40deg);
+        opacity: 0;
+    } */
+
+    100% {
+        transform: translate(600px, 300px) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+
+.meteor {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 2px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: linear-gradient(90deg, transparent, #ffffff48, #ffffffb2, white);
+    filter: drop-shadow(-8px 0px 0px rgba(255, 255, 255, 0.13));
+    box-shadow: 14px 0px 5px 3px #ffffff17;
+    transform: rotate(40deg);
+    animation: cair 0.5s linear forwards;
+}

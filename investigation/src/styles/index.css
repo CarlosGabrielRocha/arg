@@ -89,14 +89,15 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
     background-color: black;
     background-image: url('../../midia/ceu.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right bottom;
     background-attachment: fixed;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
 }
 
 /* Telefone */
