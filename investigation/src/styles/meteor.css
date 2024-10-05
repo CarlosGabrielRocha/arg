@@ -36,5 +36,6 @@
     filter: drop-shadow(-8px 0px 0px rgba(255, 255, 255, 0.13));
     box-shadow: 14px 0px 5px 3px #ffffff17;
     transform: rotate(40deg);
+    will-change: transform;
     animation: cair 0.5s linear forwards;
 }

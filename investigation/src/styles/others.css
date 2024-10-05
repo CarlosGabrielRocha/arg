@@ -2,6 +2,10 @@
 
     /* Configurações gerais das Telas */
 
+    body {
+        background-attachment: scroll;
+    }
+
     section.tela {
         height: 30rem;
         width: 35.5rem;
