@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'teste';
-    src: url('../../fontes/Breakthecode-rXp8.ttf') format('TrueType');
-}
-
-@font-face {
     font-family: 'cameras';
     src: url('../../fontes/RobotoMono.ttf') format('TrueType');
     font-weight: 400;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../../fontes/Montserrat.ttf') format('TrueType');
 }
 
 @keyframes flutuar {
@@ -60,8 +60,8 @@
 --greyTransparent: #0000009a;
 --darkerTransparent: #000000ea;
 --highLight: #03d3b7;
+--test: darkgrey;
 --fontTransparent: rgba(255, 255, 255, 0.836);
-
 }
 
 *{
@@ -126,7 +126,7 @@ section#topo {
     width: 242px;
     height: 105px;
     margin-top: 61px;
-    font-family: system-ui;
+    font-family: 'montserrat';
     filter: sepia(100%);
 }
 

@@ -16,4 +16,4 @@ function restartMeteorAnimation() {
     meteor.classList.toggle('meteor')
 }
 
-export {restartMeteorAnimation}
+export { restartMeteorAnimation }

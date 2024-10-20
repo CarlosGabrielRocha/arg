@@ -1,0 +1,109 @@
+@keyframes mecher {
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+/* Corpo da ligação */
+
+.call-body {
+    position: absolute;
+    width: 242px;
+    height: 425px;
+    margin-top: 65px;
+    font-family: 'montserrat';
+    background-color: #000000ea;
+    box-shadow: inset -4px -3px 7px 0px rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(4px);
+    filter: brightness(1.2);
+    z-index: 100;
+}
+
+/* Topo da ligação */
+
+.call-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: calc(50%);
+}
+
+.call-top h1 {
+    margin: 0.3em;
+    font-size: 1.6em;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.call-top p {
+    color: white;
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+.call-top .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin-top: 3em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Parte de baixo da ligação */
+
+.call-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: calc(50%);
+}
+
+.call-bottom .call-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 20px 0px 20px;
+    width: 60px;
+    height: 100px;
+}
+
+.call-bottom .call-icon p {
+    padding: 5px;
+    font-size: 0.8em;
+    font-weight: 200;
+    color: white;
+}
+
+.call-bottom .decline-call .decline-call-filling {
+    width: 50px;
+    height: 50px;   
+    background-color: #6e0909;
+    border-radius: 50%;
+}
+
+.call-bottom .decline-call .decline-call-filling > img {
+    transform: rotate(115deg);
+}
+
+
+.call-bottom .accept-call .accept-call-filling {
+    width: 50px;
+    height: 50px;
+    background-color: #5bce51;
+    border-radius: 50%;
+    animation: mecher .8s ease-in-out infinite alternate;
+}
+
+.call-bottom .accept-call .accept-call-filling > img {
+    transform: rotate(225deg);
+}
+
+
