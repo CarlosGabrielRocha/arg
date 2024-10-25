@@ -9,7 +9,7 @@ const cameraDiv = document.querySelector('#area-camera')
 
 const cameraVideo = document.getElementById('camera')
 
-const exit = document.querySelector('#telaCamera #sair')
+const exit = document.querySelector('#telaCamera .sair')
 
 const spanDate = document.createElement('span')
 spanDate.classList.add('camerasText')

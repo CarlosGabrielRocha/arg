@@ -79,12 +79,13 @@ function call(callType = 'voice', title = 'Desconhecido', src = '') {
 
 
 declineCallIcon.addEventListener('click', () => {
+    callRing.pause()
     endingCall.play()
 
     endingCall.addEventListener('ended', () => {
         callScreenBody.remove()
     }, {once: true})
-    
+
 })
 
 

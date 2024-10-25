@@ -1,4 +1,4 @@
-const exitScreen = document.querySelectorAll('.telaTopo > #sair')
+const exitScreen = document.querySelectorAll('.telaTopo > .sair') 
 const screens = document.querySelectorAll('.tela')
 const phoneIcons = document.querySelectorAll('.icone')
 
@@ -35,7 +35,6 @@ function openIcon() {
             })
         }) 
     })
-
 }
 
 export {openIcon, exitIcon}

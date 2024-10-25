@@ -53,6 +53,12 @@
     }    
 }
 
+@keyframes diminuir {
+    to {
+        transform: scale(0.9);
+    }
+}
+
 /* Configurações globais */
 
 :root {
@@ -314,155 +320,7 @@ section#campoSenha > p {
     border: none;
 }
 
-/* Configurações gerais das Telas */
 
-section.tela {
-    width: 22rem;
-    height: 25rem;
-    position: absolute;
-    background-color: var(--transparent);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    animation: abrir 1s ease-in-out forwards;
-}
-
-div.telaTopo {
-    display: flex;
-    column-gap: 10px;
-    position: absolute;
-    top: 0;
-    align-self: flex-start;
-    width: 100%;
-    background-color: var(--greyTransparent);
-    border-top-left-radius: 10px;
-}
-
-div.telaTopo > img {
-    background-color: grey;
-    width: 22px;
-}
-
-div.telaTopo > img:hover {
-    background-color: black;
-}
-
-div.telaTopo > img:active {
-    background-color: #00dfc4;
-}
-
-div.telaTopo > img#proximo {
-    border-top-left-radius: 10px;
-}
-
-div.telaTopo > img#sair {
-    margin-left: auto;
-    border-top-right-radius: 10px;
-}
-
-div.telaCentro {
-    width: 300px;
-    height: 200px;
-}
-
-
-/* Tela das câmeras */
-
-section#telaCameras {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    font-family: 'cameras';
-}
-
-section#telaCameras > #area-camera {
-    position: relative;
-    width: auto;
-    height: auto;
-    margin-top: 10px;
-}
-
-section#telaCameras > #area-camera > video {
-    width: 340px;
-    border: 1px solid var(--greyTransparent);
-}
-
-/* Tela das notas */
-
-section#telaNotas {
-    display: none; /*flex*/
-    align-items: center;
-    justify-content: center;
-}
-
-section#telaNotas > div#area-notas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.445);
-    border-radius: 10px;
-}
-
-div#area-notas > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-div#area-notas > div > img {
-    width: 30px;
-}
-
-div#area-notas > div > img:hover {
-    animation: crescer .2s ease-in-out forwards;
-}
-
-div#area-notas > div > p {
-    font-size: .8em;
-    color: rgba(255, 255, 255, 0.733);
-}
-
-/* Tela Puzzles */
-
-section#telaMiniGames {
-    display: none; /*flex*/
-    align-items: center;
-    justify-content: center;
-}
-
-section#telaMiniGames > div#area-puzzle {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    align-items: center;
-    justify-content: center;
-    font-size: .8em;
-    background-color: rgba(0, 0, 0, 0.445);
-    border-radius: 10px;
-}
-
-div#area-puzzle > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-div#area-puzzle > div > img {
-    width: 35px;
-}
-
-div#area-puzzle > div > img:hover {
-    animation: crescer .2s ease-in-out forwards;
-}
-
-div#area-puzzle > div > p {
-    font-size: .9em;
-    color: rgba(255, 255, 255, 0.521);
-}
 
 /* Rodapé */
 

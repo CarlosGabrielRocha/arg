@@ -26,14 +26,14 @@
                 <div class="imagemIcone ativo" id="imagemNotas"><img src="../midia/notas.svg" alt="notas"></div>
 
             </div>
-            <div class="icone" id="mapa">
+            <div class="icone" id="mapa" data-screen="mapa">
 
                 <div class="imagemIcone inativo"><img src="../midia/mapa.svg" alt="mapa"></div>
 
             </div>
-            <div class="icone" id="lista">
+            <div class="icone" id="discar" data-screen="discar">
 
-                <div class="imagemIcone inativo"><img src="../midia/lista.svg" alt="lista"></div>
+                <div class="imagemIcone ativo"><img src="../midia/lista.svg" alt="lista"></div>
 
             </div>
             <div class="icone" id="missoes" data-screen="missoes">
@@ -46,7 +46,7 @@
                     <div class="imagemIcone ativo"><img src="../midia/delegacia.svg" alt="delegacia"></div>
                 </a>
             </div>
-            <div class="icone" id="vulture">
+            <div class="icone" id="vulture" data-screen="vulture">
                 <a href="#">
                     <div class="imagemIcone inativo"><img src="../midia/vulture.svg" alt="vulture"></div>
                 </a>
@@ -72,12 +72,14 @@
 
     </section>
 
+    <!-- Tela câmeras -->
+
     <section id="telaCameras" class="tela" data-screen="cameras">
 
         <div class="telaTopo">
             <img src="../midia/seta-direita.svg" alt="seta-direita" id="proximo" class="botao">
             <img src="../midia/seta-esquerda.svg" alt="seta-esquerda" id="voltar" class="botao">
-            <img src="../midia/fechar.svg" alt="sair" id="sair" class="botao" data-screen="cameras">
+            <img src="../midia/fechar.svg" alt="sair" class="botao sair" data-screen="cameras">
         </div>
         <p>Câmera 1</p>
         <div id="area-camera" class="telaCentro">
@@ -86,10 +88,12 @@
 
     </section>
 
+    <!-- Tela notas -->
+
     <section id="telaNotas" class="tela" data-screen="notas">
 
         <div class="telaTopo">
-            <img src="../midia/fechar.svg" alt="sair" id="sair" class="botao" data-screen="notas">
+            <img src="../midia/fechar.svg" alt="sair" class="botao sair" data-screen="notas">
         </div>
 
         <div id="area-notas" class="telaCentro">
@@ -117,10 +121,12 @@
 
     </section>
 
+    <!-- Tela puzzles -->
+
     <section id="telaMiniGames" class="tela" data-screen="missoes">
 
         <div class="telaTopo">
-            <img src="../midia/fechar.svg" alt="sair" id="sair" class="botao" data-screen="missoes">
+            <img src="../midia/fechar.svg" alt="sair" class="botao sair" data-screen="missoes">
         </div>
         
         <div id="area-puzzle" class="telaCentro">
@@ -143,6 +149,79 @@
             <div>
                 <img src="../midia/labirinto.svg" alt="Labirinto5">
                 <p>Puzzle 5</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Tela discar -->
+
+    <section id="telaDiscar" class="tela" data-screen="discar">
+
+        <div class="telaTopo">
+            <img src="../midia/fechar.svg" alt="sair" class="botao sair" data-screen="discar">
+        </div>
+
+        <div id="area-discar" class="telaCentro">
+
+            <div id="discados"><input type="text" id="discados-input" maxlength="7"></div>
+
+            <div id="digitos">
+                <div data-digit="1" class="digito-caixa">
+                    <span class="digito">1</span>
+                    <span class="outros-digitos"><img src="../midia/correiro_de_voz.svg" alt="Correiro de voz"></span>
+                </div>
+                <div data-digit="2" class="digito-caixa">
+                    <span class="digito">2</span>
+                    <span class="outros-digitos">ABC</span>
+                </div>
+                <div data-digit="3" class="digito-caixa">
+                    <span class="digito">3</span>
+                    <span class="outros-digitos">DEF</span>
+                </div>
+                <div data-digit="4" class="digito-caixa">
+                    <span class="digito">4</span>
+                    <span class="outros-digitos">GHI</span>
+                </div>
+                <div data-digit="5" class="digito-caixa">
+                    <span class="digito">5</span>
+                    <span class="outros-digitos">JKL</span>
+                </div>
+                <div data-digit="6" class="digito-caixa">
+                    <span class="digito">6</span>
+                    <span class="outros-digitos">MNO</span>
+                </div>
+                <div data-digit="7" class="digito-caixa">
+                    <span class="digito">7</span>
+                    <span class="outros-digitos">PQRS</span>
+                </div>
+                <div data-digit="8" class="digito-caixa">
+                    <span class="digito">8</span>
+                    <span class="outros-digitos">TUV</span>
+                </div>
+                <div data-digit="9" class="digito-caixa">
+                    <span class="digito">9</span>
+                    <span class="outros-digitos">WXYZ</span>
+                </div>
+                <div data-digit="*" class="digito-caixa">
+                    <span class="digito">*</span>
+                </div>
+                <div data-digit="0" class="digito-caixa">
+                    <span class="digito">0</span>
+                    <span class="outros-digitos">+</span>
+                </div>
+                <div data-digit="#" class="digito-caixa">
+                    <span class="digito">#</span>
+                </div>
+            </div>
+    
+            <div id="area-discar-opcoes">
+                <div id="ligar">
+                    <img src="../midia/call/aceitar_recusar_ligacao.svg" alt="ligar">
+                </div>
+                <div id="apagar-digito">
+                    <img src="../midia/call/excluir_digito_icone.svg" alt="Excluir digito">
+                </div>
             </div>
         </div>
 
