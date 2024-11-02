@@ -1,6 +1,6 @@
 import { createElement, createTextElement, createImg } from "./create-elements.js"
 import { callRing, endingCall } from "./sounds-effects.js"
-import { answerVoiceCall } from "./call-voice-active.js"
+import { answerCall } from "./active-call.js"
 
 const main = document.querySelector('main')
 
@@ -56,27 +56,68 @@ const acceptCallP = createTextElement('p', 'Aceitar')
 acceptCallFilling.appendChild(acceptCallImg)
 acceptCallIcon.append(acceptCallFilling, acceptCallP)
 
-// append
+// Função para iniciar ligação recebida
 
-callScreenTop.append(callTitle, callSubtitle, profile)
-callScreenBottom.append(declineCallIcon, acceptCallIcon)
+function incomingCall(callType = 'voice', title = 'Desconhecido', src = '') {
 
-
-function call(callType = 'voice', title = 'Desconhecido', src = '') {
     callRing.play()
     callTitle.innerText = title
 
+    callScreenTop.append(callTitle, callSubtitle, profile)
+    callScreenBottom.append(declineCallIcon, acceptCallIcon)
     callScreenBody.append(callScreenTop, callScreenBottom)
     main.appendChild(callScreenBody)
 
-    acceptCallIcon.addEventListener('click', () => {
+   acceptCallIcon.addEventListener('click', () => {
         callScreenBody.remove()
         callRing.pause()
-        answerVoiceCall(callType, title, src)
+        answerCall(callType, title, src)
     }, { once: true }) // O evento será removido após ser ativado uma vez.
 
 }
 
+// Função para ligar para alguém
+
+/* function callSomeone(validNumbers, numberToCall) {
+    const number = validNumbers.filter(element => element.number === numberToCall)
+    
+    callTitle.innerText = numberToCall
+
+    callScreenTop.append(callTitle, callSubtitle)
+
+    callScreenBottom.append(declineCallIcon)
+    callScreenBottom.classList.add('call-someone-bottom')
+    callScreenBottom.classList.remove('incomming-call-bottom')
+    declineCallIcon.classList.remove('call-icon')
+
+    callScreenBody.append(callScreenTop, callScreenBottom)
+    main.appendChild(callScreenBody)
+
+    if (number.length > 0) {
+        callSubtitle.innerText = 'chamando..'
+        setTimeout(() => {
+            activeCall('voice', numberToCall, number[0].src)
+        }, 1000 * 8)
+    } else {
+        callSubtitle.innerText = 'ligando..'
+        setTimeout(() => {
+            callScreenBody.remove()
+            endingCall.play()
+        }, 1000 * 4)
+    }
+
+} */
+
+// Ligação ativa
+
+/* function activeCall(callType, title = '', src) {
+    callScreenBody.remove()
+    callRing.pause()
+    answerCall(callType, title, src)
+}
+ */
+
+// Recusar ligação
 
 declineCallIcon.addEventListener('click', () => {
     callRing.pause()
@@ -84,10 +125,10 @@ declineCallIcon.addEventListener('click', () => {
 
     endingCall.addEventListener('ended', () => {
         callScreenBody.remove()
-    }, {once: true})
+    }, { once: true })
 
 })
 
 
-export { call, callScreenBody}
+export { incomingCall, callScreenBody}
 

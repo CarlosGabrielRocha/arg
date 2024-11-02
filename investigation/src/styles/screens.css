@@ -48,7 +48,6 @@ div.telaCentro {
     height: 200px;
 }
 
-
 /* Tela das câmeras */
 
 section#telaCameras {
@@ -219,6 +218,10 @@ div#area-discar > #digitos {
     background-color: #050505;
 }
 
+div#area-discar > #digitos img {
+    pointer-events: none;
+}
+
 div#area-discar > #digitos > .digito-caixa {
     display: flex;
     flex-direction: column;
@@ -263,7 +266,7 @@ div#area-discar > div#area-discar-opcoes > #apagar-digito {
     border-radius: 50%;
     background-color: black;
     opacity: 0;
-    transition: opacity .5s ease;
+    transition: opacity .3s ease;
 }
 
 

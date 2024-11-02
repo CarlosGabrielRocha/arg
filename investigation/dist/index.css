@@ -413,7 +413,6 @@ div.telaCentro {
     height: 200px;
 }
 
-
 /* Tela das câmeras */
 
 section#telaCameras {
@@ -584,6 +583,10 @@ div#area-discar > #digitos {
     background-color: #050505;
 }
 
+div#area-discar > #digitos img {
+    pointer-events: none;
+}
+
 div#area-discar > #digitos > .digito-caixa {
     display: flex;
     flex-direction: column;
@@ -628,7 +631,7 @@ div#area-discar > div#area-discar-opcoes > #apagar-digito {
     border-radius: 50%;
     background-color: black;
     opacity: 0;
-    transition: opacity .5s ease;
+    transition: opacity .3s ease;
 }
 
 
@@ -884,9 +887,9 @@ div#area-discar > div#area-discar-opcoes > #apagar-digito {
 
 
 
-/*!*****************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/voice-call.css ***!
-  \*****************************************************************************/
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/active-call.css ***!
+  \******************************************************************************/
 /* Global */
 
 .active-call-icon {
@@ -1009,3 +1012,50 @@ div#area-discar > div#area-discar-opcoes > #apagar-digito {
 }
 
 
+/*!*******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/call.someone.css ***!
+  \*******************************************************************************/
+
+/* Parte de cima da ligação */
+
+.calling-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Parte de baixo da ligação */
+
+.calling-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(50%);
+}
+
+.stop-calling-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 60px;
+    height: 100px;
+}
+
+.stop-calling-filling {
+    width: 50px;
+    height: 50px;   
+    background-color: #6e0909;
+    border-radius: 50%;
+}
+
+.stop-calling-filling img {
+    transform: rotate(115deg);
+}

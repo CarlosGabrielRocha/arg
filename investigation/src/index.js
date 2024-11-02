@@ -1,4 +1,4 @@
-import { cameraEvents, cameraNumber } from "./cameras.actions.js"
+import { cameraEvents} from "./cameras.actions.js"
 import { openIcon, exitIcon } from "./icons.actions.js"
 import { handleNotesClick } from "./notes.actions.js"
 import { changePhoneDate } from "./phone.date.js"
@@ -12,7 +12,8 @@ import './styles/small.tablets.css'
 import './styles/others.css'
 import './styles/meteor.css'
 import './styles/call.css'
-import './styles/voice-call.css'
+import './styles/active-call.css'
+import './styles/call.someone.css'
 
 setInterval(changePhoneDate, 1000)
 setInterval(restartMeteorAnimation, 20000)

@@ -1,3 +1,8 @@
+import camera0 from './assets/camera0.mp4'
+import camera1 from './assets/camera1.mp4'
+import camera2 from './assets/camera2.mp4'
+import camera3 from './assets/camera3.mp4'
+
 import { cameraDate } from "./phone.date.js"
 
 const rightArrow = document.getElementById('proximo')
@@ -25,10 +30,10 @@ spanCameraNumber.innerText = 'CH1'
 cameraDiv.append(spanDate, spanCameraNumber)
 
 const camerasSrc = [
-    '../midia/camera0.mp4',
-    '../midia/camera1.mp4',
-    '../midia/camera2.mp4',
-    '../midia/camera3.mp4'
+    camera0,
+    camera1,
+    camera2,
+    camera3
 ]
 
 let number = 0

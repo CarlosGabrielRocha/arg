@@ -16,10 +16,16 @@ module.exports = {
         filename: 'bundle.min.js'
     },
     module: {
-        rules: [{
+        rules: [
+        {
             test: /\.css$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader']
-        }]
+            use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        },
+        {
+            test: /\.(png|jpe?g|gif|svg|mp4|mp3)$/i,
+            type: 'asset/resource'
+        }
+    ]
     },
     plugins: [
         new MiniCssExtractPlugin()
