@@ -269,4 +269,8 @@ div#area-discar > div#area-discar-opcoes > #apagar-digito {
     transition: opacity .3s ease;
 }
 
+#apagar-digito img {
+    pointer-events: none;
+}
+
 

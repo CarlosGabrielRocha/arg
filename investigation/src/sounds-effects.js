@@ -2,6 +2,7 @@ import endingCallSound from "./assets/encerrando_ligacao.mp3"
 import callRingSound from "./assets/recebendo_ligacao.mp3"
 import callingSound from "./assets/ligando.mp3"
 import outOfServiceSound from "./assets/foradearea.mp3"
+import changeCameraSound from "./assets/mudar_camera.mp3"
 
 import digit1Sound from "./assets/digits/digit1.mp3"
 import digit2Sound from "./assets/digits/digit2.mp3"
@@ -48,6 +49,13 @@ const outOfService = createMidiaElement
     ['preload', 'auto']
 )
 
+const changeCamera = createMidiaElement
+(
+    'audio',
+    changeCameraSound,
+    ['preload', 'auto']
+)
+
 const digitsSoundsSrc = [
     digit1Sound,
     digit2Sound,
@@ -70,8 +78,8 @@ const digitsSoundsArray = digitsSoundsSrc.map((digitSrc, indexof) => {
     return audio
 })
 
-document.body.append( endingCall, callRing, calling, outOfService)
+document.body.append( endingCall, callRing, calling, outOfService, changeCamera)
 
-export {endingCall, callRing, calling, outOfService, digitsSoundsArray}
+export {endingCall, callRing, calling, outOfService, digitsSoundsArray, changeCamera}
 
 

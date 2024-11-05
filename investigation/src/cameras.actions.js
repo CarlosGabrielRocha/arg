@@ -1,8 +1,4 @@
-import camera0 from './assets/camera0.mp4'
-import camera1 from './assets/camera1.mp4'
-import camera2 from './assets/camera2.mp4'
-import camera3 from './assets/camera3.mp4'
-
+import { changeCamera } from "./sounds-effects.js"
 import { cameraDate } from "./phone.date.js"
 
 const rightArrow = document.getElementById('proximo')
@@ -13,8 +9,6 @@ const cameraIcon = document.querySelector('#cameras')
 const cameraDiv = document.querySelector('#area-camera')
 
 const cameraVideo = document.getElementById('camera')
-
-const exit = document.querySelector('#telaCamera .sair')
 
 const spanDate = document.createElement('span')
 spanDate.classList.add('camerasText')
@@ -30,43 +24,48 @@ spanCameraNumber.innerText = 'CH1'
 cameraDiv.append(spanDate, spanCameraNumber)
 
 const camerasSrc = [
-    camera0,
-    camera1,
-    camera2,
-    camera3
+    '../midia/camera0.mp4',
+    '../midia/camera1.mp4',
+    '../midia/camera2.mp4',
+    '../midia/camera3.mp4'
 ]
 
 let number = 0
+let readyToChange = true
+
 
 function cameraEvents() {
-    
+
     rightArrow.addEventListener('click', () => {
-        number++
-        handleNumber()
-        changeCameraText()
-        cameraVideo.setAttribute('src', camerasSrc[number])
-        startVideo()
+        if (readyToChange) {
+            number++
+            handleNumber()
+            changeCameraText()
+            cameraVideo.setAttribute('src', camerasSrc[number])
+            startVideo()
+            startAudio()
+        }
     })
 
     leftArrow.addEventListener('click', () => {
-        number--
-        handleNumber()
-        changeCameraText()
-        cameraVideo.setAttribute('src', camerasSrc[number])
-        startVideo()
+        if (readyToChange) {
+            number--
+            handleNumber()
+            changeCameraText()
+            cameraVideo.setAttribute('src', camerasSrc[number])
+            startVideo()
+            startAudio()
+        }
     })
 
     cameraIcon.addEventListener('click', () => {
         startVideo()
         setInterval(() => cameraDate(spanDate), 1000)
-        displayBlock()
     })
 
-    exit.addEventListener('click', () => displayNone())
 }
 
 function handleNumber() {
-
     if (number > 3) {
         number = 0
     } else if ( number < 0) {
@@ -84,12 +83,12 @@ function startVideo() {
     cameraVideo.play()
 }
 
-function displayBlock() {
-    cameraVideo.style.display = 'block'
-}
-
-function displayNone() {
-    cameraVideo.style.display = 'none'
+function startAudio() {
+    changeCamera.play()
+    readyToChange = false
+    changeCamera.addEventListener('ended', () => {
+        readyToChange = true
+    })
 }
 
 export { cameraEvents }
