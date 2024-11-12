@@ -8,6 +8,8 @@ section.tela {
     border-radius: 10px;
     backdrop-filter: blur(10px);
     animation: abrir 1s ease-in-out forwards;
+    transition: width 1s ease;
+    transition: height 1s ease;
 }
 
 div.telaTopo {
@@ -165,7 +167,7 @@ section#telaDiscar > div.telaTopo > img {
 }
 
 section#telaDiscar > div.telaTopo > img:hover {
-    background-color: #00dfc4
+    background-color: #00dfc4;
 }
 
 section#telaDiscar > div#area-discar {
@@ -273,4 +275,98 @@ div#area-discar > div#area-discar-opcoes > #apagar-digito {
     pointer-events: none;
 }
 
+/* Tela chat */
+
+section#telaChat {
+    display: none;  
+}
+
+#telaChatTopo {
+    background-color: var(--transparent);
+}
+
+div#area-chat {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 22px);
+    margin-top: 22px;
+}
+
+div#area-chat #chat-perfis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 12%;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    background-color: var(--transparent);
+}
+
+#chat-perfis img {
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid #ffffff5d;
+}
+
+div#area-chat #chat-emails {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    height: 100%;
+    background-color: var(--greyTransparent);
+    overflow-y: auto;
+}
+
+div#area-chat #chat-emails::-webkit-scrollbar {
+    background-color: var(--transparent);
+}
+
+div#area-chat #chat-emails::-webkit-scrollbar-button {
+    height: 10px;
+}
+
+div#area-chat #chat-emails::-webkit-scrollbar-thumb {
+    background-color: var(--greyTransparent);
+}
+
+div#area-chat #chat-emails::-webkit-scrollbar-corner {
+    background-color: white;
+}
+
+#chat-emails .email {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+#chat-emails .email:hover {
+    background-color: #00dfc4;
+    color: rgb(17, 17, 17);
+}
+
+.email p {
+    width: 97%;
+    padding: 5px;
+    border-bottom: 1px solid #ffffff5d;
+}
+
+#chat-emails #enviar-email {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #01be76;
+}
+
+#enviar-email:hover {
+    animation: diminuir .3s ease forwards;
+}
 

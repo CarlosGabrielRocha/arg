@@ -66,8 +66,9 @@
 --greyTransparent: #0000009a;
 --darkerTransparent: #000000ea;
 --highLight: #03d3b7;
---test: darkgrey;
---fontTransparent: rgba(255, 255, 255, 0.836);
+--highLightDarker: #01be76;
+--test: #a9a9a9;
+--fontTransparent: #ffffffd5;
 }
 
 *{
@@ -241,6 +242,11 @@ div.imagemIcone img {
     grid-column: 1;
 }
 
+#chat {
+    grid-row: 2;
+    grid-column: 1;
+}
+
 /* Senha para os arquivos */
 
 section#campoSenha {
@@ -346,6 +352,7 @@ footer {
     height: 100vh;
     filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.726);
+    z-index: 99;
 }
 
 .camerasText {

@@ -69,8 +69,9 @@
 --greyTransparent: #0000009a;
 --darkerTransparent: #000000ea;
 --highLight: #03d3b7;
---test: darkgrey;
---fontTransparent: rgba(255, 255, 255, 0.836);
+--highLightDarker: #01be76;
+--test: #a9a9a9;
+--fontTransparent: #ffffffd5;
 }
 
 *{
@@ -244,6 +245,11 @@ div.imagemIcone img {
     grid-column: 1;
 }
 
+#chat {
+    grid-row: 2;
+    grid-column: 1;
+}
+
 /* Senha para os arquivos */
 
 section#campoSenha {
@@ -349,6 +355,7 @@ footer {
     height: 100vh;
     filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.726);
+    z-index: 99;
 }
 
 .camerasText {
@@ -373,6 +380,8 @@ section.tela {
     border-radius: 10px;
     backdrop-filter: blur(10px);
     animation: abrir 1s ease-in-out forwards;
+    transition: width 1s ease;
+    transition: height 1s ease;
 }
 
 div.telaTopo {
@@ -530,7 +539,7 @@ section#telaDiscar > div.telaTopo > img {
 }
 
 section#telaDiscar > div.telaTopo > img:hover {
-    background-color: #00dfc4
+    background-color: #00dfc4;
 }
 
 section#telaDiscar > div#area-discar {
@@ -638,6 +647,100 @@ div#area-discar > div#area-discar-opcoes > #apagar-digito {
     pointer-events: none;
 }
 
+/* Tela chat */
+
+section#telaChat {
+    display: none;  
+}
+
+#telaChatTopo {
+    background-color: var(--transparent);
+}
+
+div#area-chat {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 22px);
+    margin-top: 22px;
+}
+
+div#area-chat #chat-perfis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 12%;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    background-color: var(--transparent);
+}
+
+#chat-perfis img {
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid #ffffff5d;
+}
+
+div#area-chat #chat-emails {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    height: 100%;
+    background-color: var(--greyTransparent);
+    overflow-y: auto;
+}
+
+div#area-chat #chat-emails::-webkit-scrollbar {
+    background-color: var(--transparent);
+}
+
+div#area-chat #chat-emails::-webkit-scrollbar-button {
+    height: 10px;
+}
+
+div#area-chat #chat-emails::-webkit-scrollbar-thumb {
+    background-color: var(--greyTransparent);
+}
+
+div#area-chat #chat-emails::-webkit-scrollbar-corner {
+    background-color: white;
+}
+
+#chat-emails .email {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+#chat-emails .email:hover {
+    background-color: #00dfc4;
+    color: rgb(17, 17, 17);
+}
+
+.email p {
+    width: 97%;
+    padding: 5px;
+    border-bottom: 1px solid #ffffff5d;
+}
+
+#chat-emails #enviar-email {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #01be76;
+}
+
+#enviar-email:hover {
+    animation: diminuir .3s ease forwards;
+}
 
 
 /*!********************************************************************************!*\
@@ -679,6 +782,13 @@ div#area-discar > div#area-discar-opcoes > #apagar-digito {
     div#area-puzzle > div > img {
         width: 37px;
     }
+
+    /* Tela Chat */
+
+    #chat-perfis img {
+        width: 40px;
+    }
+    
 
 }
 
@@ -726,10 +836,14 @@ div#area-discar > div#area-discar-opcoes > #apagar-digito {
 
     /* Tela Puzzles */
 
-
-
     div#area-puzzle > div > img {
         width: 40px;
+    }
+
+    /* Tela Chat */
+
+    #chat-perfis img {
+        width: 45px;
     }
 
 }
@@ -1063,3 +1177,106 @@ div#area-discar > div#area-discar-opcoes > #apagar-digito {
 .stop-calling-filling img {
     transform: rotate(115deg);
 }
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/display.email.css ***!
+  \********************************************************************************/
+
+/* Emails */
+
+.email-body {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 19rem;
+    max-width: 21rem;
+    height: 29rem;
+    border-radius: 10px;
+    background-color: #000000ea;
+    color: var(--fontTransparent);
+    z-index: 100;
+}
+
+.subject-container {
+    width: 95%;
+    max-height: 10%;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+    font-size: .9em;
+    background-color: var(--transparent);
+    overflow: hidden;
+}
+
+.attachment-icon:hover {
+    animation: diminuir .3s ease forwards;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+}
+
+.content-container::-webkit-scrollbar {
+    width: 7px;
+    background-color: #000000ea;
+}
+
+.content-container::-webkit-scrollbar-button {
+    height: 10px;
+}
+
+.content-container::-webkit-scrollbar-thumb {
+    background-color: #01bda7;
+    border-radius: 5px;
+}
+
+.content-container p {
+    padding: 10px;
+    font-size: .8em;
+    text-align: justify;
+    text-indent: 10px;
+}
+
+/* Enviar Email */
+
+.attachment-container {
+    display: flex;
+    width: 100%;
+    height: 6%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.attachment-container div {
+    position: relative;
+}
+
+img.attached-icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 22px;
+}
+
+img.attached-midia {
+    width: 35px;
+}
+
+#send {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+}
+
+#send:hover {
+    animation: diminuir .3s ease forwards;
+}
+
+

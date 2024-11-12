@@ -6,7 +6,10 @@ function createTextElement(tag = 'p', text = '', id = '',  className) {
 
 function createElement(tag = 'div', id = '', ...className) {
     const element = document.createElement(tag)
-    element.id = id
+    if (id) {
+        element.id = id
+    }
+    
     if (className.length) {
         element.classList.add(...className)
     }
@@ -31,5 +34,12 @@ function createMidiaElement(type='audio', src, ...attributes) { // ..atributes =
     return element
 }
 
-export {createElement, createTextElement, createImg, createMidiaElement}
+function createAnchorElement(href, downloadAtt = false, id, ...className) {
+    const element = createElement('a', id, ...className)
+    element.href = href
+    if (downloadAtt) element.setAttribute('download', '')
+    return element
+}
+
+export {createElement, createTextElement, createImg, createMidiaElement, createAnchorElement}
 

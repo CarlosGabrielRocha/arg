@@ -37,10 +37,14 @@
 
     /* Tela Puzzles */
 
-
-
     div#area-puzzle > div > img {
         width: 40px;
+    }
+
+    /* Tela Chat */
+
+    #chat-perfis img {
+        width: 45px;
     }
 
 }

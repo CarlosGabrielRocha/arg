@@ -1,7 +1,6 @@
 import { addBlurBackground, removeBlurBackground } from "./blur.background.js"
 
 const notesIcons = document.querySelectorAll('.nota')
-const notesScreen = document.getElementById('telaNotas')
 
 // Criação e estilos dos elementos que vão formar a nota
 
@@ -34,7 +33,7 @@ function ElementsStyle() {
     div.style.borderRadius = '10px'
     div.style.backgroundColor = '#000000ea'
     div.style.color = 'white'
-    div.style.zIndex = '1'
+    div.style.zIndex = '100'
     div.style.backdropFilter = 'blur(20px)'
 
 
@@ -106,7 +105,7 @@ function displayNoneToElements() {
 
 function appendElements() {
     div.append(p1, p2, imgNote4)
-    notesScreen.appendChild(div)
+    document.body.appendChild(div)
     div.style.display = 'flex'
 }
 
