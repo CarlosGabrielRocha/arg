@@ -19,7 +19,7 @@
 .subject-container {
     width: 95%;
     max-height: 10%;
-    padding: 5px;
+    padding: 8px;
     margin: 10px;
     border-radius: 15px;
     font-size: .9em;
@@ -43,6 +43,7 @@
 .content-container::-webkit-scrollbar {
     width: 7px;
     background-color: #000000ea;
+    border-bottom-right-radius: 10px;
 }
 
 .content-container::-webkit-scrollbar-button {

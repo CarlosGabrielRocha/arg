@@ -299,14 +299,22 @@ div#area-chat #chat-perfis {
     gap: 8px;
     width: 12%;
     height: 100%;
+    border-right: 1px solid #ffffff5d;
     border-bottom-left-radius: 10px;
     background-color: var(--transparent);
 }
 
 #chat-perfis img {
-    width: 35px;
-    border-radius: 50%;
+    width: 30px;
+    border-radius: 9999px;
     border: 1px solid #ffffff5d;
+    background-color: #00dfc53a;
+    backdrop-filter: blur(10px);
+}
+
+#chat-perfis img:hover {
+    background-color: #00dfc4;
+    border: 1px solid rgba(0, 0, 0, 0.521);
 }
 
 div#area-chat #chat-emails {
@@ -315,12 +323,15 @@ div#area-chat #chat-emails {
     flex-direction: column;
     width: 88%;
     height: 100%;
+    border-top: 1px solid #ffffff5d;
+    border-bottom-right-radius: 10px;
     background-color: var(--greyTransparent);
     overflow-y: auto;
 }
 
 div#area-chat #chat-emails::-webkit-scrollbar {
-    background-color: var(--transparent);
+    background-color: var(--greyTransparent);
+    border-bottom-right-radius: 10px;
 }
 
 div#area-chat #chat-emails::-webkit-scrollbar-button {
@@ -328,7 +339,8 @@ div#area-chat #chat-emails::-webkit-scrollbar-button {
 }
 
 div#area-chat #chat-emails::-webkit-scrollbar-thumb {
-    background-color: var(--greyTransparent);
+    background-color: var(--transparent);
+    backdrop-filter: blur(10px);
 }
 
 div#area-chat #chat-emails::-webkit-scrollbar-corner {
@@ -337,27 +349,38 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
 
 #chat-emails .email {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: 99%;
+    padding: 6px;
     font-size: 0.8em;
+    border-bottom: 1px solid black;
+    background-color: #00000059;
+    color: var(--fontTransparent);
 }
 
 #chat-emails .email:hover {
-    background-color: #00dfc4;
-    color: rgb(17, 17, 17);
+    background-color: #00dfc5;
+    color: black;
+    text-shadow: none;
+    opacity: .8;
 }
 
 .email p {
-    width: 97%;
-    padding: 5px;
-    border-bottom: 1px solid #ffffff5d;
+    position: relative;
+    height: 1.4em;
+    overflow-y: hidden;
+}
+
+.email p::after {
+    
+    content: '...';
 }
 
 #chat-emails #enviar-email {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 50px;

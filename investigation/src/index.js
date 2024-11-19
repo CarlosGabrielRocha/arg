@@ -5,7 +5,7 @@ import { changePhoneDate } from "./phone.date.js"
 import { restartMeteorAnimation } from "./meteor.js"
 import { call } from "./call.js"
 import { digits } from "./dial.actions.js"
-import './chat.js'
+import './chat/emails.js'
 
 import './styles/index.css'
 import './styles/screens.css'
@@ -15,7 +15,7 @@ import './styles/meteor.css'
 import './styles/call.css'
 import './styles/active-call.css'
 import './styles/call.someone.css'
-import './styles/display.email.css'
+import './styles/chat.css'
 
 setInterval(changePhoneDate, 1000)
 setInterval(restartMeteorAnimation, 20000)

@@ -10,7 +10,7 @@ function createElement(tag = 'div', id = '', ...className) {
         element.id = id
     }
     
-    if (className.length) {
+    if (className[0]) {
         element.classList.add(...className)
     }
     
