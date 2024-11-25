@@ -10,6 +10,7 @@ section.tela {
     animation: abrir 1s ease-in-out forwards;
     transition: width 1s ease;
     transition: height 1s ease;
+    z-index: 2;
 }
 
 div.telaTopo {
@@ -307,12 +308,20 @@ div#area-chat #chat-perfis {
 #chat-perfis img {
     width: 30px;
     border-radius: 9999px;
-    border: 1px solid #ffffff5d;
-    background-color: #00dfc53a;
     backdrop-filter: blur(10px);
 }
 
-#chat-perfis img:hover {
+/* #chat-perfis img:hover {
+    background-color: #00dfc4;
+    border: 1px solid rgba(0, 0, 0, 0.521);
+} */
+
+.perfil {
+    border: 1px solid #ffffff5d;
+    background-color: #00dfc53a;
+}
+
+.perfil-selecionado {
     background-color: #00dfc4;
     border: 1px solid rgba(0, 0, 0, 0.521);
 }
@@ -376,11 +385,11 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
     content: '...';
 }
 
-#chat-emails #enviar-email {
+#chat-emails #escrever-email {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
@@ -389,7 +398,7 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
     background-color: #01be76;
 }
 
-#enviar-email:hover {
+#escrever-email:hover {
     animation: diminuir .3s ease forwards;
 }
 

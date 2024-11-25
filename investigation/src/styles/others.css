@@ -47,4 +47,14 @@
         width: 40px;
     }
 
+    .email-body {
+        height: 33rem;
+        max-width: 28rem;
+    }
+
+    #send {
+        width: 50px;
+        bottom: 8px;
+    }
+
 }

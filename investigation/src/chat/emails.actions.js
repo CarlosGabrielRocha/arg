@@ -1,4 +1,4 @@
-import { createElement, createMidiaElement} from "../create-elements.js"
+import { createElement, createMidiaElement, createTextElement} from "../create-elements.js"
 import { addBlurBackground, removeBlurBackground } from "../blur.background.js"
 
 // Carregar o email na tela
@@ -39,7 +39,15 @@ function emptyEmailBody() {
 
 // Email para enviar 
 
-function sendEmail(subjectElements, contentElements, attachmentElements) { 
+function writeEmail(subjectElements, contentElements, attachmentElements, receiver) { 
+
+    // Remetente
+    const receiverContainer = createElement('div', 'receiver-container')
+    const receiverSpan = createTextElement('span')
+    receiverSpan.innerText = 'Receiver: '
+    receiverContainer.append(receiverSpan, receiver.profilePicture.cloneNode(true))
+    sendEmailBody.appendChild(receiverContainer)
+
     // Elementos que compõe a parte do assunto do email
     sendEmailBody.appendChild(subjectElements)
 
@@ -67,19 +75,19 @@ function sendEmail(subjectElements, contentElements, attachmentElements) {
 
 function renderEmailsPreview(profile) {
     const chatEmails = document.querySelector('#chat-emails')
-    const sendEmailIcon = document.querySelector('#enviar-email')
-    sendEmailIcon.style.display = 'flex'
+    const previews = document.querySelectorAll('#chat-emails > div')
+    const writeEmailIcon = document.querySelector('#escrever-email')
     //Limpando o container com as prévias dos emails
-    chatEmails.childNodes.forEach(child => {
-        if (child !== sendEmailIcon) {
-            chatEmails.removeChild(child)
+    previews.forEach(preview => {
+        if(preview !== writeEmailIcon) {
+            preview.remove()
         }
     })
-    //Adicionando todas as prévias dos emails do perfil
+       //Adicionando todas as prévias dos emails do perfil
     profile.emails.forEach(email => {
         chatEmails.appendChild(email.preview)
     })
 }
 
 
-export { displayEmail, sendEmail, renderEmailsPreview }
+export { displayEmail, writeEmail, renderEmailsPreview }

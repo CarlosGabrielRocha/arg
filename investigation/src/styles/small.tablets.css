@@ -38,9 +38,18 @@
     /* Tela Chat */
 
     #chat-perfis img {
-        width: 40px;
+        width: 35px;
+    }
+
+    .email-body {
+        max-width: 25rem;
+        padding: 5px;
     }
     
+    #send {
+        width: 45px;
+        bottom: 5px;
+    }
 
 }
 

@@ -1,4 +1,4 @@
-import { renderEmailsPreview } from "./chat.actions.js"
+import { renderEmailsPreview } from "./emails.actions.js"
 import { createElement, createMidiaElement } from "../create-elements"
 import { Email } from "./Email.js"
 
@@ -13,6 +13,8 @@ class Profile {
         this.#renderProfilePicture(profileImgSrc)
         // Ao clicar na imagem de perfil, os emails desse perfil serão renderizados.
         this.#profilePicture.addEventListener('click', () => {
+            this.#replaceProfilesClass()
+            this.#profilePicture.classList.replace('perfil', 'perfil-selecionado')
             renderEmailsPreview(this)
         })
     }
@@ -25,16 +27,28 @@ class Profile {
     // Renderiza a imagem de perfil.
 
     #renderProfilePicture(profileImgSrc) {
-        const div = createElement('div')
-        const img = createMidiaElement('img', profileImgSrc)
-        div.appendChild(img)
-        this.#profilePicture = div
+        const img = createMidiaElement('img', profileImgSrc, ['class', 'perfil'])
+        img.alt = this.name
+        this.#profilePicture = img
         const chatProfiles = document.querySelector('#chat-perfis')
-        chatProfiles.appendChild(div)
+        chatProfiles.appendChild(img)
+    }
+
+    // Retira a classe 'perfil-selecionado' e adicionada a 'perfil'
+
+    #replaceProfilesClass() {
+        const profiles = document.querySelectorAll('#chat-perfis > img')
+        profiles.forEach(profile => {
+            profile.classList.replace('perfil-selecionado', 'perfil')
+        })
     }
 
     get emails() {
         return this.#emails
+    }
+
+    get profilePicture() {
+        return this.#profilePicture
     }
 }
 

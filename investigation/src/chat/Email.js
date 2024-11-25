@@ -2,7 +2,7 @@ import { Content } from "./Content.js";
 import { Subject } from "./Subject.js";
 import { Attachment } from "./Attachment.js";
 import { createElement, createTextElement } from "../create-elements.js";
-import { displayEmail, sendEmail } from "./chat.actions.js";
+import { displayEmail, sendEmail } from "./emails.actions.js";
 
 class Email {
     #subject
@@ -15,7 +15,9 @@ class Email {
         if (attachment.length) {
             this.#attachment = new Attachment(type, attachment)
         }
-        this.#createEmailPreview(subjectText, type)
+        if (type === 'received') {
+            this.#createEmailPreview(subjectText)
+        } 
     }
 
     get subject() {
@@ -34,21 +36,14 @@ class Email {
 
     // Cria uma prévia do e-mail no DOM
 
-    #createEmailPreview(subjectText, type) {
-        if (type === 'received') {
-            const div = createElement('div', '', 'email')
-            const p = createTextElement('p', subjectText)
-            div.appendChild(p)
-            div.addEventListener('click', () => {
-                displayEmail(this.subject, this.content, this.attachment)
-            })
-            this.#preview = div
-        } else if (type === 'sent') {
-            const sendIcon = document.querySelector('#enviar-email')
-            sendIcon.addEventListener('click', () => {
-                sendEmail(this.subject, this.content, this.attachment)
-            })
-        }
+    #createEmailPreview(subjectText) {
+        const div = createElement('div', '', 'email')
+        const p = createTextElement('p', subjectText)
+        div.appendChild(p)
+        div.addEventListener('click', () => {
+            displayEmail(this.subject, this.content, this.attachment)
+        })
+        this.#preview = div
     }
 
     get preview() {

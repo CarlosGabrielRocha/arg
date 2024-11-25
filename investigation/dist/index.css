@@ -72,6 +72,8 @@
 --highLightDarker: #01be76;
 --test: #a9a9a9;
 --fontTransparent: #ffffffd5;
+--white: #f1f1f1;
+--blur: blur(10px);
 }
 
 *{
@@ -207,7 +209,7 @@ div.inativo img {
 
 div.ativo {
     animation: flutuar 1s ease-in-out infinite alternate;
-    background-color: white;
+    background-color: #f1f1f1;
 }
 
 div.ativo:hover {
@@ -382,6 +384,7 @@ section.tela {
     animation: abrir 1s ease-in-out forwards;
     transition: width 1s ease;
     transition: height 1s ease;
+    z-index: 2;
 }
 
 div.telaTopo {
@@ -679,12 +682,20 @@ div#area-chat #chat-perfis {
 #chat-perfis img {
     width: 30px;
     border-radius: 9999px;
-    border: 1px solid #ffffff5d;
-    background-color: #00dfc53a;
     backdrop-filter: blur(10px);
 }
 
-#chat-perfis img:hover {
+/* #chat-perfis img:hover {
+    background-color: #00dfc4;
+    border: 1px solid rgba(0, 0, 0, 0.521);
+} */
+
+.perfil {
+    border: 1px solid #ffffff5d;
+    background-color: #00dfc53a;
+}
+
+.perfil-selecionado {
     background-color: #00dfc4;
     border: 1px solid rgba(0, 0, 0, 0.521);
 }
@@ -748,11 +759,11 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
     content: '...';
 }
 
-#chat-emails #enviar-email {
+#chat-emails #escrever-email {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
@@ -761,115 +772,10 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
     background-color: #01be76;
 }
 
-#enviar-email:hover {
+#escrever-email:hover {
     animation: diminuir .3s ease forwards;
 }
 
-
-/*!********************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/small.tablets.css ***!
-  \********************************************************************************/
-@media screen and (min-width: 576px) {
-
-    /* Configurações gerais das Telas */
-
-    section.tela {
-        height: 26rem;
-        width: 31.5rem;
-    }
-
-    div.telaCentro {
-        width: 400px;
-        height: 280px;
-        font-size: 1.1em;
-    }
-
-    /* Tela das câmeras */
-
-    section#telaCameras > #area-camera > video {
-        width: 440px;
-    }
-
-    section#telaCameras > p{
-        font-size: 1.2em;
-    }
-
-    /* Tela das notas */
-
-    div#area-notas > div > img {
-        width: 37px;
-    }
-
-    /* Tela Puzzles */
-
-    div#area-puzzle > div > img {
-        width: 37px;
-    }
-
-    /* Tela Chat */
-
-    #chat-perfis img {
-        width: 40px;
-    }
-    
-
-}
-
-
-
-/*!*************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/others.css ***!
-  \*************************************************************************/
-@media screen and (min-width: 769px) {
-
-    /* Configurações gerais das Telas */
-
-    body {
-        background-attachment: scroll;
-    }
-
-    section.tela {
-        height: 30rem;
-        width: 35.5rem;
-    }
-
-    div.telaCentro {
-        width: 450px;
-        height: 300px;
-        font-size: 1.1em; 
-    }
-
-    /* Tela das câmeras */
-
-    section#telaCameras > #area-camera > video {
-        width: 490px;
-    }
-
-    section#telaCameras > p{
-        font-size: 1.2em;
-    }
-
-    /* Tela das notas */
-
-
-
-    div#area-notas > div > img {
-        width: 40px;
-    }
-
-    /* Tela Puzzles */
-
-    div#area-puzzle > div > img {
-        width: 40px;
-    }
-
-    /* Tela Chat */
-
-    #chat-perfis img {
-        width: 40px;
-    }
-
-}
 
 /*!*************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/meteor.css ***!
@@ -1219,13 +1125,15 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
     background-color: #000000ea;
     color: var(--fontTransparent);
     z-index: 100;
+    transition: max-width 1s ease;
+    transition: height 1s ease;
 }
 
 .subject-container {
     width: 95%;
     max-height: 10%;
+    margin: 7px;
     padding: 8px;
-    margin: 10px;
     border-radius: 15px;
     font-size: .9em;
     background-color: var(--transparent);
@@ -1269,6 +1177,26 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
 
 /* Enviar Email */
 
+#receiver-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    padding: 5px 0px 0px 5px ;
+}
+
+#receiver-container span {
+    margin-right: 5px;
+}
+
+#receiver-container img {
+    width: 30px;
+    border-radius: 9999px;
+    border: 1px solid var(--fontTransparent);
+    background-color: #00dfc4;
+    backdrop-filter: blur(10px);
+}
+
 .attachment-container {
     display: flex;
     width: 100%;
@@ -1284,9 +1212,9 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
 
 img.attached-icon {
     position: absolute;
-    bottom: 0;
+    bottom: 4px;
     left: 0;
-    width: 22px;
+    width: 20px;
 }
 
 img.attached-midia {
@@ -1297,10 +1225,192 @@ img.attached-midia {
     position: fixed;
     bottom: 10px;
     right: 20px;
+    width: 35px;
+    animation: flutuar 1s ease-in-out alternate infinite;
 }
 
 #send:hover {
     animation: diminuir .3s ease forwards;
 }
 
+
+/*!************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/toast.css ***!
+  \************************************************************************/
+@keyframes descer {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes desaparecer {
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#notifications {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 270px; /* Tamanho do telefone */
+    max-width: 98%;
+    font-family: 'montserrat';
+    font-size: .9em;
+    z-index: 1;
+}
+
+.notification-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 7rem;
+    margin: 10px 10px 0px 0px;
+    border-radius: 10px;
+    border: 1px solid var(--highLight);
+    background-color: var(--darkerTransparent);
+    color: var(--white);
+    backdrop-filter: var(--blur);
+    animation: desaparecer 6s ease-in forwards, descer 0.2s ease-in forwards;
+}
+
+.notification-box p {
+    width: 90%;
+    text-align: center;
+}
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/small.tablets.css ***!
+  \********************************************************************************/
+@media screen and (min-width: 576px) {
+
+    /* Configurações gerais das Telas */
+
+    section.tela {
+        height: 26rem;
+        width: 31.5rem;
+    }
+
+    div.telaCentro {
+        width: 400px;
+        height: 280px;
+        font-size: 1.1em;
+    }
+
+    /* Tela das câmeras */
+
+    section#telaCameras > #area-camera > video {
+        width: 440px;
+    }
+
+    section#telaCameras > p{
+        font-size: 1.2em;
+    }
+
+    /* Tela das notas */
+
+    div#area-notas > div > img {
+        width: 37px;
+    }
+
+    /* Tela Puzzles */
+
+    div#area-puzzle > div > img {
+        width: 37px;
+    }
+
+    /* Tela Chat */
+
+    #chat-perfis img {
+        width: 35px;
+    }
+
+    .email-body {
+        max-width: 25rem;
+        padding: 5px;
+    }
+    
+    #send {
+        width: 45px;
+        bottom: 5px;
+    }
+
+}
+
+
+
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/others.css ***!
+  \*************************************************************************/
+@media screen and (min-width: 769px) {
+
+    /* Configurações gerais das Telas */
+
+    body {
+        background-attachment: scroll;
+    }
+
+    section.tela {
+        height: 30rem;
+        width: 35.5rem;
+    }
+
+    div.telaCentro {
+        width: 450px;
+        height: 300px;
+        font-size: 1.1em; 
+    }
+
+    /* Tela das câmeras */
+
+    section#telaCameras > #area-camera > video {
+        width: 490px;
+    }
+
+    section#telaCameras > p{
+        font-size: 1.2em;
+    }
+
+    /* Tela das notas */
+
+
+
+    div#area-notas > div > img {
+        width: 40px;
+    }
+
+    /* Tela Puzzles */
+
+    div#area-puzzle > div > img {
+        width: 40px;
+    }
+
+    /* Tela Chat */
+
+    #chat-perfis img {
+        width: 40px;
+    }
+
+    .email-body {
+        height: 33rem;
+        max-width: 28rem;
+    }
+
+    #send {
+        width: 50px;
+        bottom: 8px;
+    }
+
+}
 

@@ -69,6 +69,8 @@
 --highLightDarker: #01be76;
 --test: #a9a9a9;
 --fontTransparent: #ffffffd5;
+--white: #f1f1f1;
+--blur: blur(10px);
 }
 
 *{
@@ -204,7 +206,7 @@ div.inativo img {
 
 div.ativo {
     animation: flutuar 1s ease-in-out infinite alternate;
-    background-color: white;
+    background-color: #f1f1f1;
 }
 
 div.ativo:hover {
