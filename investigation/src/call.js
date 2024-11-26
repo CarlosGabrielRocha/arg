@@ -62,6 +62,7 @@ function incomingCall(callType = 'voice', title = 'Desconhecido', src = '', call
 
     callRing.play()
     callTitle.innerText = title
+    navigator.vibrate(2000)
 
     callScreenTop.append(callTitle, callSubtitle, profile)
     callScreenBottom.append(declineCallIcon, acceptCallIcon)

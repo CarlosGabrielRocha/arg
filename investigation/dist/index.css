@@ -83,6 +83,10 @@
     user-select: none;
 }
 
+img {
+    user-select: none;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -468,7 +472,6 @@ div#area-notas > div {
 
 div#area-notas > div > img {
     width: 30px;
-    user-select: none;
 }
 
 div#area-notas > div > img:hover {

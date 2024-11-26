@@ -100,7 +100,6 @@ div#area-notas > div {
 
 div#area-notas > div > img {
     width: 30px;
-    user-select: none;
 }
 
 div#area-notas > div > img:hover {

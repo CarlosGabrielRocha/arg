@@ -80,6 +80,10 @@
     user-select: none;
 }
 
+img {
+    user-select: none;
+}
+
 a {
     text-decoration: none;
     color: white;
