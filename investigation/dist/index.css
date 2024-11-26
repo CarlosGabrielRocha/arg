@@ -116,23 +116,6 @@ body {
     overflow: hidden;
 }
 
-/* Telefone */
-
-main {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 270px;
-    height: 560px;
-    filter: brightness(110%);
-}
-
-main img {
-    user-select: none;
-    pointer-events: none;
-}
-
 /* Topo do telefone */
 
 section#topo {

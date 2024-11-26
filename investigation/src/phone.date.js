@@ -9,7 +9,7 @@ const pDate = document.getElementById('data')
 
 function changePhoneDate() {
     pHour.innerText = `${dayjs().format('HH')}:${dayjs().format('mm')}`  
-    pDate.innerText = `${dayjs().format('dddd')}, ${dayjs().format('DD')} ${dayjs().format('MMMM')}, ${dayjs().format('YYYY')}`
+    pDate.innerText = `${dayjs().format('dddd')}, ${dayjs().format('DD')} ${dayjs().format('MMMM')}.`
 }
 
 function cameraDate(element) {

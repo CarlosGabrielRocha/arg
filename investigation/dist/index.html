@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investigation 2025</title>
+    <style>
+        /* Telefone */
+        main {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 270px;
+            height: 560px;
+            filter: brightness(110%);
+        }
+
+        main img {
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
     <link rel="stylesheet" href="index.css">
     <script src="bundle.min.js" defer></script>
 </head>
@@ -23,7 +40,7 @@
         <section id="icones">
             <div class="icone" id="notas" data-screen="notas">
 
-                <div class="imagemIcone ativo" id="imagemNotas"><img src="../midia/notas.svg" alt="notas"></div>
+                <div class="imagemIcone inativo" id="imagemNotas"><img src="../midia/notas.svg" alt="notas"></div>
 
             </div>
             <div class="icone" id="mapa" data-screen="mapa">
@@ -33,12 +50,12 @@
             </div>
             <div class="icone" id="discar" data-screen="discar">
 
-                <div class="imagemIcone ativo"><img src="../midia/lista.svg" alt="lista"></div>
+                <div class="imagemIcone inativo"><img src="../midia/lista.svg" alt="lista"></div>
 
             </div>
             <div class="icone" id="missoes" data-screen="missoes">
 
-                <div class="imagemIcone ativo"><img src="../midia/missoes.svg" alt="missoes"></div>
+                <div class="imagemIcone inativo"><img src="../midia/missoes.svg" alt="missoes"></div>
 
             </div>
             <div class="icone" id="delegacia">
@@ -53,7 +70,7 @@
             </div>
             <div class="icone" id="cameras" data-screen="cameras">
 
-                <div class="imagemIcone ativo"><img src="../midia/cameras.svg" alt="camera"></div>
+                <div class="imagemIcone inativo"><img src="../midia/cameras.svg" alt="camera"></div>
 
             </div>
             <div class="icone" id="chat" data-screen="chat">
@@ -133,7 +150,7 @@
         <div class="telaTopo">
             <img src="../midia/fechar.svg" alt="sair" class="botao sair" data-screen="missoes">
         </div>
-        
+
         <div id="area-puzzle" class="telaCentro">
             <div>
                 <img src="../midia/labirinto.svg" alt="Labirinto1">
@@ -164,8 +181,7 @@
     <section id="telaDiscar" class="tela" data-screen="discar">
 
         <div class="telaTopo">
-            <img src="../midia/fechar.svg" alt="sair" class="botao sair" id="telaDiscar-sair"
-             data-screen="discar">
+            <img src="../midia/fechar.svg" alt="sair" class="botao sair" id="telaDiscar-sair" data-screen="discar">
         </div>
 
         <div id="area-discar" class="telaCentro">
@@ -220,7 +236,7 @@
                     <span class="digito">#</span>
                 </div>
             </div>
-    
+
             <div id="area-discar-opcoes">
                 <div id="ligar">
                     <img src="../midia/call/aceitar_recusar_ligacao.svg" alt="ligar">
@@ -234,7 +250,7 @@
     </section>
 
     <!-- Tela chat -->
-    
+
     <section id="telaChat" class="tela" data-screen="chat">
 
         <div class="telaTopo" id="telaChatTopo">
