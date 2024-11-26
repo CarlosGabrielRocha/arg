@@ -182,12 +182,6 @@ div.icone {
     cursor: pointer;
 }
 
-div.icone p {
-    font-size: 0.8em;
-    text-align: center;
-    margin: 5px;
-}
-
 div.imagemIcone {
     display: flex;
     align-items: center;
@@ -474,6 +468,7 @@ div#area-notas > div {
 
 div#area-notas > div > img {
     width: 30px;
+    user-select: none;
 }
 
 div#area-notas > div > img:hover {
@@ -513,6 +508,7 @@ div#area-puzzle > div {
 
 div#area-puzzle > div > img {
     width: 35px;
+    pointer-events: none;
 }
 
 div#area-puzzle > div > img:hover {
@@ -770,6 +766,10 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
     height: 50px;
     border-radius: 50%;
     background-color: #01be76;
+}
+
+#chat-emails #escrever-email img {
+    pointer-events: none;
 }
 
 #escrever-email:hover {
@@ -1257,18 +1257,20 @@ img.attached-midia {
     }
 }
 
-#notifications {
+#notifications-body {
     position: absolute;
     top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 10px;
     min-width: 270px; /* Tamanho do telefone */
     max-width: 98%;
+    overflow: hidden;
     font-family: 'montserrat';
     font-size: .9em;
-    z-index: 1;
+    z-index: 200;
 }
 
 .notification-box {
@@ -1277,7 +1279,6 @@ img.attached-midia {
     justify-content: center;
     width: 15rem;
     height: 7rem;
-    margin: 10px 10px 0px 0px;
     border-radius: 10px;
     border: 1px solid var(--highLight);
     background-color: var(--darkerTransparent);

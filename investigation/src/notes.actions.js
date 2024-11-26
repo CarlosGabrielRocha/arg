@@ -1,5 +1,5 @@
 import { addBlurBackground, removeBlurBackground } from "./blur.background.js"
-
+import { open } from "./sounds-effects.js"
 const notesIcons = document.querySelectorAll('.nota')
 
 // Criação e estilos dos elementos que vão formar a nota
@@ -42,6 +42,7 @@ function ElementsStyle() {
     p2.style.width = '95%'
 
     imgNote4.style.maxWidth = "150px"
+    imgNote4.style.pointerEvents = 'none'
     
 }
 
@@ -84,7 +85,7 @@ function handleNotesClick() {
     
         appendElements()
         addBlurBackground()
-        
+        open.play()
     }))
     
 }

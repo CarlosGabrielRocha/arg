@@ -27,9 +27,11 @@ function openIcon() {
 
     phoneIcons.forEach( icon => {
         icon.addEventListener('click', event => {
-            const iconSelected = event.currentTarget      
+            const iconSelected = event.currentTarget
+            const img = iconSelected.querySelector('div.imagemIcone')
+             
             screens.forEach(screen => {
-                if (iconSelected.dataset.screen === screen.dataset.screen) {
+                if (iconSelected.dataset.screen === screen.dataset.screen && img.classList.contains('ativo')) {
                     screen.style.display = 'flex'
                 }
             })

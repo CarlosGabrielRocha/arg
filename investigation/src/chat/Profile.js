@@ -1,13 +1,15 @@
 import { renderEmailsPreview } from "./emails.actions.js"
-import { createElement, createMidiaElement } from "../create-elements"
+import { createMidiaElement } from "../create-elements"
 import { Email } from "./Email.js"
 
 class Profile {
+    static profiles = {} // Todos os perfis criados: PROFILE.profiles.nome
     #profilePicture
     #emails = [
 
     ]
     constructor(name, profileImgSrc) {
+        Profile.profiles[name] = this
         this.name = name
         this.profilePictureSrc = profileImgSrc
         this.#renderProfilePicture(profileImgSrc)
@@ -19,7 +21,7 @@ class Profile {
         })
     }
 
-    writeEmail(type = '', subjectText = '', contentText = [], ...attachment) {
+    newEmail(type = '', subjectText = '', contentText = [], ...attachment) {
         const email = new Email(type, subjectText, contentText, attachment)
         this.#emails.push(email)
     }

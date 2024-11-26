@@ -1,5 +1,7 @@
 import { createElement, createMidiaElement, createTextElement} from "../create-elements.js"
 import { addBlurBackground, removeBlurBackground } from "../blur.background.js"
+import { newNotification } from "../toast.js"
+import { open } from "../sounds-effects.js"
 
 // Carregar o email na tela
 
@@ -19,6 +21,7 @@ function displayEmail(subjectElements, contentElements, attachmentElements) {
     emailBody.appendChild(contentElements)
     document.body.appendChild(emailBody)
     addBlurBackground()
+    open.play()
 }
 
 // Removerá o email da tela caso o elemento que for clicado não seja o de download dos arquivos anexados
@@ -39,7 +42,7 @@ function emptyEmailBody() {
 
 // Email para enviar 
 
-function writeEmail(subjectElements, contentElements, attachmentElements, receiver) { 
+function writeEmail(subjectElements, contentElements, attachmentElements, receiver, emailKey) { 
 
     // Remetente
     const receiverContainer = createElement('div', 'receiver-container')
@@ -56,7 +59,11 @@ function writeEmail(subjectElements, contentElements, attachmentElements, receiv
     sendEmailBody.appendChild(sendIcon)
 
     sendIcon.addEventListener('click', () => {
+        newNotification('Email enviado com sucesso!')
         emptyEmailBody()
+
+        //LocalStorage
+        localStorage.setItem(emailKey, 'ok')
     }, {once: true})
     
     // Arquivos Anexados
@@ -69,6 +76,7 @@ function writeEmail(subjectElements, contentElements, attachmentElements, receiv
     sendEmailBody.appendChild(contentElements)
     document.body.appendChild(sendEmailBody)
     addBlurBackground()
+    open.play()
 }
 
 // Renderizar emails de acordo com o perfil
@@ -83,11 +91,20 @@ function renderEmailsPreview(profile) {
             preview.remove()
         }
     })
-       //Adicionando todas as prévias dos emails do perfil
+       // Adicionando todas as prévias dos emails do perfil
     profile.emails.forEach(email => {
         chatEmails.appendChild(email.preview)
     })
 }
 
+// Notifica o usuário caso não tenha um email a ser enviado.
+
+const writeEmailIcon = document.querySelector('#escrever-email')
+
+writeEmailIcon.addEventListener('click', () => {
+    if (sendEmailBody.innerHTML === '') {
+        newNotification('Você não tem o que enviar no momento!')
+    }
+})
 
 export { displayEmail, writeEmail, renderEmailsPreview }

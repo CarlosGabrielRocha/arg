@@ -100,6 +100,7 @@ div#area-notas > div {
 
 div#area-notas > div > img {
     width: 30px;
+    user-select: none;
 }
 
 div#area-notas > div > img:hover {
@@ -139,6 +140,7 @@ div#area-puzzle > div {
 
 div#area-puzzle > div > img {
     width: 35px;
+    pointer-events: none;
 }
 
 div#area-puzzle > div > img:hover {
@@ -396,6 +398,10 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
     height: 50px;
     border-radius: 50%;
     background-color: #01be76;
+}
+
+#chat-emails #escrever-email img {
+    pointer-events: none;
 }
 
 #escrever-email:hover {

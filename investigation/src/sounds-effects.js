@@ -3,6 +3,9 @@ import callRingSound from "./assets/recebendo_ligacao.mp3"
 import callingSound from "./assets/ligando.mp3"
 import outOfServiceSound from "./assets/foradearea.mp3"
 import changeCameraSound from "./assets/mudar_camera.mp3"
+import notificationSound from "./assets/notificacao.mp3"
+import emailSentSound from "./assets/email_enviado.mp3"
+import openSound from "./assets/abrir.mp3"
 
 import digit1Sound from "./assets/digits/digit1.mp3"
 import digit2Sound from "./assets/digits/digit2.mp3"
@@ -78,8 +81,22 @@ const digitsSoundsArray = digitsSoundsSrc.map((digitSrc, indexof) => {
     return audio
 })
 
-document.body.append( endingCall, callRing, calling, outOfService, changeCamera)
+const notification = createMidiaElement
+(
+    'audio',
+    notificationSound,
+    ['preload', 'auto']
+)
 
-export {endingCall, callRing, calling, outOfService, digitsSoundsArray, changeCamera}
+const open = createMidiaElement
+(
+    'audio',
+    openSound,
+    ['preload', 'auto']
+)
+
+document.body.append( endingCall, callRing, calling, outOfService, changeCamera, notification, open)
+
+export {endingCall, callRing, calling, outOfService, digitsSoundsArray, changeCamera, notification, open}
 
 

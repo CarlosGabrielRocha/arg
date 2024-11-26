@@ -18,18 +18,20 @@
     }
 }
 
-#notifications {
+#notifications-body {
     position: absolute;
     top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 10px;
     min-width: 270px; /* Tamanho do telefone */
     max-width: 98%;
+    overflow: hidden;
     font-family: 'montserrat';
     font-size: .9em;
-    z-index: 1;
+    z-index: 200;
 }
 
 .notification-box {
@@ -38,7 +40,6 @@
     justify-content: center;
     width: 15rem;
     height: 7rem;
-    margin: 10px 10px 0px 0px;
     border-radius: 10px;
     border: 1px solid var(--highLight);
     background-color: var(--darkerTransparent);

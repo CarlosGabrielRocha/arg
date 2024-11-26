@@ -2,7 +2,7 @@ import { Content } from "./Content.js";
 import { Subject } from "./Subject.js";
 import { Attachment } from "./Attachment.js";
 import { createElement, createTextElement } from "../create-elements.js";
-import { displayEmail, sendEmail } from "./emails.actions.js";
+import { displayEmail } from "./emails.actions.js";
 
 class Email {
     #subject

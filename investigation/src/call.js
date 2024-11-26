@@ -58,7 +58,7 @@ acceptCallIcon.append(acceptCallFilling, acceptCallP)
 
 // Função para iniciar ligação recebida
 
-function incomingCall(callType = 'voice', title = 'Desconhecido', src = '') {
+function incomingCall(callType = 'voice', title = 'Desconhecido', src = '', callKey) {
 
     callRing.play()
     callTitle.innerText = title
@@ -72,50 +72,12 @@ function incomingCall(callType = 'voice', title = 'Desconhecido', src = '') {
         callScreenBody.remove()
         callRing.pause()
         answerCall(callType, title, src)
+
+        // localstorage
+        localStorage.setItem(callKey, 'ok')
     }, { once: true }) // O evento será removido após ser ativado uma vez.
 
 }
-
-// Função para ligar para alguém
-
-/* function callSomeone(validNumbers, numberToCall) {
-    const number = validNumbers.filter(element => element.number === numberToCall)
-    
-    callTitle.innerText = numberToCall
-
-    callScreenTop.append(callTitle, callSubtitle)
-
-    callScreenBottom.append(declineCallIcon)
-    callScreenBottom.classList.add('call-someone-bottom')
-    callScreenBottom.classList.remove('incomming-call-bottom')
-    declineCallIcon.classList.remove('call-icon')
-
-    callScreenBody.append(callScreenTop, callScreenBottom)
-    main.appendChild(callScreenBody)
-
-    if (number.length > 0) {
-        callSubtitle.innerText = 'chamando..'
-        setTimeout(() => {
-            activeCall('voice', numberToCall, number[0].src)
-        }, 1000 * 8)
-    } else {
-        callSubtitle.innerText = 'ligando..'
-        setTimeout(() => {
-            callScreenBody.remove()
-            endingCall.play()
-        }, 1000 * 4)
-    }
-
-} */
-
-// Ligação ativa
-
-/* function activeCall(callType, title = '', src) {
-    callScreenBody.remove()
-    callRing.pause()
-    answerCall(callType, title, src)
-}
- */
 
 // Recusar ligação
 
