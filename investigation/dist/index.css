@@ -1,6 +1,3 @@
-/*!************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/index.css ***!
-  \************************************************************************/
 @charset "UTF-8";
 
 @font-face {
@@ -350,9 +347,6 @@ footer {
     display: block;
 }
 
-/*!**************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/screens.css ***!
-  \**************************************************************************/
 /* Configurações gerais das Telas */
 
 section.tela {
@@ -763,9 +757,6 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
 }
 
 
-/*!*************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/meteor.css ***!
-  \*************************************************************************/
 @keyframes cair {
     0% {
         transform: translate(0vw, 0vh) rotate(25deg);
@@ -807,9 +798,6 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
     will-change: transform;
     animation: cair 0.5s linear forwards;
 }
-/*!***********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/call.css ***!
-  \***********************************************************************/
 @keyframes mecher {
     to {
         transform: translateY(-15px);
@@ -920,9 +908,6 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
 
 
 
-/*!******************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/active-call.css ***!
-  \******************************************************************************/
 /* Global */
 
 .active-call-icon {
@@ -1045,9 +1030,6 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
 }
 
 
-/*!*******************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/call.someone.css ***!
-  \*******************************************************************************/
 
 /* Parte de cima da ligação */
 
@@ -1092,9 +1074,6 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
 .stop-calling-filling img {
     transform: rotate(115deg);
 }
-/*!***********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/chat.css ***!
-  \***********************************************************************/
 
 /* Emails */
 
@@ -1220,9 +1199,6 @@ img.attached-midia {
 }
 
 
-/*!************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/toast.css ***!
-  \************************************************************************/
 @keyframes descer {
     0% {
         transform: translateY(-10px);
@@ -1277,9 +1253,6 @@ img.attached-midia {
     width: 90%;
     text-align: center;
 }
-/*!********************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/small.tablets.css ***!
-  \********************************************************************************/
 @media screen and (min-width: 576px) {
 
     /* Configurações gerais das Telas */
@@ -1337,9 +1310,6 @@ img.attached-midia {
 
 
 
-/*!*************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/others.css ***!
-  \*************************************************************************/
 @media screen and (min-width: 769px) {
 
     /* Configurações gerais das Telas */

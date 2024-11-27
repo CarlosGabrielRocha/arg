@@ -1,6 +1,6 @@
 {
   "name": "investigation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,9 @@
     "dayjs": "^1.11.13"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
     "mini-css-extract-plugin": "^2.9.1",
     "style-loader": "^4.0.0",
