@@ -42,7 +42,7 @@ main div {
     margin: 60px auto 0px;
 }
 
-div.ativo img {
+div.active-case img {
     animation: flutuar 0.7s ease-in-out infinite alternate;
 }
 

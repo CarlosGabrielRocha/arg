@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/Montserrat.ttf') format('TrueType');
+}
 
 @keyframes flutuar {
     to {
@@ -18,8 +22,8 @@
     :root {
         --cor-principal: #0D1B2A;
         --cor-secundaria: #050F1A;
-        --cor-destaque: #0D1B2A;
-        --azul-desbotado: rgb(7, 7, 7);
+        --highlight-color: #0D1B2A;
+        --azul-desbotado: #070707;
     }
     
     *{
@@ -29,7 +33,10 @@
     }
     
     body {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         height: 100vh;
         font-family: Arial, Helvetica, sans-serif;
         background: linear-gradient(to bottom, #050F1A, #01060C, black);
@@ -37,6 +44,8 @@
     }
     
     header {
+        position: absolute;
+        top: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -66,8 +75,8 @@
         height: 550px;
         background-color: rgba(0, 0, 0, 0.219);
         color: rgba(255, 255, 255, 0.534);
-        border: 2px solid var(--cor-destaque);
-        margin: auto;
+        border: 2px solid var(--highlight-color);
+        margin-top: 40px;
     }
 
     main img {
@@ -100,12 +109,6 @@
 @media screen and (min-width: 1024px) {
     main {
         width: 700px;
-    }
-
-    main #page1 {
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2, 120px);      
-        height: 520px;
     }
 }
 

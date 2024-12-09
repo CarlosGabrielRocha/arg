@@ -1,10 +1,21 @@
 @charset "UTF-8";
 
-@media all {
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/Montserrat.ttf') format('TrueType');
+}
 
-    :root {
-        --white: white;
-    }
+:root  {
+ --highlight: #971212;
+ --white: #e7e5e5;
+ --transparent-grey: #00000080;
+ --darker-transparent-grey: #000000bb;
+ --button-grey: #252525;
+ --blur: blur(10px);
+}
+
+
+@media all {
     
     *{
         margin: 0px;
@@ -20,9 +31,9 @@
         justify-content: center;
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../midia/fundo.webp');
+        background: linear-gradient(var(--transparent-grey), var(--transparent-grey)), url('../../midia/fundo.webp');
         background-color: black;
-        color: white;
+        color: var(--white);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: left bottom;
@@ -35,8 +46,7 @@
         width: 300px;
         height: 400px;
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../midia/fundo_login.webp');
+        background: linear-gradient(var(--transparent-grey), var(--transparent-grey)), url('../../midia/fundo_login.webp');
         background-color: black;
         background-repeat: no-repeat;
         background-size: cover;
@@ -61,20 +71,21 @@
         padding-bottom: 50px;
     }
     
-    section#login > input {
+    section#login input {
         display: block;
         padding: 4px;
         margin: 10px;
         width: 200px;
         height: 35px;
-        background-color: #4e626667;
-        color: white;
+        font-family: 'montserrat';
         border: none;
         border-radius: 5px;
+        background-color: #4e626667;
+        color: var(--white);
         outline: none;      
     }
     
-    section#login > input:focus {
+    section#login input:focus {
         border: 1px solid white;
     }
     
@@ -82,7 +93,7 @@
         width: 60px;
         height: 30px;
         margin: 5px;
-        background-color: rgb(37, 37, 37);
+        background-color: var(--button-grey);
         border: none;
         border-radius: 5px;
     }
@@ -94,6 +105,13 @@
     a {
         text-decoration: none;
         color: rgba(255, 255, 255, 0.616);
+    }
+
+    p#change-password {
+        margin: 10px;
+        padding: .5rem 0rem;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: underline;
     }
 
 }

@@ -1,0 +1,49 @@
+@keyframes descer {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes desaparecer {
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+:root  {
+    --darker-transparent-grey: #000000d8;
+    --blur: blur(10px);
+   }
+
+#notifications-body {
+    position: absolute ;
+    top: 40px;
+    font-family: 'montserrat';
+    z-index: 1;
+}
+
+.notification-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    height: 7rem;
+    border-radius: 10px;
+    background-color: var(--darker-transparent-grey);
+    backdrop-filter: var(--blur);
+    animation: desaparecer 6s ease-in forwards, descer 0.2s ease-in forwards; 
+}
+
+.notification-box p {
+    width: 90%;
+    font-size: 1.1rem;
+    text-align: center;
+}
