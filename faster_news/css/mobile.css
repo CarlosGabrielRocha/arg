@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+body {
+    overflow-x: hidden;
+}
 
 header {
     height: 100px;
@@ -12,7 +15,7 @@ header > h1 {
 header > span#menumobile {
     display: block;
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
     font-size: 30px;
     cursor: pointer;
 }
@@ -154,11 +157,6 @@ section.news p {
     color: rgba(255, 255, 255, 0.801);
 }
 
-section.news img {
-    width: 350px;
-    transform: scale(0.9);
-}
-
 section.outros {
     width: 95vw;
     max-width: 600px;
@@ -188,6 +186,13 @@ footer > div#rodapé {
     font-size: 0.8em;
 }
 
+/* Mensagem do Hacker */
+
+.hacker-message {
+    min-width: 200px;
+    width: 50%;
+}
+
 @media screen and (max-width: 370px) {
     
     section.logo {
@@ -211,10 +216,5 @@ footer > div#rodapé {
         font-size: .9em;
         padding: 20px;
         color: rgba(255, 255, 255, 0.801);
-    }
-
-    section.news img {
-        width: 300px;
-        transform: scale(0.9);
     }
 }

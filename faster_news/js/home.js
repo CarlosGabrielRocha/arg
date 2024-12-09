@@ -106,3 +106,26 @@ function sair() {
     new1.style.display = "none";
     new2.style.display = "none";
 }
+
+// Mensagem do hacker
+
+document.body.addEventListener('click', () => {
+    const div = document.createElement('div')
+    div.classList = 'hacker-message'
+    const img = document.createElement('img')
+    img.src = 'imagens/hacker.svg'
+    const span = document.createElement('span')
+    span.innerText = 'random54787@...'
+    div.append(img, span)
+    setTimeout(() => {
+        document.body.appendChild(div)
+    }, 10000)
+
+    const timeOutId = setTimeout(() => {
+        div.remove()
+    }, 10200)
+
+    div.addEventListener('click', () => {
+        clearTimeout(timeOutId)
+    }, {once: true})
+}, {once: true})

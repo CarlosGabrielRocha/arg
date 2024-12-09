@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faster News</title>
+    <link rel="shortcut icon" href="imagens/faster_news_icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css" media="all">
     <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 769px) and (max-width: 992px)">
     <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)">
@@ -15,6 +16,7 @@
 <body onresize="Tamanho()" onclick="ExecAudio()">
     <header>
         <h1>faster news</h1>
+        <p>Notícias meramente fictícias</p>
         <span class="material-symbols-outlined" id="menumobile" onclick="ClickMenu()">menu</span>
         <menu id="opcoes">
             <ul>
@@ -34,7 +36,7 @@
         <a href="2025/2025.html">2025</a>
         <span class="menu"></span>
     </nav>
-
+    
     <main>
 
         <h1 class="title" id="suasnoticias">Suas notícias</h1>
@@ -47,7 +49,7 @@
 
         <section class="logo" onclick="noticiaOne()">
             <h1 id="urgente">Urgente</h1>
-            <div class="caixa">
+            <div class="caixa" id="caixa1">
                 <a>
                     <p class="descricao">Casa antiga pega fogo no estado de Pernambuco e gera preocupação entre os
                         habitantes</p>
@@ -70,7 +72,7 @@
 
         <section class="logo" onclick="noticiaTwo()">
             <h1 id="urgente">Urgente</h1>
-            <div class="caixa">
+            <div class="caixa" id="caixa2">
                 <a href="#">
                     <p class="descricao">Mistério em Catuama-PE: Menina desaparece durante passeio de barco; pai é
                         encontrado morto em circunstâncias sombrias
@@ -80,7 +82,7 @@
 
             <div class="info">
                 <a href="#">
-                    <p>Menina desaparece sem deixar rastros após sair para pescar com o seu pai.</p>
+                    <p>Menina desaparece sem deixar rastros após sair para um passeio com o seu pai.</p>
                 </a>
                 <a href="#">
                     <p>O caso da Elisabeth Eyes de apenas 7 anos continua sendo um grande mistério.</p>
@@ -100,22 +102,22 @@
             </span>
 
             <h1>Fogo em casa antiga</h1>
-            <p>Na madrugada desta quarta-feira, moradores da Rua 75, no bairro de Jardim Paulista Baixo, em Paulista -
+            <p>Na madrugada desta <strong>segunda-feira (9)</strong>, moradores da Rua 75, no bairro de Jardim Paulista Baixo, em Paulista -
                 PE, foram despertados por um incêndio que se alastrava rapidamente em uma casa antiga. As chamas
                 intensas geraram pânico entre os residentes, que temiam que o fogo atingisse suas casas.</p>
+            <img src="imagens/noticiario/casa_img2.webp" alt="Casa pegando fogo">
             <p>Equipes do Corpo de Bombeiros e da Polícia Civil chegaram rapidamente ao local para controlar a situação.
                 Felizmente, o fogo foi contido antes de causar danos significativos nas casas vizinhas, não houve
                 registro de feridos.
             </p>
-            <img src="imagens/teste.png" alt="teste">
-            <p>A casa, que estava desocupada há décadas, era considerada um ponto de preocupação pela comunidade local.
-                Segundo relatos, ninguém morava no local há muito tempo, e a presença de alguém ali levanta suspeitas
-                sobre um possível ato intencional de vandalismo.
+            <img src="imagens/noticiario/casa_img1.webp" alt="Casa pegando fogo">
+            <p>A casa, que estava desocupada há décadas, era considerada um ponto de preocupação pela comunidade local. Um homem mascarado foi visto por um morador próximo, andando pelas redondesas da casa durante a madrugada quando a fumaça começou a subir. Segundo relatos, ninguém morava no local há muito tempo, e a presença de alguém ali levanta suspeitas sobre um possível ato intencional de vandalismo.
             </p>
+            <img src="imagens/noticiario/casa_img4.webp" alt="Homem mascarado">
             <p>Além disso, símbolos foram encontrados na parte de trás da casa, reforçando a teoria de que o incêndio
                 foi intencionalmente provocado pela figura mascarada com o objetivo de espalhar medo entre a população,
                 segundo declarações da Polícia Civil.</p>
-            <img src="imagens/teste.png" alt="teste">
+            <img src="imagens/noticiario/casa_img3.webp" alt="Símbolos">
             <p>Apesar dos esforços rápidos da equipe de resgate, a estrutura antiga foi completamente consumida pelas
                 chamas. A polícia civil agora investiga o incidente, enquanto os moradores tentam entender o que poderia
                 ter motivado tal ato.
@@ -130,37 +132,36 @@
             </span>
 
             <h1>Elisabeth Eyes</h1>
-            <p>A pequena Elisabeth Eyes, de apenas 7 anos, foi tida como desaparecida e sem deixar rastros na tarde do
-                último sábado (7), às 02:30, durante um passeio de barco com seu pai, Adam Eyes, na pacata região de
-                Catuama, litoral norte de Pernambuco. Segundo informações preliminares, o barco foi encontrado à deriva,
-                horas após a mãe da menina, Erica Eyes, noticiar a polícia local. O barco não possuia pertences pessoais
+            <p>A pequena <strong>Elisabeth Eyes</strong>, de apenas 7 anos, foi tida como desaparecida e sem deixar rastros na tarde do
+                <strong>último sábado (7)</strong>, <strong>às 02:30</strong>, durante um passeio de barco com seu pai, <strong>Adam Eyes</strong>, principal suspeito, na pacata região de
+                <strong>Catuama</strong>, <strong>litoral norte de Pernambuco</strong>. Segundo informações preliminares, o barco foi encontrado à deriva,
+                horas após a mãe da menina, <strong>Erica Eyes</strong>, noticiar a polícia local. O barco não possuia pertences pessoais
                 da menina e do pai, e não havia sinais claros do que teria acontecido.</p>
-            <img src="imagens/teste.png" alt="teste">
-            <p>No entanto, o caso ganhou contornos ainda mais assustadores na manhã deste domingo (8), quando o corpo de
-                Adam Eyes foi localizado em uma área de floresta densa, a aproximadamente 60 quilômetros do ponto onde o
+            <img src="imagens/noticiario/elisabeth_img4.webp" alt="Area do crime, imagem 1">
+            <p>No entanto, o caso ganhou contornos ainda mais assustadores na noite deste <strong>domingo (8)</strong>, quando o corpo de
+                <strong>Adam Eyes</strong> foi localizado em uma área de floresta densa, a aproximadamente 60 quilômetros do ponto onde o
                 barco havia sido avistado. A cena encontrada pelas autoridades levanta muitas dúvidas: o corpo
                 apresentava marcas evidentes de violência, incluindo hematomas e sinais de espancamento.</p>
-            <img src="imagens/teste.png" alt="teste">
+            <img src="imagens/noticiario/elisabeth_img1.webp" alt="Cena do crime">
             <p>O que chamou ainda mais a atenção foram os símbolos estranhos, pintados com uma substância avermelhada e
                 branca, nas árvores ao redor do local onde o corpo foi encontrado. Especialistas ainda não identificaram
-                a origem ou significado desses símbolos, mas moradores locais afirmam nunca ter visto algo parecido
-                antes. Alguns descrevem as marcas como "Um olho e um x".</p>
-            <img src="imagens/teste.png" alt="teste">
-            <p>A comunidade de Catuama está em choque. Segundo vizinhos, Adam era um homem reservado, sem histórico de
-                conflitos, o mesmo sempre buscava a filha nesse mesmo horário para um passeio semanal, visto que ele e
-                Erica eram separados. O desaparecimento de Elisabeth e a morte violenta de Adam, geram especulações
-                entre os moradores, que acreditam que há algo além de um simples "acidente".</p>
+                a origem ou significado desses símbolos, mas moradores locais afirmam nunca terem visto algo parecido
+                antes. Alguns descrevem as marcas como "Um circulo e um x".</p>
+            <img src="imagens/noticiario/elisabeth_img2.webp" alt="Area do crime, imagem 2">
+            <p>A comunidade de Catuama está em choque. Segundo vizinhos, Adam era um homem reservado, sem histórico de conflitos, o mesmo sempre buscava a filha na tarde dos sábados para um passeio semanal, visto que ele e Erica eram separados. O desaparecimento de Elisabeth e a morte violenta de Adam, geram especulações entre os moradores, que acreditam que há algo além de um simples "acidente".</p>
             <p>A polícia segue investigando o caso, mas até o momento não há pistas sobre o paradeiro de Elisabeth ou
                 sobre quem poderia ser o responsável pelos símbolos e a morte de Adam. Moradores da região próxima à
-                mata onde Adam foi encontrado, relataram ter ouvido barulhos incomuns durante a noite, mas ninguém soube
+                mata onde Adam foi encontrado, relataram terem ouvido barulhos incomuns durante a noite, mas ninguém soube
                 explicar o que aconteceu.</p>
+            <audio src="" controls></audio>
+            <img src="imagens/noticiario/elisabeth_img3.webp" alt="Area do crime, imagem 3">
             <p>Autoridades pedem para que qualquer informação seja reportada diretamente à delegacia de Goiana. Enquanto
                 isso, teorias sobre rituais, sequestro ou até algo sobrenatural começam a circular entre os moradores e
                 nas redes sociais.
                 O desaparecimento de Elisabeth e os eventos estranhos ao redor do caso são um enigma que a polícia e a
                 comunidade local estão desesperados para resolver. <strong>#EncontreElisabeth</strong>
             </p>
-
+            
         </section>
 
     </main>
