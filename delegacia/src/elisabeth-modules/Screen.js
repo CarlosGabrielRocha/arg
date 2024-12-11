@@ -7,8 +7,8 @@ export class Screen {
     static #archives = []
     // Cria um novo arquivo e o adiciona no array de arquivos
     //...files = {type: 'value', src: 'value'}
-    static newArchive(type = 'closed', description = '', ...files) { 
-        const archive = new Archive(type, description)
+    static newArchive(type = 'closed', password = '', description = '', ...files) { 
+        const archive = new Archive(type, password, description)
         files.forEach(file => {
             archive.newFile(file.type, file.src)
         })
