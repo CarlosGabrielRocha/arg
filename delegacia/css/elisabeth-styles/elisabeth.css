@@ -4,7 +4,7 @@ main {
     position: relative;
 }
 
-#header-main {
+.header-main {
     position: absolute;
     display: flex;
     top: 0;
@@ -14,7 +14,7 @@ main {
     background-color: rgba(0, 0, 0, 0.349);
 }
 
-#header-main img {
+.header-main img {
     background-color: rgba(0, 0, 0, 0.219);
     width: 25px;
 }

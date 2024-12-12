@@ -19,7 +19,7 @@ main {
     grid-template-rows: repeat(4, 120px);
 }
 
-#header-main {
+.header-main {
     position: absolute;
     display: flex;
     justify-content: space-evenly;
@@ -30,7 +30,7 @@ main {
     background-color: rgba(0, 0, 0, 0.349);
 }
 
-#header-main img {
+.header-main img {
     width: 20px;
 }
 

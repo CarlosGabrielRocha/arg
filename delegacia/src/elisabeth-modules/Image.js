@@ -2,11 +2,11 @@ import { createMidiaElement } from "../create-elements.js"
 import { addBlurBackground, removeBlurBackground } from "../blur.background.js"
 // Cria um elemento de imagem e suas respectivas funcionalidades
 export class Image {
-    #imageElement
+    #element
     #src
     constructor(src) {
         this.#src = src
-        this.#imageElement = this.#renderIcon()
+        this.#element = this.#renderIcon()
     }
     // Cria o icone da imagem
     #renderIcon() {
@@ -25,7 +25,7 @@ export class Image {
         }, {once: true})
     }
 
-    get imageElement() {
-        return this.#imageElement
+    get element() {
+        return this.#element
     }
 }

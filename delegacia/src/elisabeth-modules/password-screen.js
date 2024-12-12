@@ -25,6 +25,7 @@ function tryPassword(password, archive) {
         // Se a senha estiver corrreta, retornará true, caso o contrário false.
         if (typedPassword === password) {
             archive.openArchive()
+            archive.type = 'opened'
         } else {
             newNotification('Senha incorreta!')
         }      
