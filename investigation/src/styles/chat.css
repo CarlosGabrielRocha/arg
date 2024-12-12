@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'lato';
+    src: url('../../fontes/Lato-Regular.ttf') format('TrueType');
+}
+
 
 /* Emails */
 
@@ -13,6 +18,8 @@
     border-radius: 10px;
     background-color: #000000ea;
     color: var(--fontTransparent);
+    font-family: 'lato', sans-serif;
+    font-size: 1em;
     z-index: 100;
     transition: max-width 1s ease;
     transition: height 1s ease;
@@ -24,7 +31,6 @@
     margin: 7px;
     padding: 8px;
     border-radius: 15px;
-    font-size: .9em;
     background-color: var(--transparent);
     overflow: hidden;
 }
@@ -59,7 +65,6 @@
 
 .content-container p {
     padding: 10px;
-    font-size: .8em;
     text-align: justify;
     text-indent: 10px;
 }

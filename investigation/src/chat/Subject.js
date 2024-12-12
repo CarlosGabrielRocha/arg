@@ -6,7 +6,11 @@ class Subject {
     constructor(text) {
         this.#subjectSpan = createTextElement('span')
         this.#subjectContainer = createElement('div', '', 'subject-container')
-        this.#subjectSpan.innerHTML = `<strong>Subject: </strong>${text}`
+        if (!text) {
+            this.#subjectSpan.innerHTML = `<strong>Subject: </strong>...`
+        } else {
+            this.#subjectSpan.innerHTML = `<strong>Subject: </strong>${text}`
+        }      
         this.#subjectContainer.appendChild(this.#subjectSpan)
     }
 

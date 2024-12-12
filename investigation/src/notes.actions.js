@@ -13,8 +13,8 @@ const p1 = document.createElement('p')
 const p2 = document.createElement('p')
 
 const imgNote4 = document.createElement('img')
-imgNote4.src = "../midia/medico_original.png"
-imgNote4.style.display = 'none'
+/* imgNote4.src = "../midia/medico_original.png" */
+imgNote4.style.display = 'none' 
 
 ElementsStyle()
 
@@ -54,7 +54,7 @@ function handleNotesClick() {
         const noteClicked = ev.currentTarget
         const p = noteClicked.querySelector('p')
     
-        switch(p.textContent) {
+       /* switch(p.textContent) {
     
             case 'Note 1':
                 p1.innerText = 'Hoje é o dia mais triste da minha vida, pois te perdi, minha princesinha. Não sei o que eu faço, aquela que me prometeu confiância até a morte, tirou você de mim.'
@@ -81,7 +81,7 @@ function handleNotesClick() {
                 p1.innerText = 'Quem são eles? Por que eles importam tanto assim? Esses nomes.. Eu vou encontra-lôs.'
                 p2.innerText = ''
     
-        }
+        } */ 
     
         appendElements()
         addBlurBackground()

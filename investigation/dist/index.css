@@ -230,87 +230,6 @@ div.imagemIcone img {
     grid-column: 1;
 }
 
-/* Senha para os arquivos */
-
-section#campoSenha {
-    display: none;
-    align-items: center; 
-    flex-direction: column;
-    position: absolute;
-    top: 400px;
-    height: 200px;
-    border: 2px solid white;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    background-color: var(--transparent);
-}
-
-section#campoSenha > p {
-    font-size: 1.2em;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.inputBox {
-    position: relative;
-    width: 250px;
-}
-
-.inputBox input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    outline: none;
-    color: white;
-    background-color: var(--greyTransparent);
-    transition: 0.5s;
-}
-
-.inputBox label {
-    position: absolute;
-    left: 0;
-    padding: 10px;
-    pointer-events: none;
-    color: rgba(255, 255, 255, 0.25);
-    text-transform: uppercase;
-    transition: 0.5s;
-}
-
-.inputBox > input:valid ~ label, .inputBox > input:focus ~ label {
-    color: #00dfc4;
-    transform: translateX(10px) translateY(-7px);
-    font-size: 0.65em;
-    padding: 8px 10px;
-    letter-spacing: 2px;
-}
-
-.inputBox > input:valid, .inputBox > input:focus {
-    border: 1px solid var(--transparent);
-}
-
-.button {
-    width: 100px;
-    height: 30px;
-    margin-top: 20px;
-    outline: none;
-    border: 1px solid white;
-    color: white;
-    background-color: var(--greyTransparent);
-}
-
-.button:active {
-    border: none;
-    background-color: #00dfc4;
-}
-
-.button:hover {
-    border: none;
-}
-
-
-
 /* Rodapé */
 
 footer {
@@ -1074,6 +993,11 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
 .stop-calling-filling img {
     transform: rotate(115deg);
 }
+@font-face {
+    font-family: 'lato';
+    src: url(9d883d540ee2b4de8024.ttf) format('TrueType');
+}
+
 
 /* Emails */
 
@@ -1089,6 +1013,8 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
     border-radius: 10px;
     background-color: #000000ea;
     color: var(--fontTransparent);
+    font-family: 'lato', sans-serif;
+    font-size: 1em;
     z-index: 100;
     transition: max-width 1s ease;
     transition: height 1s ease;
@@ -1100,7 +1026,6 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
     margin: 7px;
     padding: 8px;
     border-radius: 15px;
-    font-size: .9em;
     background-color: var(--transparent);
     overflow: hidden;
 }
@@ -1135,7 +1060,6 @@ div#area-chat #chat-emails::-webkit-scrollbar-corner {
 
 .content-container p {
     padding: 10px;
-    font-size: .8em;
     text-align: justify;
     text-indent: 10px;
 }
@@ -1359,15 +1283,19 @@ img.attached-midia {
         width: 40px;
     }
 
+    /* Emails */
+ 
     .email-body {
         height: 33rem;
         max-width: 28rem;
+        font-size: 1.1em;
     }
+
+    /* Enviar Email */
 
     #send {
         width: 50px;
         bottom: 8px;
     }
-
 }
 

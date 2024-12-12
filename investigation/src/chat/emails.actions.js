@@ -91,7 +91,10 @@ function renderEmailsPreview(profile) {
             preview.remove()
         }
     })
-       // Adicionando todas as prévias dos emails do perfil
+
+    
+
+    // Adicionando todas as prévias dos emails do perfil
     profile.emails.forEach(email => {
         chatEmails.appendChild(email.preview)
     })

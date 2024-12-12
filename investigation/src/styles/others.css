@@ -47,14 +47,18 @@
         width: 40px;
     }
 
+    /* Emails */
+ 
     .email-body {
         height: 33rem;
         max-width: 28rem;
+        font-size: 1.1em;
     }
+
+    /* Enviar Email */
 
     #send {
         width: 50px;
         bottom: 8px;
     }
-
 }

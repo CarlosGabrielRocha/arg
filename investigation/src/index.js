@@ -33,35 +33,37 @@ handleNotesClick()
 cameraEvents()
 
 // Desativa o botão direito do mouse
-document.addEventListener('contextmenu', (ev) => ev.preventDefault())
+/* document.addEventListener('contextmenu', (ev) => ev.preventDefault()) */
 
-////////////////////// LIGAÇÕES //////////////////////////
 
 let calls = [] // {key, value}
 let sentEmails = []
+let receivedEmails = []
 let notifications = []
 
 /* Atualizando os arrays espelhos do LocalStorage */
 
-function updateStorageArrays() {
+export function updateStorageArrays() {
     calls = []
     sentEmails = []
     notifications = []
     for (let c = 1; c < localStorage.length; c++) {
         const key = localStorage.key(c - 1)
-        if (key === `call_00${c}`) {
+        if (key === `stalker-call_00${c}`) {
             calls.push({ key: key, value: localStorage.getItem(key) })
         } else if (key === `email_00${c}`) {
             sentEmails.push({ key: key, value: localStorage.getItem(key) })
-        } else if (key === `update_00${c}`) {
+        } else if (key === `notifications_00${c}`) {
             notifications.push({ key: key, value: localStorage.getItem(key) })
+        } else if (key === `stalker-email_00${c}`) {
+            receivedEmails.push({ key: key, value: localStorage.getItem(key) })
         }
     }
 }
 
 updateStorageArrays()
 
-////////// 
+////////////////////// LIGAÇÕES //////////////////////////
 
 /* EXEMPLO: */
 
@@ -81,33 +83,57 @@ if (localStorage.getItem('callKey') === 'pending') { // Se a ligação for pende
     }, 1000 * 18)
 } */
 
-/* if (!localStorage.getItem('call_001')) {
-    localStorage.setItem('call_001', 'pending')
-    updateStorageArrays()
+if (!localStorage.getItem('stalker-call_001')) {
+    localStorage.setItem('stalker-call_001', 'pending')
 }
 
-if (localStorage.getItem('call_001') === 'pending') {
+if (localStorage.getItem('stalker-call_001') === 'pending') {
     setTimeout(() => {
-        incomingCall('voice', 'Desconhecido', '../midia/call/voz_placeholder.mp3', 'call_001')
-    }, 1000 * 18)
-} */
+        incomingCall('voice', 'Desconhecido', '../midia/call/call1.mp3', 'stalker-call_001')
+    }, 1000 * 200)
+} 
 
 ////////////////////// NOTIFICAÇÕES //////////////////////////
 
-/* if (!localStorage.getItem('update_001')) {
-    localStorage.setItem('update_001', 'pending')
+ if (!localStorage.getItem('notifications_001')) {
+    localStorage.setItem('notifications_001', 'pending')
 }
 
-if (localStorage.getItem('update_001') === 'pending') {
+if (localStorage.getItem('notifications_001') === 'pending') {
     document.addEventListener('click', () => {
-        setTimeout(() => {
-            newNotification('Você tem novas mensagens!', 'A câmera foi instalada com sucesso!')
-        })
-    localStorage.setItem('update_001', 'ok')
+    newNotification('Você tem novas mensagens!')
+    localStorage.setItem('notifications_001', 'ok')
     }, {once: true})
-} */
+} 
 
-////////////////////// CHAT //////////////////////////
+//
+
+if (!localStorage.getItem('notifications_002')) {
+    localStorage.setItem('notifications_002', 'pending')
+}
+
+if (localStorage.getItem('notifications_002') === 'pending') {
+    setTimeout(() => {
+        newNotification('Você tem novas mensagens!')
+        localStorage.setItem('notifications_002', 'ok')
+    }, 1000 * 90)     
+} 
+
+//
+
+if (!localStorage.getItem('notifications_003')) {
+    localStorage.setItem('notifications_003', 'pending')
+}
+
+if (localStorage.getItem('notifications_003') === 'pending') {
+    setTimeout(() => {
+        newNotification('Você tem novas mensagens!')
+        localStorage.setItem('notifications_003', 'ok')
+    }, 1000 * 120)     
+} 
+
+
+////////////////////// EMAILS ENVIADOS //////////////////////////
 
 // Criar envio de Email (só pode haver um email por vez)
 // O LocalStorage é atualizado na função writeEmail passando a chave.
@@ -126,8 +152,6 @@ if (localStorage.getItem('update_001') === 'pending') {
         writeEmail(writedEmail.subject, writedEmail.content, writedEmail.attachment, Profile.profiles.hacker, 'email_001')
     }, { once: true })
 } */
-
-
 
 
 

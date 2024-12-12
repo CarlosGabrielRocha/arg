@@ -14,11 +14,7 @@ class Profile {
         this.profilePictureSrc = profileImgSrc
         this.#renderProfilePicture(profileImgSrc)
         // Ao clicar na imagem de perfil, os emails desse perfil serão renderizados.
-        this.#profilePicture.addEventListener('click', () => {
-            this.#replaceProfilesClass()
-            this.#profilePicture.classList.replace('perfil', 'perfil-selecionado')
-            renderEmailsPreview(this)
-        })
+        this.#profilePicture.addEventListener('click', () => this.selectProfile())
     }
 
     newEmail(type = '', subjectText = '', contentText = [], ...attachment) {
@@ -43,6 +39,14 @@ class Profile {
         profiles.forEach(profile => {
             profile.classList.replace('perfil-selecionado', 'perfil')
         })
+    }
+
+    // Seleciona o perfil)
+    
+    selectProfile() {
+        this.#replaceProfilesClass()
+        this.#profilePicture.classList.replace('perfil', 'perfil-selecionado')
+        renderEmailsPreview(this)
     }
 
     get emails() {
