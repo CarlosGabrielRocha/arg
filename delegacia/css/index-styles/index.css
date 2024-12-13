@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'montserrat';
-    src: url('../fonts/Montserrat.ttf') format('TrueType');
+    src: url('../../fonts/Montserrat.ttf') format('TrueType');
 }
 
 :root  {

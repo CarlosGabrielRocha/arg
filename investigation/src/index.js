@@ -90,7 +90,7 @@ if (!localStorage.getItem('stalker-call_001')) {
 if (localStorage.getItem('stalker-call_001') === 'pending') {
     setTimeout(() => {
         incomingCall('voice', 'Desconhecido', '../midia/call/call1.mp3', 'stalker-call_001')
-    }, 1000 * 200)
+    }, 1000 * 300)
 } 
 
 ////////////////////// NOTIFICAÇÕES //////////////////////////

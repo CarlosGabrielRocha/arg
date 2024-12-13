@@ -21,7 +21,6 @@ class Attachment {
         this.#attachmentIcon.addEventListener('click', () => {
             attachmentArray.forEach(midiaToDownload => {
                 const a = createAnchorElement(midiaToDownload, true)
-                a.download = midiaToDownload
                 document.body.appendChild(a)
                 a.click()
                 a.remove()
