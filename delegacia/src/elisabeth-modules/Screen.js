@@ -12,7 +12,7 @@ export class Screen {
     static newArchive(type = 'closed', password = '', description = '', ...files) { 
         const archive = new Archive(type, password, description)
         files.forEach(file => {
-            archive.newFile(file.type, file.src)
+            archive.newFile(file.type, file.src, file.text)
         })
         Screen.appendArchive(archive.element)
         Screen.#archives.push(archive)

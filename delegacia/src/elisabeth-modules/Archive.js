@@ -1,5 +1,7 @@
 import { createElement, createMidiaElement, createTextElement } from "../create-elements.js"
+import { Download } from "./Download.js"
 import { Image } from "./Image.js"
+import { Note } from "./Note.js"
 import { tryPassword } from "./password-screen.js"
 import { Screen } from "./Screen.js"
 import { Video } from "./Video.js"
@@ -25,10 +27,10 @@ export class Archive {
         const container = createElement('div')
         let img
         if (this.#type === 'closed') {
-            img = createMidiaElement('img', '../midia/pasta_fechada_escuro.svg')
+            img = createMidiaElement('img', '../midia/pasta_fechada.svg')
             container.addEventListener('click', () => tryPassword(this.#password, this))        
         } else if (this.#type === 'opened') {
-            img = createMidiaElement('img', '../midia/pasta_aberta_escuro.svg')
+            img = createMidiaElement('img', '../midia/pasta_aberta.svg')
             container.addEventListener('click', () => this.openArchive())
         } else {
             throw new Error('invalid archive type! [closed or opened]')
@@ -72,18 +74,19 @@ export class Archive {
 
 
     // Cria um novo file e a depender do tipo, serão de classes diferentes.
-    newFile(type = '', src = '') {
-        
+    newFile(type = '', src = '', text = '') {
         if (type === 'image') {
             const img = new Image(src)
             this.#files.push(img)
         } else if (type === 'video') {
-            const video= new Video(src)
+            const video = new Video(src)
             this.#files.push(video)
         } else if (type === 'note') {
-
+            const note = new Note(text)
+            this.#files.push(note)
         } else if (type === 'download') {
-            
+            const download = new Download(src)
+            this.#files.push(download)
         } else {
             throw new Error('invalid file type! [image, video, note, download]')
         }

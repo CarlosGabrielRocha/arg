@@ -20,10 +20,11 @@
 @media all {
 
     :root {
-        --cor-principal: #0D1B2A;
-        --cor-secundaria: #050F1A;
+        --primary-color: #0D1B2A;
+        --secundary-color: #050F1A;
         --highlight-color: #0D1B2A;
-        --azul-desbotado: #070707;
+        --faded-blue: #070707;
+        --grey-transparent: #000000ea;
     }
     
     *{
@@ -40,7 +41,7 @@
         height: 100vh;
         font-family: Arial, Helvetica, sans-serif;
         background: linear-gradient(to bottom, #050F1A, #01060C, black);
-        color: white;
+        color: #f1f1f1;
     }
     
     header {
@@ -52,7 +53,7 @@
         width: 100%;
         height: 50px;
         padding: 10px;
-        background-color: var(--azul-desbotado);
+        background-color: var(--faded-blue);
     }
     
     header div {

@@ -10,7 +10,7 @@ export class Image {
     }
     // Cria o icone da imagem
     #renderIcon() {
-        const element = createMidiaElement('img', '../midia/imagem_escuro.svg')
+        const element = createMidiaElement('img', '../midia/imagem.svg')
         element.addEventListener('click', () => this.#renderImage())
         return element
     }

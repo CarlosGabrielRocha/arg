@@ -13,7 +13,42 @@
 
 .file {
     position: absolute;
-    width: 70%;
+    width: 95%;
     z-index: 1000;
     animation: pop-up .5s ease-in forwards
+}
+
+.note-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    z-index: 1000;
+    animation: pop-up .5s ease-in forwards
+}
+
+.note-container span {
+    text-align: center;
+}
+
+@media screen and (min-width: 481px) {
+    .file {
+        width: 50%;
+    }
+
+    .note-container {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .file {
+        width: 60%;
+    }
+
+    .note-container {
+        width: 40%;
+    }
 }

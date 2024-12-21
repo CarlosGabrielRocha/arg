@@ -11,12 +11,12 @@ export class Video {
     }
     // Cria o icone do vídeo
     #renderIcon() {
-        const element = createMidiaElement('img', '../midia/video_escuro.svg')
-        element.addEventListener('click', () => this.#renderImage())
+        const element = createMidiaElement('img', '../midia/video.svg')
+        element.addEventListener('click', () => this.#renderVideo())
         return element
     }
     // Renderiza o video quando o icone é clicado
-    #renderImage() {
+    #renderVideo() {
         const video = createMidiaElement('video',  this.#src, ['class', 'file'], ['controls', ''])
         addBlurBackground()
         document.body.appendChild(video)
