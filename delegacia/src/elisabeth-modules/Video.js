@@ -1,4 +1,4 @@
-import { createMidiaElement } from "../create-elements.js"
+import { createElement, createMidiaElement } from "../create-elements.js"
 import { addBlurBackground, removeBlurBackground } from "../blur.background.js"
 
 // Cria um elemento de vídeo e suas respectivas funcionalidades
@@ -17,12 +17,14 @@ export class Video {
     }
     // Renderiza o video quando o icone é clicado
     #renderVideo() {
+        const videoContainer = createElement('div', '', 'video-container')
         const video = createMidiaElement('video',  this.#src, ['class', 'file'], ['controls', ''])
+        videoContainer.appendChild(video)
         addBlurBackground()
-        document.body.appendChild(video)
-        video.addEventListener('click', () => {
+        document.body.appendChild(videoContainer)
+        videoContainer.addEventListener('click', () => {
             removeBlurBackground()
-            video.remove()
+            videoContainer.remove()
         }, {once: true})
     }
 

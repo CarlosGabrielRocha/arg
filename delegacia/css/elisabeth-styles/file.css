@@ -18,6 +18,16 @@
     animation: pop-up .5s ease-in forwards
 }
 
+.video-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
 .note-container {
     position: absolute;
     display: flex;
@@ -35,7 +45,7 @@
 
 @media screen and (min-width: 481px) {
     .file {
-        width: 50%;
+        width: 75%;
     }
 
     .note-container {
